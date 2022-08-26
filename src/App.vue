@@ -7,6 +7,18 @@
   <router-view/>
 </template>
 
+<script>
+import AppHeader from './components/AppHeader.vue'
+import AppFooter from './components/AppFooter.vue'  
+
+export default { 
+  components: { 
+    AppHeader,
+    AppFooter  
+  } 
+} 
+</script> 
+
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
