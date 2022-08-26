@@ -1,5 +1,6 @@
 # yoobee_JS_Framework_Assignment
-This is the third summative assignment for the WUX programme. It deals with a JS Framework 
+
+This is the third summative assignment for the WUX programme. It deals with a JS Framework
 
 Hi my name is Thomas King
 My favourite programming language is Python
@@ -9,4 +10,4 @@ Hi my name is Justina Ho
 I like long walks on the beach...
 
 Hi my name is Keegan Dufty
-(Insert blurb)
+I enjoy using the Adobe suite products + drinking coffee
