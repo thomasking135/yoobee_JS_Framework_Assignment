@@ -6,7 +6,7 @@ My favourite programming language is Python
 I would like to build a Bitcoin market evaluator one day.
 
 Hi my name is Justina Ho
-(Insert blurb)
+I like long walks on the beach...
 
 Hi my name is Keegan Dufty
 (Insert blurb)
