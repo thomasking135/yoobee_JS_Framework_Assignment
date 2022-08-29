@@ -1,5 +1,5 @@
 <template>
-
+<!--Nav router links-->
   <router-link to="/"><img alt="Vue logo" src="./assets/images/logoNoText.png" ></router-link><nav>
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>|  
@@ -13,6 +13,7 @@
 </template>
 
 
+<!--Style guide-->
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
