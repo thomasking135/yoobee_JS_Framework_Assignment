@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import LoginView from '../views/LoginView.vue'
 import RegisterView from '../views/RegisterView.vue'
 import ProfileView from '../views/ProfileView.vue'
+import CreateEvent from '../views/CreateEvent.vue'
 
 
 
@@ -16,6 +17,11 @@ const routes = [
     path: '/login',
     name: 'login',
     component: LoginView
+  },
+  {
+    path: '/create',
+    name: 'create',
+    component: CreateEvent
   },
   {
     path: '/register',
