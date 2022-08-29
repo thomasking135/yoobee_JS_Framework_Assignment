@@ -1,9 +1,9 @@
 <template>
 
-  <div class="home">
+  <div class="profile">
     
-  <h1>Welcome to Hap!</h1>  
-    <p>Insert content</p>
+  <h1>Profile</h1>  
+    <p>Insert profile details</p>
   </div>
 </template>
 
@@ -13,7 +13,7 @@
 h1{
   text-align: center;
 }
-.home {
+.profile {
   padding-top: 100px;
   text-align: justify;
   margin-left: 25%;

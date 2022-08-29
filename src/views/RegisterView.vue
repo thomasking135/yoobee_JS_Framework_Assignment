@@ -1,9 +1,9 @@
 <template>
 
-  <div class="home">
+  <div class="register">
     
-  <h1>Welcome to Hap!</h1>  
-    <p>Insert content</p>
+  <h1>Register</h1>  
+    <p>Insert registration form below</p>
   </div>
 </template>
 
@@ -13,7 +13,7 @@
 h1{
   text-align: center;
 }
-.home {
+.register {
   padding-top: 100px;
   text-align: justify;
   margin-left: 25%;

@@ -48,9 +48,9 @@ h1{
   text-align: center;
 }
 .about {
-  padding-top: 80px;
+  padding-top: 100px;
   text-align: justify;
-  margin-left: 30px;
-  margin-right: 30px;
+  margin-left: 25%;
+  margin-right: 25%;
 }
 </style>

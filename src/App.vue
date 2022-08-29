@@ -1,8 +1,13 @@
 <template>
 
-  <img alt="Vue logo" src="./assets/logo.png" ><nav>
+  <router-link to="/"><img alt="Vue logo" src="./assets/logo.png" ></router-link><nav>
     <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link to="/about">About</router-link>|  
+    <router-link to="/profile">Profile</router-link>|
+    <router-link to="/register">Register</router-link>|
+    <router-link to="/login">Login/Logoff</router-link>
+    
+
   </nav>
   <router-view/>
 </template>
@@ -19,6 +24,7 @@
 
 nav {
   padding: 30px;
+  
   float: right;
 }
 
@@ -32,7 +38,7 @@ nav a.router-link-exact-active {
 }
 
 img {
-  width: 10%;
+  width: 5%;
   float: left;
 }
 </style>
