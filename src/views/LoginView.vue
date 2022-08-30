@@ -3,7 +3,7 @@
     <div class="login">
     <h1>Login</h1>  
 
-    <form action="/" method="post">
+    <form>
       <div class="container">
         <label for="email"><b>Email Address</b></label>
         <input type="text" placeholder="Email Address" name="email" required>
@@ -15,8 +15,8 @@
       </div>
 
       <div class="container">
-        <button class="SignUpBtn">Don't have an account?</button>
-        <span class="psw"><a href="/">Forgot password?</a></span>
+        <span class="signUp"><a href="/register">Don't have an account?</a></span>
+        <span class="psw"><a href="/register">Forgot password?</a></span>
       </div>
     </form>
     </div>
@@ -42,7 +42,7 @@ h1{
 }
 
 .login {
-  padding-top: 100px;
+  padding-top: 300px;
   text-align: left;
   margin-left: 25%;
   margin-right: 25%;
@@ -56,7 +56,7 @@ h1{
 
 form {
   border: none;
-  }
+}
 
 input[type=text], input[type=password] {
   width: 100%;
@@ -87,7 +87,7 @@ button:hover {
 }
 
 .SignUpBtn {
-  color: #ffffff;
+  color: #303030;
   text-align: center;
   font-size: 14px;
   font-family: lato, sans-serif;
@@ -123,10 +123,29 @@ span.psw {
 }
 
 span.psw a {
-  color: #ffffff;
+  color: #303030;
 }
 
-span.psw a:hover {
+span.psw a:hover a:visited{
+  color: #303030;
+}
+
+span.signUp {
+  float: left;
+  padding-top: 16px;
+  text-align: center;
+  font-size: 14px;
+  font-family: lato, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #303030;
+}
+
+span.signUp a {
+  color: #303030;
+}
+
+span.signUp a:hover a:visited{
   color: #303030;
 }
 
