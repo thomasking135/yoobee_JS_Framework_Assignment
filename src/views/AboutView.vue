@@ -48,7 +48,7 @@ h1{
   text-align: center;
 }
 .about {
-  padding-top: 100px;
+  padding-top: 10px;
   text-align: justify;
   margin-left: 25%;
   margin-right: 25%;
