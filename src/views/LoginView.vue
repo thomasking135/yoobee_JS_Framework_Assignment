@@ -2,8 +2,25 @@
   <div class="background-image" :style="{ backgroundImage: 'url(' + backgroundUrl + ')' }">
     <div class="login">
     <h1>Login</h1>  
-      <p>Insert login details</p>
+
+    <form action="/action_page.php" method="post">
+      <div class="container">
+        <label for="email"><b>Email Address</b></label>
+        <input type="text" placeholder="Email Address" name="email" required>
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Password" name="psw" required>
+            
+        <button type="submit">Login</button>
+      </div>
+
+      <div class="container">
+        <button type="button" class="SignUpBtn">Don't have an account?</button>
+        <span class="psw"><a href="#">Forgot password?</a></span>
+      </div>
+    </form>
     </div>
+
   </div>
 </template>
 
@@ -17,11 +34,16 @@ padding: 0;
 
 h1{
   text-align: center;
+  font-size: 40px;
+  font-family: lato, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #ffffff;
 }
 
 .login {
   padding-top: 100px;
-  text-align: justify;
+  text-align: left;
   margin-left: 25%;
   margin-right: 25%;
 }
@@ -30,6 +52,49 @@ h1{
   background-size: cover;
   width: 100%;
   height: 100vh;
+}
+
+form {
+  border: none;
+  }
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #08BDB6;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.SignUpBtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: transparent;
+}
+
+.container {
+  padding: 16px;
+  border: none;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
 }
 </style>
 
