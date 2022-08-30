@@ -1,6 +1,6 @@
 <template>
 <!--Nav router links-->
-  <router-link to="/"><img alt="Vue logo" src="./assets/images/logoNoText.png" ></router-link><nav>
+  <router-link to="/"><img alt="Vue logo" src="./assets/logo/logo-full.png" style="width: 300px; margin: 40px"></router-link><nav>
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>|  
     <router-link to="/create">Create Event</router-link>|

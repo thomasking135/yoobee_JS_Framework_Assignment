@@ -3,7 +3,7 @@
     <div class="login">
     <h1>Login</h1>  
 
-    <form action="/action_page.php" method="post">
+    <form action="/" method="post">
       <div class="container">
         <label for="email"><b>Email Address</b></label>
         <input type="text" placeholder="Email Address" name="email" required>
@@ -15,8 +15,8 @@
       </div>
 
       <div class="container">
-        <button type="button" class="SignUpBtn">Don't have an account?</button>
-        <span class="psw"><a href="#">Forgot password?</a></span>
+        <button class="SignUpBtn">Don't have an account?</button>
+        <span class="psw"><a href="/">Forgot password?</a></span>
       </div>
     </form>
     </div>
@@ -69,7 +69,12 @@ input[type=text], input[type=password] {
 
 button {
   background-color: #08BDB6;
-  color: white;
+  text-align: center;
+  font-size: 14px;
+  font-family: lato, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #303030;
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
@@ -78,10 +83,24 @@ button {
 }
 
 button:hover {
-  opacity: 0.8;
+  background-color: #48B1BF;
 }
 
 .SignUpBtn {
+  color: #ffffff;
+  text-align: center;
+  font-size: 14px;
+  font-family: lato, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  text-decoration: underline;
+  width: auto;
+  padding: 10px 18px;
+  background-color: transparent;
+}
+
+.SignUpBtn:hover {
+  color: #303030;
   width: auto;
   padding: 10px 18px;
   background-color: transparent;
@@ -95,7 +114,22 @@ button:hover {
 span.psw {
   float: right;
   padding-top: 16px;
+  text-align: center;
+  font-size: 14px;
+  font-family: lato, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #303030;
 }
+
+span.psw a {
+  color: #ffffff;
+}
+
+span.psw a:hover {
+  color: #303030;
+}
+
 </style>
 
 <script>
