@@ -1,6 +1,13 @@
 <template>
+  <div class="CoverContainer">
+    <img
+      class="cover-image"
+      :src="aboutCoverImage"
+      alt="people standing around a fire on the beach"
+    />
+    <h1 class="CoverHeader">About</h1>
+  </div>
   <div class="about">
-    <h1>About Hap</h1>
     <p>
       Hap was created in 2022 by an event management company to allow event
       attendees and event hosts to have a better experience. We saw a gap in the
@@ -39,18 +46,70 @@
     <br />
 
     <p>Hap, It’s where it’s at.</p>
-    <h1>Contact</h1>
+    <button class="JoinUsButton">Join Us!</button>
+  </div>
+  <div class="ContactUs">
+    <h2 class="ContactHeader">Contact</h2>
+    <p class="contactPara">
+      For any futher information or inquires, get in-touch with our team at
+      admin@hap.com
+    </p>
   </div>
 </template>
 
 <style>
-h1{
-  text-align: center;
+.CoverHeader {
+  position: absolute;
+  text-align: left;
+  bottom: 8%;
+  left: 20%;
+  font-size: 40pt;
+  transform: translate(-50%, -50%);
+  color: white;
 }
 .about {
   padding-top: 100px;
   text-align: justify;
-  margin-left: 25%;
-  margin-right: 25%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.CoverContainer {
+  position: relative;
+  display: inline-block;
+}
+.cover-image {
+  width: 100vw;
+  margin-top: 0;
+  border-top: 1px solid #06beb6;
+}
+.ContactUs {
+  padding-top: 50px;
+  text-align: justify;
+  margin-bottom: 50px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.ContactHeader {
+  text-align: left;
+  font-size: 40pt;
+}
+
+.JoinUsButton {
+  background-color: #06beb6;
+  color: white;
+  padding: 10px;
+  font-weight: 700;
 }
 </style>
+
+<script>
+import aboutCoverImage from "../assets/images/AboutPage.jpg";
+
+export default {
+  data() {
+    return {
+      aboutCoverImage,
+    };
+  },
+};
+</script>
