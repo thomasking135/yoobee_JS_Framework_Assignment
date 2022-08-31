@@ -12,11 +12,13 @@
   <style>
   h1{
     text-align: center;
+    color: black;
   }
   .create {
-    padding-top: 100px;
+    padding-top: 200px;
     text-align: justify;
     margin-left: 25%;
     margin-right: 25%;
+    color: black;
   }
   </style>
