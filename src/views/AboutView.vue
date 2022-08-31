@@ -18,63 +18,36 @@
     <br />
     <br />
 
-    <!--<h1 id="aboutHead">About Hap</h1>-->
+    <p>
+      Hap allows the attendees of events to communicate with speakers and hosts
+      of the event. Giving the opportunity for hosts to clear up any queries
+      that attendees may have going into an event, after an event, or even
+      during the event.
+    </p>
 
-    <img
-      id="aboutImage"
-      src="../assets/images/AboutPage.jpg"
-      alt="About page"
-      style="width: 100%"
-    />
-    <div class="centerMessage">About</div>
+    <br />
+    <br />
 
-    <div class="about">
-      <p class="firstParagraphBuffer">
-        Hap was created in 2022 by an event management company to allow event
-        attendees and event hosts to have a better experience. We saw a gap in
-        the market and jumped at the opportunity. After researching what was
-        needed, we have proudly created ‘Hap’, an app that will hopefully make
-        your event experience more enjoyable. <br />
-      </p>
-      <br />
-      <br />
-      >>>>>>> 04c6a4200d2faa73dd2cc6d9207aee72e0e1d24a
+    <p>
+      We have given the attendees all the information they need in one place!
+      The event page is a one stop shop, with all the information that is needed
+      including dates, locations, and event descriptions. We have broken this
+      down into a simple and intuitive app that works carefree. Anyone is able
+      to enjoy Hap.
+    </p>
 
-      <p>
-        Hap allows the attendees of events to communicate with speakers and
-        hosts of the event. Giving the opportunity for hosts to clear up any
-        queries that attendees may have going into an event, after an event, or
-        even during the event.
-      </p>
+    <br />
+    <br />
 
-      <br />
-      <br />
-
-      <p>
-        We have given the attendees all the information they need in one place!
-        The event page is a one stop shop, with all the information that is
-        needed including dates, locations, and event descriptions. We have
-        broken this down into a simple and intuitive app that works carefree.
-        Anyone is able to enjoy Hap.
-      </p>
-
-      <br />
-      <br />
-
-      <p>
-        Whether you are looking to go to an event and find your crowd, or create
-        an event of your own, we have made the app for you!
-      </p>
-      <br />
-
-      <p>Hap, It’s where it’s at.</p>
-      <h1 id="contactHead">Contact</h1>
-      <p style="color: red">Keegan will insert the contact details here</p>
-    </div>
+    <p>
+      Whether you are looking to go to an event and find your crowd, or create
+      an event of your own, we have made the app for you!
+    </p>
+    <br />
 
     <p>Hap, It’s where it’s at.</p>
-    <button class="JoinUsButton">Join Us!</button>
   </div>
+  <button class="JoinUsButton">Join Us!</button>
   <div class="ContactUs">
     <h2 class="ContactHeader">Contact</h2>
     <p class="contactPara">
@@ -135,8 +108,8 @@
 }
 
 .about {
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 100px;
+  padding-bottom: 100px;
   text-align: justify;
 
   margin-left: 10%;
@@ -165,21 +138,24 @@
 
 .JoinUsButton {
   background-color: #06beb6;
-  color: white;
+  color: #303030;
   padding: 10px;
   font-weight: 700;
-
-  margin-left: 25%;
-  margin-right: 25%;
-  color: black;
+  border: 1px solid #06beb6;
+  margin-top: 30px;
+  align-items: left;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.JoinUsButton:hover {
+  background-color: #48b1bf;
+  border: 1px solid #48b1bf;
+  padding: 10px;
+  color: #303030;
 }
 
 #aboutImage {
   padding-bottom: 50px;
-}
-
-.firstParagraphBuffer {
-  padding-top: 80px;
 }
 </style>
 
