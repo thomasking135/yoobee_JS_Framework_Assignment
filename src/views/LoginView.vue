@@ -11,7 +11,7 @@
         <label for="psw"><b>Password</b></label>
         <input type="password" placeholder="Password" name="psw" required>
             
-        <button type="submit">Login</button>
+        <button type="submit" id="submitLogin">Login</button>
       </div>
 
       <div class="container">
@@ -67,7 +67,7 @@ input[type=text], input[type=password] {
   box-sizing: border-box;
 }
 
-button {
+#submitLogin {
   background-color: #08BDB6;
   text-align: center;
   font-size: 14px;
@@ -82,7 +82,7 @@ button {
   width: 100%;
 }
 
-button:hover {
+#submitLogin:hover {
   background-color: #48B1BF;
 }
 

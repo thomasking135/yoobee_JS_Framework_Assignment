@@ -8,7 +8,7 @@
           <input type="password" placeholder="Password" name="psw" required>
           <input type="password" placeholder="Password" name="psw" required>
               
-          <button type="submit">Sign Up</button>
+          <button type="submit" id="submit">Sign Up</button>
         </div>
 
         <div class="container">
@@ -63,7 +63,7 @@ input[type=text], input[type=password] {
   box-sizing: border-box;
 }
 
-button {
+#submit {
   background-color: #08BDB6;
   text-align: center;
   font-size: 14px;
@@ -78,7 +78,7 @@ button {
   width: 100%;
 }
 
-button:hover {
+#submit:hover {
   background-color: #48B1BF;
 }
 
