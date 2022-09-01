@@ -3,18 +3,15 @@
     <div class="login">
     <h1>Login</h1>  
 
-    <form>
-      <div class="container">
-        <label for="email"><b>Email Address</b></label>
-        <input type="text" placeholder="Email Address" name="email" required>
-
-        <label for="psw"><b>Password</b></label>
-        <input type="password" placeholder="Password" name="psw" required>
+    <form class="loginForm">
+      <div class="loginForm__container">
+        <input class="loginFormInput" type="text" placeholder="Email Address" name="email" required>
+        <input class="loginFormInput" type="password" placeholder="Password" name="psw" required>
             
         <button type="submit" id="submitLogin">Login</button>
       </div>
 
-      <div class="container">
+      <div class="loginForm__container">
         <span class="signUp"><a href="/register">Don't have an account?</a></span>
         <span class="psw"><a href="/register">Forgot password?</a></span>
       </div>
@@ -48,17 +45,22 @@ h1{
   margin-right: 25%;
 }
 
+.loginForm__container {
+  padding: 16px;
+  border: none;
+}
+
 .background-image {
   background-size: cover;
   width: 100%;
   height: 100vh;
 }
 
-form {
+.loginForm {
   border: none;
 }
 
-input[type=text], input[type=password] {
+.loginFormInput {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -104,11 +106,6 @@ input[type=text], input[type=password] {
   width: auto;
   padding: 10px 18px;
   background-color: transparent;
-}
-
-.container {
-  padding: 16px;
-  border: none;
 }
 
 span.psw {

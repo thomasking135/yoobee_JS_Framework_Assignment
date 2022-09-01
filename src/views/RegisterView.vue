@@ -2,16 +2,16 @@
   <div class="background-image" :style="{ backgroundImage: 'url(' + backgroundUrl + ')' }">
     <div class="register">
       <h1>Sign Up</h1>  
-      <form>
-        <div class="container">
-          <input type="text" placeholder="Email Address" name="email" required>
-          <input type="password" placeholder="Password" name="psw" required>
-          <input type="password" placeholder="Password" name="psw" required>
+      <form class="registerForm">
+        <div class="registerForm__container">
+          <input class="registerFormInput" type="text" placeholder="Email Address" name="email" required>
+          <input class="registerFormInput" type="password" placeholder="Password" name="psw" required>
+          <input class="registerFormInput" type="password" placeholder="Confirm Password" name="psw" required>
               
-          <button type="submit" id="submit">Sign Up</button>
+          <button type="submit" id="submitSignUp">Sign Up</button>
         </div>
 
-        <div class="container">
+        <div class="registerForm__container">
            <span class="account"><a href="/login">Already have an account?</a></span>
         </div>
         
@@ -50,11 +50,17 @@ h1{
   height: 100vh;
 }
 
-form {
+.registerForm {
   border: none;
-  }
+}
 
-input[type=text], input[type=password] {
+.registerForm__container{
+  padding: 16px;
+  border: none;
+}
+
+
+.registerFormInput {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -63,7 +69,7 @@ input[type=text], input[type=password] {
   box-sizing: border-box;
 }
 
-#submit {
+#submitSignUp {
   background-color: #08BDB6;
   text-align: center;
   font-size: 14px;
@@ -100,12 +106,6 @@ input[type=text], input[type=password] {
   width: auto;
   padding: 10px 18px;
   background-color: transparent;
-}
-
-
-.container {
-  padding: 16px;
-  border: none;
 }
 
 span.psw {
