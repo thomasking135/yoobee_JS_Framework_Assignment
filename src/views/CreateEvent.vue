@@ -3,8 +3,13 @@
     <div class="create">
       
     <h1>Create Event</h1>  
-      <p>Insert create event details and the form below</p>
+    
+      <div class="centerMessaging">
+        <img class="float" src="../assets/icons/uploadImage.png" alt="upload" >
+        <br><br><p class="imageUpload">Click to upload image</p>
+      </div>
     </div>
+  
   </template>
   
   
@@ -13,12 +18,44 @@
   h1{
     text-align: center;
     color: black;
+    padding: 10%;
   }
-  .create {
-    padding-top: 200px;
-    text-align: justify;
-    margin-left: 25%;
-    margin-right: 25%;
+
+  .float {
+    float: right;
+  }
+    
+  
+  .create { 
+    margin-left: auto;
+    margin-right: auto;
     color: black;
+    text-align: center;
+
+
   }
+
+  .imageUpload{
+    margin-left: auto;
+    margin-right: auto;
+    position:justify;
+    color:white;
+    text-align: auto;
+    
+  }
+  .centerMessaging {
+  padding: 40px;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white ;
+  font-size: 200%;
+  font-weight: bold;
+  background-color: lightgray;
+  width: 100%;
+  height: 13%;
+  text-align: center;
+  
+}
   </style>
