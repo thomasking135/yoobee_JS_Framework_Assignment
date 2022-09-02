@@ -23,6 +23,8 @@
         <router-link to="/login"><button id="logoutProfile" type="submit" class="LogOutBtn">Log Out</button></router-link><br>
       </div>
     </div>
+
+
     <div class="ProfileEvents">
       <div class="ProfileTabs">
         <button class="ProfileMyEvents ProfileTabButtons">My Events</button>
@@ -71,7 +73,7 @@
   height: 80px;
   border-radius: 50%;
   border: 1px solid black;
-  margin-left: -20%;
+  margin-left:5%;
   margin-top: -10%;
 }
 
@@ -81,16 +83,20 @@
   border: 1px solid #06beb6;
   padding: 10px;
   margin-top: 10px;
-  margin-left: -21%;
+  margin-left: 0%;
   float:left;
 }
 
 .profileDetails {
   flex-direction: column;
   float:right;
-  margin-top: -20%;
+  margin-top: -15%;
   margin-right: 17%;
   
+}
+
+.ProfileEvents {
+  padding-top: 360px;
 }
 
 .submitBio {
@@ -169,9 +175,9 @@ h1 {
 }
 </style>
 
-<script type="application/javascript" src="https://cdn.jsdelivr.net/vue.js"></script>
+<script></script>
 
-import { change } from "../assets/JS/views.js";
+//import { change } from "../assets/JS/views.js";
 
 
 

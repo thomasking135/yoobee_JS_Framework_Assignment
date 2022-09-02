@@ -11,7 +11,7 @@
         <img src="./assets/icons/home.png" alt="home hover">
           <img src="./assets/icons/homeHover.png" class="img-top" alt="home">
       </div>
-    </router-link> 
+    </router-link>
 
     <router-link to="/about">
       <div class="info-icon" id="info" alt="About">
@@ -50,9 +50,13 @@
 <style>
 @import './assets/styles/main.css';
 
+.icon-bar {
+  margin-left: 65%;
+}
 .home-icon {
   width: 900px;
   position: relative;
+  
   /* display: inline-block; */
 }
 .home-icon .img-top {
@@ -61,6 +65,7 @@
   top: 0;
   left: 0;
   z-index: 99;
+  
 }
 .home-icon:hover .img-top {
   display: inline;
