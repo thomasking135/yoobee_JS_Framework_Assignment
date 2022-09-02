@@ -11,7 +11,7 @@
   nav {
     padding-top: 70px;
     width: 200px;
-    float: left;
+    float: right;
   }
   
   nav a {
@@ -23,8 +23,8 @@
     color: #08BDB6;
   }
   
-  img {
-    width: 5%;
+  .landingImg {
+    width: 2%;
     float: left;
   }
 
@@ -226,7 +226,6 @@
     
   }
   .centerMessaging {
-  padding: 40px;
   position: absolute;
   top: 45%;
   left: 50%;
