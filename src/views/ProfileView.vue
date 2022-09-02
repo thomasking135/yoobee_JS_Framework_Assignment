@@ -1,33 +1,65 @@
 <template>
+  
   <div class="profile">
+   
+    
     <div class="profileGrid">
       <div class="ProfileImageContainer">
         <div class="ProfileImage"></div>
-        <button class="updateProfileImage">Update Image</button>
+        <button class="updateProfileImage" onchange="upload()">Update Image</button>
       </div>
-      <div class="profileDetails">
-        <input type="text" placeholder="User Name" />
-        <input type="text" placeholder="Bio" />
-        <button type="submit" class="submitBio">Update</button>
-        <button type="submit" class="LogOutBtn">Log Out</button>
+      
+    
+
+
+  <div class="profileDetails">
+    <br><br><br><br>  
+    <form action="#" method="get" id="myForm"></form>
+        <label>Username</label><br>
+        <input type="text" id="textbox" name="textfield" /><br><br>
+        <label>Bio</label><br>
+        <textarea id="textarea" name="textarea" rows="5" cols="33"/><br><br>
+        <button type="submit" id="updateProfile" class="submitBio" onclick="change()">Update</button><br><br>
+        <router-link to="/login"><button id="logoutProfile" type="submit" class="LogOutBtn">Log Out</button></router-link><br>
       </div>
     </div>
   </div>
+
+  <hr class="profileHR">
+
 </template>
 
+
+
 <style>
+
+#logoutProfile:hover {
+  background-color: #48B1BF; 
+  transform: scale(1.1);
+}
+
+#updateProfile:hover {
+  background-color: #48B1BF; 
+  transform: scale(1.1);
+}
+
+.profileHR {
+  margin-top: 23em;
+  border-top: 2px solid #48B1BF
+}
+
 .ProfileImageContainer {
-  display: flex;
-  flex-direction: column;
+  
   margin-top: 100px;
 }
 
 .ProfileImage {
-  width: 100px;
-  height: 100px;
-  border-radius: 50px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
   border: 1px solid black;
-  margin-bottom: 20px;
+  margin-left: -20%;
+  margin-top: -10%;
 }
 
 .updateProfileImage {
@@ -35,26 +67,32 @@
   background-color: white;
   border: 1px solid #06beb6;
   padding: 10px;
+  margin-top: 10px;
+  margin-left: -21%;
+  float:left;
 }
 
 .profileDetails {
-  display: flex;
   flex-direction: column;
-  margin-top: 100px;
+  float:right;
+  margin-top: -20%;
+  margin-right: 17%;
+  
 }
 
 .submitBio {
   background-color: white;
   border: 1px solid #06beb6;
   padding: 10px;
-  width: 30%;
+  width: 50%;
+  padding: 10px;
 }
 .LogOutBtn {
   background-color: #06beb6;
-  border: 1px solid #06beb6;
+  border: 10px solid #06beb6;
   color: #303030;
   padding: 10px;
-  width: 30%;
+  width: 50%;
 }
 h1 {
   text-align: center;
@@ -66,3 +104,13 @@ h1 {
   margin-right: 25%;
 }
 </style>
+
+<script type="application/javascript" src="https://cdn.jsdelivr.net/vue.js"></script>
+
+import { change } from "../assets/JS/views.js";
+
+
+
+
+
+
