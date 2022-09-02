@@ -31,6 +31,7 @@
     margin-right: auto;
     color: black;
     text-align: center;
+    padding: 2%;
 
 
   }
