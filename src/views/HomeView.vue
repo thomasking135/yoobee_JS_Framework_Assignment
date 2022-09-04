@@ -9,10 +9,12 @@
   <div class="accordion">
   <input type="checkbox" name="collapse" id="handle1" checked="checked" hidden>
   <h2 class="handle">
+    
     <label for="handle1">Search</label>
   </h2>
+  <input class="inline" type="text" id="keyword" name="keyword">
   <button class="clear">Clear</button><button class="search">Search</button>
-  <input class="inline" type="text" id="keyword" name="keyword"><br><br>
+  <br><br>
   <div class="content">
     
     <label for="date">Date</label>
