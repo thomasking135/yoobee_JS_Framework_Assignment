@@ -9,8 +9,10 @@
   <div class="accordion">
   <input type="checkbox" name="collapse" id="handle1" checked="checked" hidden>
   <h2 class="handle">
+   
+    <label for="handle1">Search <img class="landingImg inline" src="../assets/icons/filter.png" id="filter" ></label>
     
-    <label for="handle1">Search</label>
+    
   </h2>
   <input class="inline" type="text" id="keyword" name="keyword">
   <button class="clear">Clear</button><button class="search">Search</button>
@@ -30,7 +32,7 @@
   <option value="Tennis">Tennis</option>
   <option value="Concert">Concert</option>
 </select>
-  </div>
+  </div><br><br><br><br><br>
 </div>
 
 
@@ -81,6 +83,11 @@
 #keyword, #category, #date, #location  {
   height: 45px;
   width: 300px;
+}
+
+#filter {
+  position: absolute;
+  margin-left: 20px;
 }
 
 </style>
