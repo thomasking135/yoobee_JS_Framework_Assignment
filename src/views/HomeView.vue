@@ -1,5 +1,6 @@
+<!--Thomas Code-->
+<!--Template-->
 <template>
-
 
   <img class="landingImg" src="../assets/images/LandingPage.jpg" alt="Landing page" style="width:100%;">
   <div class="centerMessage">Kia ora, Hap is where it's at!<br>
@@ -37,7 +38,9 @@
 
 
 </template>
+<!--End of template-->
 
+<!--Style section-->
 <style>
 
 /*
@@ -91,4 +94,4 @@
 }
 
 </style>
-
+<!--End of style section-->
