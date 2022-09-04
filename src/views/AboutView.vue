@@ -47,7 +47,7 @@
 
     <p>Hap, It’s where it’s at.</p>
   </div>
-  <button class="JoinUsButton">Join Us!</button>
+  <a><router-link to="/register"><button class="JoinUsButton">Join Us!</button></router-link></a>
   <div class="ContactUs">
     <h2 class="ContactHeader">Contact</h2>
     <p class="contactPara">
