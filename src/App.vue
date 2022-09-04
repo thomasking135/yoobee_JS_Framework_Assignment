@@ -40,6 +40,7 @@
     
   </nav>
   <router-view/>
+
 </template>
 
 
