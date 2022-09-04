@@ -35,8 +35,8 @@
       <p class="ProfileNotParticipating">
         You are currently not participating in any events.
       </p>
-      <button class="ProfileExploreButtons">Explore new events</button>
-      <button class="ProfileExploreButtons">Explore upcoming events</button>
+      <a><router-link to="/"><button class="ProfileExploreButtons">Explore new events</button></router-link></a>
+      <a><router-link to="/"><button class="ProfileExploreButtons">Explore upcoming events</button></router-link></a>
     </div>
   </div>
 
