@@ -5,8 +5,8 @@
 
     <form class="loginForm">
       <div class="loginForm__container">
-        <input class="loginFormInput" type="text" placeholder="Email Address" name="email" required>
-        <input class="loginFormInput" type="password" placeholder="Password" name="psw" required>
+        <input class="loginFormInput" type="email" placeholder="Email Address" name="email" required>
+        <input class="loginFormInput" type="password" placeholder="Password" name="password" required>
             
         <button type="submit" id="submitLogin">Login</button>
       </div>
