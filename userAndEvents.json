@@ -25,6 +25,25 @@
         "participate": "true"
       }
       ]
+    },
+    "comments": {
+      "comment":[
+      {
+      "commentid": 1,
+      "eventid": 1,
+      "username":"thomas",
+      "timestamp": "$now()",
+      "reply": "What's the cost?"
+      },
+      {
+      "commentid": 2,
+      "eventid": 1,
+      "username":"justina",
+      "timestamp": "$now()",
+      "reply": "$10 dollars"
+        
+      }
+      ]
     } 
 }, 
 
@@ -45,16 +64,35 @@
     "participate": "true"
     },
     {
-      "eventid": 1,
-      "sdate": "2022-09-09-07T00:00",
-      "edate": "2022-09-09-07T30:00",
-      "address": "Wilding Park",
-      "category": "tennis",
-      "privacy": "public",
-      "participate": "true"
+    "eventid": 2,
+    "sdate": "2022-09-09-07T00:00",
+    "edate": "2022-09-09-07T30:00",
+    "address": "Wilding Park",
+    "category": "tennis",
+    "privacy": "public",
+    "participate": "true"
     }
     ]
-  } 
+  },
+  "comments": {
+    "comment":[
+    {
+    "commentid": 1,
+    "eventid": 1,
+    "username":"justina",
+    "timestamp": "$now()",
+    "reply": "Do I need anything?"
+    },
+    {
+    "commentid": 2,
+    "eventid": 1,
+    "username":"keegan",
+    "timestamp": "$now()",
+    "reply": "A tennis racket"
+      
+    }
+    ]
+  }  
 }, 
 
 {
@@ -74,13 +112,13 @@
     "participate": "true"
     },
     {
-      "eventid": 2,
-      "sdate": "2022-09-09-07T00:00",
-      "edate": "2022-09-09-07T30:00",
-      "address": "Shirley Tennis Club",
-      "category": "tennis",
-      "privacy": "public",
-      "participate": "true"
+    "eventid": 2,
+    "sdate": "2022-09-09-07T00:00",
+    "edate": "2022-09-09-07T30:00",
+    "address": "Shirley Tennis Club",
+    "category": "tennis",
+    "privacy": "public",
+    "participate": "true"
     }
     ]
   } 
@@ -103,13 +141,33 @@
     "participate": "true"
     },
     {
-      "eventid": 2,
-      "sdate": "2022-09-09-07T00:00",
-      "edate": "2022-09-09-07T30:00",
-      "address": "Halswell Quary Park",
-      "category": "picnic",
-      "privacy": "public",
-      "participate": "true"
+    "eventid": 2,
+    "sdate": "2022-09-09-07T00:00",
+    "edate": "2022-09-09-07T30:00",
+    "address": "Halswell Quary Park",
+    "category": "picnic",
+    "privacy": "public",
+    "participate": "true"
+    }
+    
+    ]
+  },
+  "comments": {
+    "comment":[
+    {
+    "commentid": 1,
+    "eventid": 1,
+    "username":"thomas",
+    "timestamp": "$now()",
+    "reply": "Can I bring a friend?"
+    },
+    {
+    "commentid": 2,
+    "eventid": 1,
+    "username":"user",
+    "timestamp": "$now()",
+    "reply": "Sure thing, boss"
+      
     }
     ]
   } 
