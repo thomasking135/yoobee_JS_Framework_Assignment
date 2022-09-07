@@ -47,7 +47,7 @@
         ).then(response => {
           this.isSuccess = true;
           console.log(response);
-          console.log('hello');
+          console.log(this.email + ' ' + this.password);
         });
       }
     }
