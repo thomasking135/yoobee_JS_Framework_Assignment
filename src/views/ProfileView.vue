@@ -18,7 +18,7 @@
         <label>Username</label><br>
         <input type="text" id="textbox" name="textfield" /><br><br>
         <label>Bio</label><br>
-        <textarea id="textarea" name="textarea" rows="5" cols="33"/><br><br>
+        <textarea id="userBio" name="userBio" rows="5" cols="33"/><br><br>
         <button type="submit" id="updateProfile" class="submitBio" onclick="change()">Update</button><br><br>
         <router-link to="/login"><button id="logoutProfile" type="submit" class="LogOutBtn">Log Out</button></router-link><br>
       </div>

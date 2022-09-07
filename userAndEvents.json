@@ -1,14 +1,128 @@
+[
 {
     "id": 1,
     "username": "justina",
     "email": "justina@ho.com",
+    "userBio": "I love going on long walks on the beach.",
+    "events": {
+      "event":[
+      {
+      "eventid": 1,
+      "sdate": "2022-09-09-07T00:00",
+      "edate": "2022-09-09-07T30:00",
+      "address": "Hagley Park",
+      "category": "picnic",
+      "privacy": "public",
+      "participate": "true"
+      },
+      {
+        "eventid": 1,
+        "sdate": "2022-09-09-07T00:00",
+        "edate": "2022-09-09-07T30:00",
+        "address": "Dance Diva",
+        "category": "dance",
+        "privacy": "public",
+        "participate": "true"
+      }
+      ]
+    } 
+}, 
+
+{
+  "id": 2,
+    "username": "keegan",
+    "email": "keegan@dufty.com",
+    "userBio": "I love spending time on the beach.",
+    "events": {
+    "event":[
+    {
+    "eventid": 1,
     "sdate": "2022-09-09-07T00:00",
-    "edate": "2022-09-09-07T00:00",
-    "phone": "1-770-736-8031 x56442",
-    "website": "hildegard.org",
-    "company": {
-      "name": "Romaguera-Crona",
-      "catchPhrase": "Multi-layered client-server neural-net",
-      "bs": "harness real-time e-markets"
+    "edate": "2022-09-09-07T30:00",
+    "address": "Boogie Nights",
+    "category": "dance",
+    "privacy": "public",
+    "participate": "true"
+    },
+    {
+      "eventid": 1,
+      "sdate": "2022-09-09-07T00:00",
+      "edate": "2022-09-09-07T30:00",
+      "address": "Wilding Park",
+      "category": "tennis",
+      "privacy": "public",
+      "participate": "true"
     }
-  }
+    ]
+  } 
+}, 
+
+{
+  "id": 3,
+    "username": "thomas",
+    "email": "thomas@king.com",
+    "userBio": "I love spending time away from the beach.",
+    "events": {
+    "event":[
+    {
+    "eventid": 1,
+    "sdate": "2022-09-09-07T00:00",
+    "edate": "2022-09-09-07T30:00",
+    "address": "Isaac Theatre",
+    "category": "concert",
+    "privacy": "public",
+    "participate": "true"
+    },
+    {
+      "eventid": 2,
+      "sdate": "2022-09-09-07T00:00",
+      "edate": "2022-09-09-07T30:00",
+      "address": "Shirley Tennis Club",
+      "category": "tennis",
+      "privacy": "public",
+      "participate": "true"
+    }
+    ]
+  } 
+},
+
+{
+  "id": 4,
+    "username": "user",
+    "email": "user@user.com",
+    "userBio": "I love beaches. Full stop.",
+    "events": {
+    "event":[
+    {
+    "eventid": 1,
+    "sdate": "2022-09-09-07T00:00",
+    "edate": "2022-09-09-07T30:00",
+    "address": "Botanic Gardens",
+    "category": "picnic",
+    "privacy": "public",
+    "participate": "true"
+    },
+    {
+      "eventid": 2,
+      "sdate": "2022-09-09-07T00:00",
+      "edate": "2022-09-09-07T30:00",
+      "address": "Halswell Quary Park",
+      "category": "picnic",
+      "privacy": "public",
+      "participate": "true"
+    }
+    ]
+  } 
+}
+]
+
+    
+    
+  
+  
+    
+    
+
+
+  
+ 
