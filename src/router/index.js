@@ -4,6 +4,7 @@ import LoginView from '../views/LoginView.vue'
 import RegisterView from '../views/RegisterView.vue'
 import ProfileView from '../views/ProfileView.vue'
 import CreateEvent from '../views/CreateEvent.vue'
+import UpdateDelete from '../views/UpdateDelete.vue'
 
 
 
@@ -22,6 +23,11 @@ const routes = [
     path: '/create',
     name: 'create',
     component: CreateEvent
+  },
+  {
+    path: '/editDelete',
+    name: 'editDelete',
+    component: UpdateDelete
   },
   {
     path: '/register',

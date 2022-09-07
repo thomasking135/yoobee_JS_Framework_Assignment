@@ -3,7 +3,7 @@
 
     <div class="create">
       
-    <h1 class="createEventHeader">Create Event</h1>  
+    <h1 class="createEventHeader">Create Event</h1> 
     
       <div class="centerMessaging">
         <img class="float" src="../assets/icons/uploadImage.png" alt="upload" >
