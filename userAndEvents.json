@@ -13,16 +13,18 @@
       "address": "Hagley Park",
       "category": "picnic",
       "privacy": "public",
-      "participate": "true"
+      "participate": "true", 
+      "participants": 25
       },
       {
-        "eventid": 1,
-        "sdate": "2022-09-09-07T00:00",
-        "edate": "2022-09-09-07T30:00",
-        "address": "Dance Diva",
-        "category": "dance",
-        "privacy": "public",
-        "participate": "true"
+      "eventid": 1,
+      "sdate": "2022-09-09-07T00:00",
+      "edate": "2022-09-09-07T30:00",
+      "address": "Dance Diva",
+      "category": "dance",
+      "privacy": "public",
+      "participate": "true",
+      "participants": 15
       }
       ]
     },
@@ -61,7 +63,8 @@
     "address": "Boogie Nights",
     "category": "dance",
     "privacy": "public",
-    "participate": "true"
+    "participate": "true",
+    "participants": 12
     },
     {
     "eventid": 2,
@@ -70,7 +73,8 @@
     "address": "Wilding Park",
     "category": "tennis",
     "privacy": "public",
-    "participate": "true"
+    "participate": "true",
+    "participants": 18
     }
     ]
   },
@@ -109,7 +113,8 @@
     "address": "Isaac Theatre",
     "category": "concert",
     "privacy": "public",
-    "participate": "true"
+    "participate": "true",
+    "participants": 8
     },
     {
     "eventid": 2,
@@ -118,7 +123,8 @@
     "address": "Shirley Tennis Club",
     "category": "tennis",
     "privacy": "public",
-    "participate": "true"
+    "participate": "true",
+    "participants": 21
     }
     ]
   } 
@@ -138,7 +144,8 @@
     "address": "Botanic Gardens",
     "category": "picnic",
     "privacy": "public",
-    "participate": "true"
+    "participate": "true",
+    "participants": 17
     },
     {
     "eventid": 2,
@@ -147,7 +154,8 @@
     "address": "Halswell Quary Park",
     "category": "picnic",
     "privacy": "public",
-    "participate": "true"
+    "participate": "true",
+    "participants": 13
     }
     
     ]
