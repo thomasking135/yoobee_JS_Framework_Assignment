@@ -41,8 +41,8 @@
   
     
   
-    <br><br><button class="postit">Post Event</button>
-    <button class="cancelit">Cancel</button>
+    <br><br><button class="delete">Delete</button>
+    <button class="update">Update/Save</button>
   </div>  
 </form> 
 
@@ -85,19 +85,19 @@
   padding-bottom: 1%; 
 }
 
-.postit {
+.update {
   width: 100px;
   height: 30px;
   float: right;
   margin-left: 10px;
 }
 
-.postit:hover {
+.update:hover {
   transform: scale(1.1);
   background-color: #06bdb6;
 }
 
-.cancelit {
+.delete {
   width: 100px;
   height: 30px;
   float: right;
@@ -105,7 +105,7 @@
   border: 2px solid red;
 }
 
-.cancelit:hover {
+.delete:hover {
   transform: scale(1.1);
   background-color: red;
   color: white
