@@ -3,10 +3,10 @@
     <div class="login">
     <h1>Login</h1>  
 
-    <form class="loginForm">
+    <form class="loginForm" @submit.prevent="onCreatePost">
       <div class="loginForm__container">
-        <input class="loginFormInput" type="email" placeholder="Email Address" name="email" required>
-        <input class="loginFormInput" type="password" placeholder="Password" name="password" required>
+        <input class="loginFormInput" type="email" placeholder="Email Address" name="email" v-model="email" required>
+        <input class="loginFormInput" type="password" placeholder="Password" name="password" v-model="password" required>
             
         <button type="submit" id="submitLogin">Login</button>
       </div>
@@ -17,7 +17,7 @@
       </div>
     </form>
     </div>
-
+    <div class="alert" v-if="isSuccess">Logged in successfully</div>
   </div>
 </template>
 
@@ -29,13 +29,27 @@
 </style>
 
 <script>
-import backgroundUrl from "../assets/images/LogInSignUpDesktop.jpg";
-
-export default {
-  data() {
-    return {
-      backgroundUrl,
-    };
-  },
-};
+  import backgroundUrl from "../assets/images/LogInSignUpDesktop.jpg";
+  import axios from 'axios';
+  export default {
+    data() {
+      return {
+        backgroundUrl,
+        email:'',
+        password:'',
+        isSuccess: false,
+      };
+    },
+    methods: {
+      onCreatePost() {
+        axios.post('https://jsonplaceholder.typicode.com/users',
+        {email: this.email, password: this.password },
+        ).then(response => {
+          this.isSuccess = true;
+          console.log(response);
+          console.log(this.email + ' ' + this.password);
+        });
+      }
+    }
+  };
 </script>
