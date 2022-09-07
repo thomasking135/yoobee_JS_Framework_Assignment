@@ -48,8 +48,14 @@
           this.isSuccess = true;
           console.log(response);
           console.log(this.email + ' ' + this.password);
+
+          //if login form is validated, this directs the user to the landing page.
+          if (this.isSuccess == true){
+            window.location.href = "/";
+          }
         });
       }
+
     }
   };
 </script>
