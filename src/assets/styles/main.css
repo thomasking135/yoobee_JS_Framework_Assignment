@@ -1,244 +1,237 @@
-
 /*Significant Programme code requirements*/
 #app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-  }
-  
-  nav {
-    padding-top: 70px;
-    width: 200px;
-    float: right;
-  }
-  
-  nav a {
-    font-weight: bold;
-    color: #08BDB6;
-  }
-  
-  nav a.router-link-exact-active {
-    color: #08BDB6;
-  }
-  
-  .landingImg {
-    width: 2%;
-    float: left;
-  }
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
 
-  /*CSS for the Home Landing Page*/
-  .container {
-    padding-top: -100px;
-    position: absolute;
-    text-align: center;
-    color: white;
-  }
-  
-  .centerMessage {
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: palegoldenrod ;
-    font-size: 300%;
-    font-weight: bold;
-  }
-  
-  .createEvent {
-    background-color: #08BDB6;
-    text-align: center;
-    font-size: 14px;
-    font-family: lato, sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    color: #303030;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 50px;
-    padding-right: 50px;
-   
-  }
-  
-  .createEvent:hover {
-    background-color: #48B1BF;
-    transform: scale(1.1);
-    border-radius: 26%;
-  }
-  
-  .home {
-    padding-top: 200px;
-  }
+nav {
+  padding-top: 70px;
+  width: 200px;
+  float: right;
+}
 
-  /*CSS for the Login Page*/
+nav a {
+  font-weight: bold;
+  color: #08bdb6;
+}
 
-  * {
-    margin: 0;
-    padding: 0;
-    }
-    
-    h1{
-      text-align: center;
-      font-size: 40px;
-      font-family: lato, sans-serif;
-      font-weight: 500;
-      font-style: normal;
-      color: #ffffff;
-    }
-    
-    .login {
-      padding-top: 300px;
-      text-align: left;
-      margin-left: 25%;
-      margin-right: 25%;
-    }
-    
-    .loginForm__container {
-      padding: 16px;
-      border: none;
-    }
-    
-    .background-image {
-      background-size: cover;
-      width: 100%;
-      height: 100vh;
-    }
-    
-    .loginForm {
-      border: none;
-    }
-    
-    .loginFormInput {
-      width: 100%;
-      padding: 12px 20px;
-      margin: 8px 0;
-      display: inline-block;
-      border: 1px solid #ccc;
-      box-sizing: border-box;
-    }
-    
-    #submitLogin {
-      background-color: #08BDB6;
-      text-align: center;
-      font-size: 14px;
-      font-family: lato, sans-serif;
-      font-weight: 500;
-      font-style: normal;
-      color: #303030;
-      padding: 14px 20px;
-      margin: 8px 0;
-      border: none;
-      cursor: pointer;
-      width: 100%;
-    }
-    
-    #submitLogin:hover {
-      background-color: #48B1BF;
-    }
-    
-    .SignUpBtn {
-      color: #303030;
-      text-align: center;
-      font-size: 14px;
-      font-family: lato, sans-serif;
-      font-weight: 500;
-      font-style: normal;
-      text-decoration: underline;
-      width: auto;
-      padding: 10px 18px;
-      background-color: transparent;
-    }
-    
-    .SignUpBtn:hover {
-      color: #303030;
-      width: auto;
-      padding: 10px 18px;
-      background-color: transparent;
-    }
-    
-    span.psw {
-      float: right;
-      padding-top: 16px;
-      text-align: center;
-      font-size: 14px;
-      font-family: lato, sans-serif;
-      font-weight: 500;
-      font-style: normal;
-      color: #303030;
-    }
-    
-    span.psw a {
-      color: #303030;
-    }
-    
-    span.psw a:hover a:visited{
-      color: #303030;
-    }
-    
-    span.signUp {
-      float: left;
-      padding-top: 16px;
-      text-align: center;
-      font-size: 14px;
-      font-family: lato, sans-serif;
-      font-weight: 500;
-      font-style: normal;
-      color: #303030;
-    }
-    
-    span.signUp a {
-      color: #303030;
-    }
-    
-    span.signUp a:hover a:visited{
-      color: #303030;
-    }
+nav a.router-link-exact-active {
+  color: #08bdb6;
+}
 
-  /*CSS for Create Event Page*/
-  .createEventHeader{
-    text-align: center;
-    color: black;
-    padding: 10%;
-  }
+.landingImg {
+  width: 2%;
+  float: left;
+}
 
-  .float {
-    float: right;
-    height: 50px;
-  }
-    
-  
-  .create { 
-    margin-left: auto;
-    margin-right: auto;
-    color: black;
-    text-align: center;
-    padding: 2%;
+/*CSS for the Home Landing Page*/
+.container {
+  padding-top: -100px;
+  position: absolute;
+  text-align: center;
+  color: white;
+}
 
-
-  }
-
-  .imageUpload{
-    margin-left: auto;
-    margin-right: auto;
-    position:justify;
-    color:white;
-    text-align: auto;
-    
-  }
-  .centerMessaging {
+.centerMessage {
   position: absolute;
   top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white ;
+  color: palegoldenrod;
+  font-size: 300%;
+  font-weight: bold;
+}
+
+.createEvent {
+  background-color: #08bdb6;
+  text-align: center;
+  font-size: 14px;
+  font-family: lato, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #303030;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.createEvent:hover {
+  background-color: #48b1bf;
+  transform: scale(1.1);
+  border-radius: 26%;
+}
+
+.home {
+  padding-top: 200px;
+}
+
+/*CSS for the Login Page*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  font-size: 40px;
+  font-family: lato, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #ffffff;
+}
+
+.login {
+  padding-top: 300px;
+  text-align: left;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+.loginForm__container {
+  padding: 16px;
+  border: none;
+}
+
+.background-image {
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+.loginForm {
+  border: none;
+}
+
+.loginFormInput {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+#submitLogin {
+  background-color: #08bdb6;
+  text-align: center;
+  font-size: 14px;
+  font-family: lato, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #303030;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+#submitLogin:hover {
+  background-color: #48b1bf;
+}
+
+.SignUpBtn {
+  color: #303030;
+  text-align: center;
+  font-size: 14px;
+  font-family: lato, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  text-decoration: underline;
+  width: auto;
+  padding: 10px 18px;
+  background-color: transparent;
+}
+
+.SignUpBtn:hover {
+  color: #303030;
+  width: auto;
+  padding: 10px 18px;
+  background-color: transparent;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+  text-align: center;
+  font-size: 14px;
+  font-family: lato, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #303030;
+}
+
+span.psw a {
+  color: #303030;
+}
+
+span.psw a:hover a:visited {
+  color: #303030;
+}
+
+span.signUp {
+  float: left;
+  padding-top: 16px;
+  text-align: center;
+  font-size: 14px;
+  font-family: lato, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #303030;
+}
+
+span.signUp a {
+  color: #303030;
+}
+
+span.signUp a:hover a:visited {
+  color: #303030;
+}
+
+/*CSS for Create Event Page*/
+.createEventHeader {
+  text-align: center;
+  color: black;
+  padding: 10%;
+}
+
+.float {
+  float: right;
+  height: 50px;
+}
+
+.create {
+  margin-left: auto;
+  margin-right: auto;
+  color: black;
+  text-align: center;
+  padding: 2%;
+}
+
+.imageUpload {
+  margin-left: auto;
+  margin-right: auto;
+  position: justify;
+  color: white;
+  text-align: auto;
+}
+.centerMessaging {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
   font-size: 200%;
   font-weight: bold;
   background-color: lightgray;
   width: 100%;
   height: 13%;
   text-align: center;
-  
 }
 
 /*CSS for About Info Page*/
@@ -344,22 +337,21 @@
 
 /*CSS for profile page*/
 #logoutProfile:hover {
-  background-color: #48B1BF; 
+  background-color: #48b1bf;
   transform: scale(1.1);
 }
 
 #updateProfile:hover {
-  background-color: #48B1BF; 
+  background-color: #48b1bf;
   transform: scale(1.1);
 }
 
 .profileHR {
   margin-top: 23em;
-  border-top: 2px solid #48B1BF
+  border-top: 2px solid #48b1bf;
 }
 
 .ProfileImageContainer {
-  
   margin-top: 100px;
 }
 
@@ -368,7 +360,7 @@
   height: 80px;
   border-radius: 50%;
   border: 1px solid black;
-  margin-left:5%;
+  margin-left: 5%;
   margin-top: -10%;
 }
 
@@ -379,15 +371,14 @@
   padding: 10px;
   margin-top: 10px;
   margin-left: 0%;
-  float:left;
+  float: left;
 }
 
 .profileDetails {
   flex-direction: column;
-  float:right;
+  float: right;
   margin-top: -15%;
   margin-right: 17%;
-  
 }
 
 .ProfileEvents {
@@ -469,128 +460,189 @@ h1 {
   margin-bottom: 20px;
 }
 
-/*CSS for Registration Page*/ 
+/*CSS for Registration Page*/
 * {
   margin: 0;
   padding: 0;
-  }
-  
-  h1{
-    text-align: center;
-    font-size: 40px;
-    font-family: lato, sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    color: #ffffff;
-  }
-  
-  .register {
-    padding-top: 300px;
-    text-align: left;
-    margin-left: 25%;
-    margin-right: 25%;
-  }
-  
-  .background-image {
-    background-size: cover;
-    width: 100%;
-    height: 100vh;
-  }
-  
-  .registerForm {
-    border: none;
-  }
-  
-  .registerForm__container{
-    padding: 16px;
-    border: none;
-  }
-  
-  
-  .registerFormInput {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-  }
-  
-  #submitSignUp {
-    background-color: #08BDB6;
-    text-align: center;
-    font-size: 14px;
-    font-family: lato, sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    color: #303030;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-  }
-  
-  #submit:hover {
-    background-color: #48B1BF;
-  }
-  
-  .SignUpBtn {
-    color: #303030;
-    text-align: center;
-    font-size: 14px;
-    font-family: lato, sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    text-decoration: underline;
-    width: auto;
-    padding: 10px 18px;
-    background-color: transparent;
-  }
-  
-  .SignUpBtn:hover {
-    color: #303030;
-    width: auto;
-    padding: 10px 18px;
-    background-color: transparent;
-  }
-  
-  span.psw {
-    float: right;
-    padding-top: 16px;
-    text-align: center;
-    font-size: 14px;
-    font-family: lato, sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    color: #303030;
-  }
-  
-  span.psw a {
-    color: #303030;
-  }
-  
-  span.psw a:hover a:visited{
-    color: #303030;
-  }
-  
-  span.account {
-    float: left;
-    padding-top: 16px;
-    text-align: center;
-    font-size: 14px;
-    font-family: lato, sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    color: #303030;
-  }
-  
-  span.account a {
-    color: #303030;
-  }
-  
-  span.account a:hover a:visited{
-    color: #303030;
-  }
-  
-  
+}
+
+h1 {
+  text-align: center;
+  font-size: 40px;
+  font-family: lato, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #ffffff;
+}
+
+.register {
+  padding-top: 300px;
+  text-align: left;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+.background-image {
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+.registerForm {
+  border: none;
+}
+
+.registerForm__container {
+  padding: 16px;
+  border: none;
+}
+
+.registerFormInput {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+#submitSignUp {
+  background-color: #08bdb6;
+  text-align: center;
+  font-size: 14px;
+  font-family: lato, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #303030;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+#submit:hover {
+  background-color: #48b1bf;
+}
+
+.SignUpBtn {
+  color: #303030;
+  text-align: center;
+  font-size: 14px;
+  font-family: lato, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  text-decoration: underline;
+  width: auto;
+  padding: 10px 18px;
+  background-color: transparent;
+}
+
+.SignUpBtn:hover {
+  color: #303030;
+  width: auto;
+  padding: 10px 18px;
+  background-color: transparent;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+  text-align: center;
+  font-size: 14px;
+  font-family: lato, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #303030;
+}
+
+span.psw a {
+  color: #303030;
+}
+
+span.psw a:hover a:visited {
+  color: #303030;
+}
+
+span.account {
+  float: left;
+  padding-top: 16px;
+  text-align: center;
+  font-size: 14px;
+  font-family: lato, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #303030;
+}
+
+span.account a {
+  color: #303030;
+}
+
+span.account a:hover a:visited {
+  color: #303030;
+}
+
+/*CSS For Modal Pop Ups*/
+/*CSS for Event Deleted Confirmation Component*/
+
+.ModalContainer {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background-color: #303030;
+  left: 20%;
+  right: 20%;
+  top: 35%;
+  bottom: 35%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.ModalCrossButton {
+  background-color: #06beb6;
+  border: 1px solid #06beb6;
+  border-radius: 50%;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.ModalExitButton {
+  width: 35%;
+  background-color: #06beb6;
+  border: 1px solid #06beb6;
+  color: #303030;
+  cursor: pointer;
+}
+
+.ModalText {
+  font-size: 16px;
+  font-weight: 400;
+  color: white;
+}
+
+/*CSS for Abandon Modal component*/
+
+.ModalButtonsContainer {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.ModalCancelButton {
+  width: 35%;
+  background-color: #303030;
+  border: 1px solid #06beb6;
+  color: #06beb6;
+  margin-right: 2%;
+}
+
+.ModalYesButton {
+  width: 35%;
+  background-color: #06beb6;
+  border: 1px solid #06beb6;
+  color: #303030;
+  cursor: pointer;
+  margin-left: 2%;
+}
