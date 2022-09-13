@@ -6,14 +6,13 @@
     <form class="loginForm" @submit.prevent="onLogin">
       <div class="loginForm__container">
         <input class="loginFormInput" type="email" placeholder="Email Address" name="email" v-model="email" required>
-        <input class="loginFormInput" type="password" placeholder="Password" name="password" v-model="password" required>
+        <input class="loginFormInput" type="text" placeholder="Username" name="username" v-model="username" required>
             
         <button type="submit" id="submitLogin">Login</button>
       </div>
 
       <div class="loginForm__container">
         <span class="signUp"><a href="/register">Don't have an account?</a></span>
-        <span class="psw"><a href="/register">Forgot password?</a></span>
       </div>
     </form>
     </div>
@@ -36,18 +35,18 @@
       return {
         backgroundUrl,
         email:'',
-        password:'',
+        username:'',
         loginSuccess: false,
       };
     },
     methods: {
       onLogin() {
         axios.post('https://jsonplaceholder.typicode.com/users',
-        {email: this.email, password: this.password },
+        {email: this.email, username: this.username },
         ).then(response => {
           this.loginSuccess = true;
           console.log(response);
-          console.log(this.email + ' ' + this.password);
+          console.log(this.email + ' ' + this.username);
 
           //if login form is validated, this directs the user to the landing page.
           if (this.loginSuccess == true){
