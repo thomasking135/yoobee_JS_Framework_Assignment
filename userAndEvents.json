@@ -12,16 +12,18 @@
       "edate": "2022-09-09-07T30:00",
       "address": "Hagley Park",
       "category": "picnic",
+      "description": "A lovely picnic",
       "privacy": "public",
       "participate": "true", 
       "participants": 25
       },
       {
-      "eventid": 1,
+      "eventid": 2,
       "sdate": "2022-09-09-07T00:00",
       "edate": "2022-09-09-07T30:00",
       "address": "Dance Diva",
       "category": "dance",
+      "description": "A lovely dance",
       "privacy": "public",
       "participate": "true",
       "participants": 15
@@ -62,6 +64,7 @@
     "edate": "2022-09-09-07T30:00",
     "address": "Boogie Nights",
     "category": "dance",
+    "description": "A lovely dance also",
     "privacy": "public",
     "participate": "true",
     "participants": 12
@@ -72,6 +75,7 @@
     "edate": "2022-09-09-07T30:00",
     "address": "Wilding Park",
     "category": "tennis",
+    "description": "A lovely tennis match",
     "privacy": "public",
     "participate": "true",
     "participants": 18
@@ -112,6 +116,7 @@
     "edate": "2022-09-09-07T30:00",
     "address": "Isaac Theatre",
     "category": "concert",
+    "description": "A smashing concert, delightfu!",
     "privacy": "public",
     "participate": "true",
     "participants": 8
@@ -122,6 +127,7 @@
     "edate": "2022-09-09-07T30:00",
     "address": "Shirley Tennis Club",
     "category": "tennis",
+    "description": "A lovely game of tennis",
     "privacy": "public",
     "participate": "true",
     "participants": 21
@@ -143,6 +149,7 @@
     "edate": "2022-09-09-07T30:00",
     "address": "Botanic Gardens",
     "category": "picnic",
+    "description": "A lovely picnic in the park",
     "privacy": "public",
     "participate": "true",
     "participants": 17
@@ -153,6 +160,7 @@
     "edate": "2022-09-09-07T30:00",
     "address": "Halswell Quary Park",
     "category": "picnic",
+    "description": "A lovely picnic at Halswell",
     "privacy": "public",
     "participate": "true",
     "participants": 13
