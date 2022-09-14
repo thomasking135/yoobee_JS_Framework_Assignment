@@ -40,21 +40,40 @@
       };
     },
     methods: {
-      onLogin() {
-        axios.post('https://jsonplaceholder.typicode.com/users',
-        {email: this.email, username: this.username },
-        ).then(response => {
-          this.loginSuccess = true;
-          console.log(response);
-          console.log(this.email + ' ' + this.username);
+      // onLogin() {
+      //   axios.post('https://jsonplaceholder.typicode.com/users',
+      //   {email: this.email, username: this.username },
+      //   ).then(response => {
+      //     this.loginSuccess = true;
+      //     console.log(response);
+      //     console.log(this.email + ' ' + this.username);
 
-          //if login form is validated, this directs the user to the landing page.
-          if (this.loginSuccess == true){
-            window.location.href = "/";
-          }
-        });
-      }
+      //     //if login form is validated, this directs the user to the landing page.
+      //     if (this.loginSuccess == true){
+      //       window.location.href = "/";
+      //     }
+      //   });
+      // }
 
     }
-  };
+  }
+
+  axios.get('https://json.extendsclass.com/bin/4e1287d46a64')
+  .then((res) => {handleResult(res)})
+  .catch((err) => console.log(err))
+
+  function handleResult(data) {
+    console.log(data);
+  }
+
+  //  axios.post('https://json.extendsclass.com/bin/4e1287d46a64', {
+  //     email: "john@smith.com",
+  //     username: "john"
+  //   })
+  //   .then((res) => {handleResult(res)})
+  //   .catch((err) => console.log(err))
+  //     function handleResult(data) {
+  //     console.log(data);
+  //   }
+
 </script>
