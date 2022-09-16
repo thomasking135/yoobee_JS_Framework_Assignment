@@ -46,21 +46,24 @@
 <script>
 import backgroundUrl from "../assets/images/LogInSignUpDesktop.jpg";
 import axios from "axios";
+import userData from '/data/db.json'
 const baseURL = "http://localhost:3000/users"
 export default {
+  name: 'login',
   data() {
     return {
       backgroundUrl,
       email: "",
       username: "",
+      users: userData,
+      url: 'http://localhost:3000/users',
       formIsValid: true,
     };
   },
   mounted() {
-    fetch(baseURL)
-    .then(res => res.json())
-    .then(data => this.users = data)
-    .catch(err => console.log(err.message))
+    axios.get(this.url).then((response) => {
+      this.users = response.data
+    })
   },
   methods: {
     submitForm() {
@@ -74,6 +77,15 @@ export default {
         return;
       }
 
+      for (let i=0; i<=this.users.length; i++) {
+        if (this.username == this.users[i].username) {
+          console.log('Username is correct')
+        }
+        if (this.email == this.users[i].email){
+        console.log('Email is correct')
+        } 
+      }
+
       //GET
       axios
         .get(baseURL)
@@ -85,8 +97,9 @@ export default {
       function handleResult(data) {
         console.log(data);
       }
-      
-    }
+
+      // window.location.href = "/";
+    },
   },
 };
 </script>

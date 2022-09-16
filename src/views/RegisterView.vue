@@ -35,7 +35,7 @@
       </form>
     </div>
     <div v-if="!formIsValid">Please enter a valid email and username</div>
-        <li v-for="user of users" :key="user.id">{{ user.username }}</li>
+     <div v-if="nameTaken">This username has been taken, please try another one.</div>
   </div>
 </template>
 
@@ -56,7 +56,8 @@ export default {
       username: '',
       formIsValid: true,
       users: [],
-      userAdded: false
+      userAdded: false,
+      nameTaken: false
     };
   },
    async created(){
@@ -78,19 +79,21 @@ export default {
         this.formIsValid = false;
         return;
       }
+      
     },
 
       async addUser() {
-      const res = await axios.post(baseURL, { email: this.email, username: this.username });
-      this.users = [...this.users, res.data];
-      this.username = '';
-      this.email = '';
 
-      this.userAdded = true;
-
-      if (this.userAdded == true){
+      if (this.username === 'justina' || this.username === 'keegan' || this.username === 'thom'){
+        this.nameTaken = true;
+      } else {
+        const res = await axios.post(baseURL, { email: this.email, username: this.username });
+        this.users = [...this.users, res.data];
+        this.username = '';
+        this.email = '';
+        this.userAdded == true
         window.location.href = "/login";
-      }
+      } 
     }
     
   },
