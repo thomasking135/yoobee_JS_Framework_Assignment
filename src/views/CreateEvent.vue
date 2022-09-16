@@ -1,10 +1,15 @@
 <!--Thomas to update functionality-->
+<!--Functionality to be tested by Justina Ho-->
 <template>
 
     <div class="create">
       
     <event-form @add:event="addEvent"/>
-
+    <event-table
+      :events="events"
+      @delete:event="deleteEvent"
+      @edit:event="editEvent"
+    />
     </div>
 
    
@@ -13,11 +18,13 @@
   
   <script>
   import EventForm from "@/components/EventForm.vue";
+  import EventTable from "@/components/EventTable.vue";
 
 export default {
   name: "app",
   components: {
-    EventForm
+    EventForm,
+    EventTable
   },
   data() {
     return {
@@ -35,6 +42,7 @@ export default {
         const response = await fetch(
           "https://jsonplaceholder.typicode.com/users"
           /*This is where our own API data will go*/
+          /*Use of the JSON https API created by Justina*/
         );
         const data = await response.json();
         this.events = data;
@@ -48,6 +56,7 @@ export default {
         const response = await fetch(
           "https://jsonplaceholder.typicode.com/users",
           /*This is where our own API data will go*/
+          /*Use of the JSON https API created by Justina*/
           {
             method: "POST",
             body: JSON.stringify(event),
@@ -66,6 +75,7 @@ export default {
         const response = await fetch(
           `https://jsonplaceholder.typicode.com/users/${id}`,
           /*This is where our own API data will go*/
+          /*Use of the JSON https API created by Justina*/
           {
             method: "PUT",
             body: JSON.stringify(updatedEvent),
@@ -85,9 +95,10 @@ export default {
       try {
         await fetch(`https://jsonplaceholder.typicode.com/users/${id}`, {
           /*This is where our own API data will go*/
+          /*Use of the JSON https API created by Justina*/
           method: "DELETE"
         });
-        this.employees = this.employees.filter(employee => employee.id !== id);
+        this.events = this.events.filter(event => event.id !== id);
       } catch (error) {
         console.error(error);
       }
