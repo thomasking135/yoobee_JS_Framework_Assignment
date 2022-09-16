@@ -124,5 +124,9 @@
   .empty-table {
     text-align: center;
   }
+
+  td{
+    text-align: justify;
+  }
   </style>
   

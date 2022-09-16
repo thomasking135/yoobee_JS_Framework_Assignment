@@ -5,7 +5,8 @@
     <div class="create">
       
     <event-form @add:event="addEvent"/>
-    <event-table
+    <br><br><br><br><br><br>
+    <event-table class="displayCenter"
       :events="events"
       @delete:event="deleteEvent"
       @edit:event="editEvent"
@@ -163,4 +164,11 @@ export default {
   background-color: red;
   color: white
 }
+
+.displayCenter {
+  display: inline-block;
+  margin-left: 25%;
+  margin-right: 25%; 
+}
+
   </style>
