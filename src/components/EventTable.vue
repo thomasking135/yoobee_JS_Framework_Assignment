@@ -87,7 +87,7 @@
       <!--Add a counter-->
       <div id="counter">
       <button @click="incrementValue" class="button-reset bg-green ba b--black ph4 pv3 mb2 white f4 dim">LIKE HAP</button>
-      <div class="f2 tc pa4 mv4 bg-light-gray ba b--light-silver">{{counter}}</div>
+      <div class="likeCountStyling">{{counter}}</div>
       </div>
 
     </div>
