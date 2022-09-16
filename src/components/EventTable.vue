@@ -83,6 +83,13 @@
           </tr>
         </tbody>
       </table>
+
+      <!--Add a counter-->
+      <div id="counter">
+      <button @click="incrementValue" class="button-reset bg-green ba b--black ph4 pv3 mb2 white f4 dim">LIKE HAP</button>
+      <div class="f2 tc pa4 mv4 bg-light-gray ba b--light-silver">{{counter}}</div>
+      </div>
+
     </div>
   </template>
   
@@ -95,12 +102,16 @@
     data() {
       return {
         editing: null,
+        counter: 0,
       }
     },
     methods: {
       editMode(id) {
         this.editing = id
       },
+      incrementValue() {
+      this.counter++;
+    },
   
       editEvent(event) {
         if (event.name === '' || event.StartDate === ''  || event.EndDate === ''
@@ -109,6 +120,7 @@
         this.editing = null
       }
     }
+    
   }
   </script>
   
