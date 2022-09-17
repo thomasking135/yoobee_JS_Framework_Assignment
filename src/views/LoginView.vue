@@ -26,6 +26,8 @@
           />
 
           <button type="submit" id="submitLogin">Login</button>
+          <br>
+          <router-link to="/"><button type="submit" id="submitLogin">Guest Login</button></router-link>
         </div>
 
         <div class="loginForm__container">
