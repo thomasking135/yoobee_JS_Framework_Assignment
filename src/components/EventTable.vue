@@ -1,11 +1,16 @@
 <template>
+  
     <div id="event-table">
+      <h2>Current Events</h2>
+      <br><br>
+      <p>Click on the events to express interest or to find an event contact.</p>
       <p
         v-if="events.length < 1"
         class="event-table"
       >
         No events
       </p>
+      
       <table class="event-table" v-else>
         <thead>
           <tr>
@@ -15,6 +20,7 @@
             <th>End Date</th>
             <th>Location</th>           
             <th>Description</th>
+            <th>Participate</th>
           </tr>
         </thead>
         <tbody>
@@ -78,6 +84,14 @@
             </td>
             <td v-else>{{event.Description}}</td>
 
+            <td>
+              <!-- Rounded switch -->
+            <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+            </label>
+            </td>
+
 
             <!--Further Processing Functions-->
             <td v-if="editing === event.id">
@@ -106,8 +120,12 @@
 
     </div>
   </template>
+
+  
+
   
   <script>
+
   export default {
     name: 'event-table',
     props: {
@@ -136,6 +154,7 @@
     }
     
   }
+
   </script>
   
   <style scoped>
@@ -175,5 +194,6 @@
     margin-left: auto;
     margin-right: auto;
   }
+
   </style>
   
