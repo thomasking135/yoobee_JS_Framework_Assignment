@@ -27,7 +27,7 @@ export default {
 
 <style>
   .upload{
-    padding-top: 100px;
+    padding-top: 20px;
     max-width: 25%;
   }
 

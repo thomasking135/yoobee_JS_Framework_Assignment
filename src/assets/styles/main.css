@@ -217,18 +217,19 @@ span.signUp a:hover a:visited {
   margin-left: auto;
   margin-right: auto;
   position: justify;
-  color: white;
+  /*color: white; (this would have been the colour of the text present for the upload image link for a Bit64 upload*/
   text-align: auto;
 }
+
 .centerMessaging {
   position: absolute;
   top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
+  color: black;
   font-size: 200%;
   font-weight: bold;
-  background-color: lightgray;
+  background-image: url("@/assets/images/createGathering.jpg");
   width: 100%;
   height: 13%;
   text-align: center;
