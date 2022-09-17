@@ -24,6 +24,7 @@
             v-model.trim="username"
             required
           />
+          
           <button type="submit" id="submitLogin">Login</button>
         </div>
 
@@ -32,16 +33,80 @@
             ><a href="/register">Don't have an account?</a></span
           >
         </div>
+        <br><br>
+        <div class="centering">
+        <div class="loginForm__container">
+          <span class="signUp"
+            ><div class="tooltip">Need answers?
+        <span class="tooltiptext"><router-link to="/about">Click here to learn more</router-link></span>
+        </div></span
+          >
+        </div>
+        </div>
       </form>
     </div>
     <div v-if="!formIsValid">Please enter a valid email and username</div>
     <div v-if="!userDetailsIsValid">Email and/or username is incorrect</div>
 
   </div>
+
+  
+
 </template>
+
+
 
 <style>
 @import "../assets/styles/main.css";
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted blue;
+  margin-left:auto;
+  margin-right: auto;
+  font-weight: bold;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  float: right;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.centering{
+  margin-left: auto;
+  margin-right: auto;
+  float: right;
+}
 </style>
 
 <script>
