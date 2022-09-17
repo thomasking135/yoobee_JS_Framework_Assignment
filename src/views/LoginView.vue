@@ -35,6 +35,7 @@
       </form>
     </div>
     <div v-if="!formIsValid">Please enter a valid email and username</div>
+    <div v-if="!userDetailsIsValid">Email and/or username is incorrect</div>
 
   </div>
 </template>
@@ -46,7 +47,6 @@
 <script>
 import backgroundUrl from "../assets/images/LogInSignUpDesktop.jpg";
 import axios from "axios";
-import userData from '/data/db.json'
 const baseURL = "http://localhost:3000/users"
 export default {
   name: 'login',
@@ -55,9 +55,10 @@ export default {
       backgroundUrl,
       email: "",
       username: "",
-      users: userData,
+      users: [],
       url: 'http://localhost:3000/users',
       formIsValid: true,
+      userDetailsIsValid: true
     };
   },
   mounted() {
@@ -78,12 +79,13 @@ export default {
       }
 
       for (let i=0; i<=this.users.length; i++) {
-        if (this.username == this.users[i].username) {
-          console.log('Username is correct')
+        if (this.username == this.users[i].username){
+          console.log('yay');
+          window.location.href = "/";
         }
-        if (this.email == this.users[i].email){
-        console.log('Email is correct')
-        } 
+        if (this.email == this.users[i].email) {
+          window.location.href = "/";
+        }
       }
 
       //GET
@@ -97,8 +99,6 @@ export default {
       function handleResult(data) {
         console.log(data);
       }
-
-      // window.location.href = "/";
     },
   },
 };
