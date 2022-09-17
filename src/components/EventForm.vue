@@ -19,6 +19,15 @@
           @focus="clearStatus"
           @keypress="clearStatus"
         >
+        <label>Event email</label>
+        <input
+          ref="first"
+          type="email"
+          :class="{ 'has-error': submitting && invalidEmail }"
+          v-model="event.Email"
+          @focus="clearStatus"
+          @keypress="clearStatus"
+        >
         <label>Start Date</label>
         <input
           type="datetime-local"
@@ -69,6 +78,7 @@
         success: false,
         event: {
           name: "",
+          Email: "",
           StartDate: "",
           EndDate: "",
           Location: "",
@@ -80,6 +90,10 @@
     computed: {
       invalidName() {
         return this.event.name === "";
+      },
+
+      invalidEmail() {
+        return this.event.Email === "";
       },
   
       invalidStartDate() {
@@ -103,7 +117,7 @@
         this.clearStatus();
         this.submitting = true;
   
-        if (this.invalidName || this.invalidStartDate || this.invalidEndDate || this.invalidLocation || this.invalidDescription) {
+        if (this.invalidName || this.invalidEmail || this.invalidStartDate || this.invalidEndDate || this.invalidLocation || this.invalidDescription) {
           this.error = true;
           return;
         }
