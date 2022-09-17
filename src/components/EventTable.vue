@@ -37,6 +37,8 @@
                 type="email"
                 v-model="event.email"
               >
+              <a v-bind:href="'mailto:' + event.email">{{ event.email }}</a>
+              
             </td>
             <td v-else>{{event.email}}</td>
 
@@ -114,7 +116,7 @@
     data() {
       return {
         editing: null,
-        counter: 0,
+        counter: 65789,
       }
     },
     methods: {
