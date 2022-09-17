@@ -6,6 +6,14 @@
       :isUploading="uploading"
       @remove-image="removeImage"
     />
+    
+     <br><br>
+<p>Username: {{ message }}</p>
+<input v-model="message" placeholder="Username" />
+<br><br>
+<span>Bio:</span>
+<p style="white-space: pre-line;">{{ message }}</p>
+<textarea v-model="message" placeholder="I love to create event"></textarea>
  
 </template>
 
