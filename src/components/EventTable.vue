@@ -10,9 +10,10 @@
         <thead>
           <tr>
             <th>Name</th>
+            <th>Email</th>
             <th>Start Date</th>
             <th>End Date</th>
-            <th>Location</th>
+            <th>Location</th>           
             <th>Description</th>
           </tr>
         </thead>
@@ -29,6 +30,15 @@
               >
             </td>
             <td v-else>{{event.name}}</td>
+
+            <!--Edit Event email-->
+            <td v-if="editing === event.id">
+              <input
+                type="email"
+                v-model="event.email"
+              >
+            </td>
+            <td v-else>{{event.email}}</td>
 
             <!--Edit Event StartDate-->
             <td v-if="editing === event.id">
