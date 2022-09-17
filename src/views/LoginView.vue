@@ -61,9 +61,10 @@
 .tooltip {
   position: relative;
   display: inline-block;
-  border-bottom: 1px dotted black;
+  border-bottom: 1px dotted blue;
   margin-left:auto;
   margin-right: auto;
+  font-weight: bold;
 }
 
 .tooltip .tooltiptext {
@@ -81,6 +82,7 @@
   margin-left: -60px;
   opacity: 0;
   transition: opacity 0.3s;
+  float: right;
 }
 
 .tooltip .tooltiptext::after {
@@ -100,8 +102,9 @@
 }
 
 .centering{
-  margin-left: 40%;
-  margin-right: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  float: right;
 }
 </style>
 
