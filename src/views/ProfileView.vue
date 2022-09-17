@@ -45,12 +45,18 @@
   </tr>
   
 </table>
+
+<FooterSection />
  
 </template>
 
 <script>
+
+
 import Axios from "axios";
 import ProfileForm from "@/components/ProfileForm.vue";
+import FooterSection from "@/components/FooterSection.vue";
+
 
 const cloudName = "dqyhsobqa";
 const unsignedUploadPreset = "ewvntos9";
@@ -59,8 +65,9 @@ const cloudinaryLink = `https://api.cloudinary.com/v1_1/${cloudName}/upload`;
 export default {
   name: "App",
   components: {
-    ProfileForm
-  },
+    ProfileForm,
+    FooterSection
+},
   data() {
     return {
       src: "",
