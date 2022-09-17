@@ -6,7 +6,7 @@
       >
         No events
       </p>
-      <table v-else>
+      <table class="event-table" v-else>
         <thead>
           <tr>
             <th>Name</th>
@@ -83,10 +83,12 @@
           </tr>
         </tbody>
       </table>
-
+      <br><br>
       <!--Add a counter-->
       <div id="counter">
-      <button @click="incrementValue" class="button-reset bg-green ba b--black ph4 pv3 mb2 white f4 dim">LIKE HAP</button>
+        
+      <p class="bold">Like Hap?</p>
+      <button id="like" @click="incrementValue" class="button-reset bg-green ba b--black ph4 pv3 mb2 white f4 dim"></button>
       <div class="likeCountStyling">{{counter}}</div>
       </div>
 
@@ -125,10 +127,21 @@
   </script>
   
   <style scoped>
-  button {
+  #like {
     margin: 0 0.5rem 0 0;
+    background-image: url("@/assets/icons/thumb.png");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  /* put the height and width of your image here */
+    height: 90px;
+    width: 90px;
+    border: none;
   }
-  
+
+  #like:hover {
+    opacity: 90%;
+  }
+
   input {
     margin: 0;
   }
@@ -139,6 +152,16 @@
 
   td{
     text-align: justify;
+  }
+
+  .bold{
+    font-weight: bold;
+  }
+
+  .event-table{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
   }
   </style>
   
