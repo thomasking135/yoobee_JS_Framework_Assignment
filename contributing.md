@@ -48,7 +48,7 @@ What are the project requirements/dependencies? Where are they listed? A require
 
 Proceed to describe how to install / setup one's local environment / get started with the project.
 
-The project requires AXIOS to serve as an API. The NPM is needed along with Mongo DB to access data. 
+The project requires AXIOS to serve as an API. The NPM is needed along with Axios to access data. 
 
 
 ## Usage
