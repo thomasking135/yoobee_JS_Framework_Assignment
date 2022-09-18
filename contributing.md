@@ -39,7 +39,7 @@ List the ready features here:
 
 
 ## Screenshots
-![Example screenshot](./assets/images/HapApplication.PNG)
+<img src="HapApplication.PNG">
 <!-- If you have screenshots you'd like to share, include them here. -->
 
 
