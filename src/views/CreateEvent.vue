@@ -1,16 +1,75 @@
 <!--Thomas to update functionality-->
-<!--Functionality to be tested by Justina Ho-->
 <template>
 
     <div class="create">
       
-    <event-form @add:event="addEvent"/>
-    <br><br><br><br><br><br>
-    <event-table class="displayCenter"
-      :events="events"
-      @delete:event="deleteEvent"
-      @edit:event="editEvent"
-    />
+    <h1 class="createEventHeader">Create Event</h1> 
+    
+      <div class="centerMessaging">
+        <img class="float" src="../assets/icons/uploadImage.png" alt="upload" >
+        <br><br><p class="imageUpload">Click to upload image</p>
+      </div>
+
+      <div id="employee-form">
+    <form @submit.prevent="handleSubmit">
+      <label>Employee name</label>
+      <input
+        ref="first"
+        type="text"
+        :class="{ 'has-error': submitting && invalidName }"
+        v-model="employee.name"
+        @focus="clearStatus"
+        @keypress="clearStatus"
+      >
+      <label>Employee Email</label>
+      <input
+        type="text"
+        :class="{ 'has-error': submitting && invalidEmail }"
+        v-model="employee.email"
+        @focus="clearStatus"
+      >
+      <p v-if="error && submitting" class="error-message">❗Please fill out all required fields</p>
+      <p v-if="success" class="success-message">✅ Employee successfully added</p>
+      <button>Add Employee</button>
+    </form>
+  </div>
+      <!--<form >
+        
+  <div class="formBorder">
+  <label  for="date">Starts on:</label><br>
+  <input type="date" id="sdate" name="sdate" value="Start Date"><br>
+  <label for="edate">Ends on:</label><br>
+  <input type="date" id="edate" name="edate" value="End Date">
+  <br>
+  <label for="address">Address:</label><br>
+  <input type="text" id="address" name="address" value="Address">
+  <br>
+  <label for="category">Category:</label><br>
+  <select name="category" id="category">
+  <option value="picnic">Picnic</option>
+  <option value="dance">Dance</option>
+  <option value="tennis">Tennis</option>
+  <option value="concert">Concert</option>
+</select>
+  <br>
+  <label for="privacy">Privacy:</label><br>
+  <select name="privacy" id="privacy">
+  <option value="public">Public</option>
+  <option value="private">Private</option>
+  
+</select>
+  </div>
+  <br><br>
+  <div class="formBuilder">
+    <textarea id="description" rows="4" cols="50" placeholder="Describe your event here..."></textarea>
+  
+    
+  
+    <br><br><button class="postit">Post Event</button>
+    <button class="cancelit">Cancel</button>
+  </div>  
+</form>--> 
+
     </div>
 
    
@@ -18,95 +77,55 @@
   </template>
   
   <script>
-  import EventForm from "@/components/EventForm.vue";
-  import EventTable from "@/components/EventTable.vue";
-
-export default {
-  name: "app",
-  components: {
-    EventForm,
-    EventTable
-  },
-  data() {
-    return {
-      events: []
+    export default {
+      name: "employee-form",
+      data() {
+        return {
+          error: false,
+          submitting: false,
+          success: false,
+          employee: {
+            name: "",
+            email: ""
+          }
+        };
+      },
+      computed: {
+        invalidName() {
+          return this.employee.name === "";
+        },
+    
+        invalidEmail() {
+          return this.employee.email === "";
+        }
+      },
+      methods: {
+        handleSubmit() {
+          this.clearStatus();
+          this.submitting = true;
+    
+          if (this.invalidName || this.invalidEmail) {
+            this.error = true;
+            return;
+          }
+    
+          this.$emit("add:employee", this.employee);
+          this.$refs.first.focus();
+          this.employee = {
+            name: "",
+            email: ""
+          };
+          this.clearStatus();
+          this.submitting = false;
+        },
+    
+        clearStatus() {
+          this.success = false;
+          this.error = false;
+        }
+      }
     };
-  },
-
-  mounted() {
-    this.getEvents();
-  },
-
-  methods: {
-    async getEvents() {
-      try {
-        const response = await fetch(
-          "https://jsonplaceholder.typicode.com/users"
-          /*This is where our own API data will go*/
-          /*Use of the JSON https API created by Justina*/
-        );
-        const data = await response.json();
-        this.events = data;
-      } catch (error) {
-        console.error(error);
-      }
-    },
-
-    async addEvent(event) {
-      try {
-        const response = await fetch(
-          "https://jsonplaceholder.typicode.com/users",
-          /*This is where our own API data will go*/
-          /*Use of the JSON https API created by Justina*/
-          {
-            method: "POST",
-            body: JSON.stringify(event),
-            headers: { "Content-type": "application/json; charset=UTF-8" }
-          }
-        );
-        const data = await response.json();
-        this.events = [...this.events, data];
-      } catch (error) {
-        console.error(error);
-      }
-    },
-
-    async editEvent(id, updatedEvent) {
-      try {
-        const response = await fetch(
-          `https://jsonplaceholder.typicode.com/users/${id}`,
-          /*This is where our own API data will go*/
-          /*Use of the JSON https API created by Justina*/
-          {
-            method: "PUT",
-            body: JSON.stringify(updatedEvent),
-            headers: { "Content-type": "application/json; charset=UTF-8" }
-          }
-        );
-        const data = await response.json();
-        this.events = this.events.map(event =>
-          event.id === id ? data : event
-        );
-      } catch (error) {
-        console.error(error);
-      }
-    },
-
-    async deleteEvent(id) {
-      try {
-        await fetch(`https://jsonplaceholder.typicode.com/users/${id}`, {
-          /*This is where our own API data will go*/
-          /*Use of the JSON https API created by Justina*/
-          method: "DELETE"
-        });
-        this.events = this.events.filter(event => event.id !== id);
-      } catch (error) {
-        console.error(error);
-      }
-    }
-  }
-}; 
-  </script>
+    </script>
   
   <style>
   @import '../assets/styles/main.css';
@@ -164,11 +183,4 @@ export default {
   background-color: red;
   color: white
 }
-
-.displayCenter {
-  display: inline-block;
-  margin-left: 25%;
-  margin-right: 25%; 
-}
-
   </style>

@@ -1,116 +1,71 @@
 <template>
-  <div
-    class="background-image"
-    :style="{ backgroundImage: 'url(' + backgroundUrl + ')' }"
-  >
+  <div class="background-image" :style="{ backgroundImage: 'url(' + backgroundUrl + ')' }">
     <div class="register">
-      <h1>Sign Up</h1>
-      <form class="registerForm" @submit.prevent="onRegister" novalidate>
+      <h1>Sign Up</h1>  
+      <form class="registerForm" @submit.prevent="onRegister">
         <div class="registerForm__container">
-          <input
-            class="registerFormInput"
-            type="email"
-            placeholder="Email Address"
-            name="email"
-            v-model="email"
-            required
-          />
-          <input
-            class="registerFormInput"
-            type="username"
-            placeholder="Username"
-            name="username"
-            v-model="username" @keyup.enter="addUser"
-            required
-          />
-
+          <input class="registerFormInput" type="email" placeholder="Email Address" name="email" v-model="email" required>
+          <input class="registerFormInput" type="password" placeholder="Password" name="psw" v-model="password" required>
+          <input class="registerFormInput" type="password" placeholder="Confirm Password" name="psw" v-model="confirmedPassword" required>
+              
           <button type="submit" id="submitSignUp">Sign Up</button>
         </div>
 
         <div class="registerForm__container">
-          <span class="account"
-            ><a href="/login">Already have an account?</a></span
-          >
+           <span class="account"><a href="/login">Already have an account?</a></span>
         </div>
+        
       </form>
     </div>
-    <div v-if="!formIsValid">Please enter a valid email and username</div>
-     <div v-if="nameTaken">This username and/or email has been taken, please try another one.</div>
+    <div class="alert" v-if="registerSuccess">Logged in successfully</div>
+    <div class="alert" v-if="registerFail">Error!</div>
   </div>
 </template>
 
+
+
 <style>
-@import "../assets/styles/main.css";
+@import '../assets/styles/main.css';
 </style>
 
 <script>
 import backgroundUrl from "../assets/images/LogInSignUpDesktop.jpg";
-import axios from "axios";
-const baseURL = "http://localhost:3000/users"
+import axios from 'axios';
 
 export default {
   data() {
     return {
       backgroundUrl,
-      email: '',
-      username: '',
-      formIsValid: true,
-      users: [],
-      userAdded: false,
-      nameTaken: false
+      email:'',
+      password:'',
+      confirmedPassword:'',
+      registerSuccess: false,
+      registerFail: false,
     };
   },
-   async created(){
-    try {
-      const res = await axios.get(baseURL);
-      this.users = res.data;
-    } catch(e){
-      console.error(e);
-    }
-  },
   methods: {
-    onRegister() {
-      this.formIsValid = true;
-      if (
-        this.email === "" ||
-        !this.email.includes("@") ||
-        this.username.length < 1
-      ) {
-        this.formIsValid = false;
-        return;
-      }
-      
-    },
+      onRegister() {
+        axios.post('https://jsonplaceholder.typicode.com/users',
+        {email: this.email, password: this.password, confirmedPassword: this.confirmedPassword },
+        ).then(response => {
+          
+          //if both passwords are the same and register form is validated, this directs the user to the login page.
+          if (this.password == this.confirmedPassword){
+            this.registerSuccess = true;
+            this.registerFail = false;
+            if (this.registerSuccess == true){
+              window.location.href = "/login";
+            }
+          } else {
+            this.registerFail = true;
+          }
 
-      async addUser() {
-
-      for (let i=0; i<this.users.length; i++){
-        if (this.username === 'justina' || this.email === 'justina@ho.com'){
-          this.nameTaken = true;
-          this.userAdded == false;
-          break;
-        }
-        if (this.username === 'keegan' || this.email === 'keegan@dufty.com'){
-          this.nameTaken = true;
-          this.userAdded == false;
-          break;
-        }
-        if (this.username === 'thom' || this.email === 'thom@king.com'){
-          this.nameTaken = true;
-          break;
-        } else {
-          const res = await axios.post(baseURL, { email: this.email, username: this.username });
-          this.users = [...this.users, res.data];
-          this.username = '';
-          this.email = '';
-          this.userAdded == true
-          window.location.href = "/login";
-          break;
-        } 
-      }
-      
-    }
+          console.log(response);
+          console.log(this.email + ' ' + this.password + ' ' + this.confirmedPassword);
     
-  },
+        });
+      }
+
+    }
 };
 </script>
