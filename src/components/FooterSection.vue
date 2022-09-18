@@ -1,6 +1,6 @@
 <template> 
 <br><br>
-    <a href="https://thomasking135.github.io/yoobee.github.io/"><img class="gitHub" src="../assets/icons/githubIcon.png"></a>
+    <a href="https://hapappjsondata.w3spaces.com/"><img class="gitHub" src="../assets/icons/githubIcon.png"></a>
     <h3>Ⓒ2022</h3>
 </template>
 
