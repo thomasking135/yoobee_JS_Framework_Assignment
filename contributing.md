@@ -28,14 +28,13 @@
 ## Technologies Used
 - Vue JS
 - Axios
-- Mongo DB
-
+- Vue CLI
 
 ## Features
 List the ready features here:
 - Login/Logoff
 - Create post (share text)
-- CRUD reply to posts
+- Profile page
 - About information
 
 
