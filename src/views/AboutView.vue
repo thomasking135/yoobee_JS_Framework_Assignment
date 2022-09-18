@@ -52,7 +52,7 @@
     <h2 class="ContactHeader">Contact</h2>
     <p class="contactPara">
       For any futher information or inquires, get in-touch with our team at
-      admin@hap.com
+      <a href="mailto:admin@hap.com">admin@hap.com</a>
     </p>
   </div>
 </template>
