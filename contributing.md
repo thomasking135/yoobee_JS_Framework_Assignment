@@ -28,19 +28,18 @@
 ## Technologies Used
 - Vue JS
 - Axios
-- Mongo DB
-
+- Vue CLI
 
 ## Features
 List the ready features here:
 - Login/Logoff
 - Create post (share text)
-- CRUD reply to posts
+- Profile page
 - About information
 
 
 ## Screenshots
-![Example screenshot](./img/screenshot.png)
+<img src="HapApplication.PNG">
 <!-- If you have screenshots you'd like to share, include them here. -->
 
 
@@ -49,7 +48,7 @@ What are the project requirements/dependencies? Where are they listed? A require
 
 Proceed to describe how to install / setup one's local environment / get started with the project.
 
-The project requires AXIOS to serve as an API. The NPM is needed along with Mongo DB to access data. 
+The project requires AXIOS to serve as an API. The NPM is needed along with Axios to access data. 
 
 
 ## Usage
