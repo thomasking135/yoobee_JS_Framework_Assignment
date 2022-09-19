@@ -62,7 +62,7 @@ export default {
   },
    async created(){
     try {
-      const res = await axios.get(baseURL);
+      const res = await axios.get('http://localhost:3000/users');
       this.users = res.data;
     } catch(e){
       console.error(e);

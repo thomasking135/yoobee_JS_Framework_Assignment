@@ -1,5 +1,6 @@
 <template>
 <!--Nav router links-->
+<link rel="stylesheet" href="https://use.typekit.net/hic2dec.css">
   
   <router-link to="/"><img id="logo" alt="Vue logo" src="./assets/logo/logo-full.png" style="width: 300px; margin: 40px; float: left;"></router-link>
   <nav class="icon-nav">  

@@ -1,35 +1,35 @@
 <!--Thomas to update functionality-->
 <!--Functionality to be tested by Justina Ho-->
 <template>
-
-    <div class="create">
-      
-    <event-form @add:event="addEvent"/>
-    <br><br><br><br><br><br>
-    <event-table class="displayCenter"
+  <div class="create">
+    <event-form @add:event="addEvent" />
+    <br /><br /><br /><br /><br /><br />
+    <event-table
+      class="displayCenter"
       :events="events"
       @delete:event="deleteEvent"
       @edit:event="editEvent"
     />
-    </div>
+  </div>
+</template>
 
-   
-  
-  </template>
-  
-  <script>
-  import EventForm from "@/components/EventForm.vue";
-  import EventTable from "@/components/EventTable.vue";
+<style>
+@import "../assets/styles/main.css";
+</style>
+
+<script>
+import EventForm from "@/components/EventForm.vue";
+import EventTable from "@/components/EventTable.vue";
 
 export default {
   name: "app",
   components: {
     EventForm,
-    EventTable
+    EventTable,
   },
   data() {
     return {
-      events: []
+      events: [],
     };
   },
 
@@ -61,7 +61,7 @@ export default {
           {
             method: "POST",
             body: JSON.stringify(event),
-            headers: { "Content-type": "application/json; charset=UTF-8" }
+            headers: { "Content-type": "application/json; charset=UTF-8" },
           }
         );
         const data = await response.json();
@@ -80,11 +80,11 @@ export default {
           {
             method: "PUT",
             body: JSON.stringify(updatedEvent),
-            headers: { "Content-type": "application/json; charset=UTF-8" }
+            headers: { "Content-type": "application/json; charset=UTF-8" },
           }
         );
         const data = await response.json();
-        this.events = this.events.map(event =>
+        this.events = this.events.map((event) =>
           event.id === id ? data : event
         );
       } catch (error) {
@@ -97,78 +97,13 @@ export default {
         await fetch(`https://jsonplaceholder.typicode.com/users/${id}`, {
           /*This is where our own API data will go*/
           /*Use of the JSON https API created by Justina*/
-          method: "DELETE"
+          method: "DELETE",
         });
-        this.events = this.events.filter(event => event.id !== id);
+        this.events = this.events.filter((event) => event.id !== id);
       } catch (error) {
         console.error(error);
       }
-    }
-  }
-}; 
-  </script>
-  
-  <style>
-  @import '../assets/styles/main.css';
-  .formBorder{
-  border: 2px solid blue; 
-  margin-top: 10%;
-  display: inline-block;
-  padding-left: 15%;
-  padding-right: 15%;
-  padding-top: 1%;
-  padding-bottom: 1%; 
-}
-
-
-
-#address{
-  width: 353px;
-}
-
-#category, #privacy {
-  width: 360px;
-}
-
-#description{
-  border: 2px solid blue; 
-  display: inline-block;
-  padding-left: 14%;
-  padding-right: 14.6%;
-  padding-top: 1%;
-  padding-bottom: 1%; 
-}
-
-.postit {
-  width: 100px;
-  height: 30px;
-  float: right;
-  margin-left: 10px;
-}
-
-.postit:hover {
-  transform: scale(1.1);
-  background-color: #06bdb6;
-}
-
-.cancelit {
-  width: 100px;
-  height: 30px;
-  float: right;
-  color: red;
-  border: 2px solid red;
-}
-
-.cancelit:hover {
-  transform: scale(1.1);
-  background-color: red;
-  color: white
-}
-
-.displayCenter {
-  display: inline-block;
-  margin-left: 25%;
-  margin-right: 25%; 
-}
-
-  </style>
+    },
+  },
+};
+</script>
