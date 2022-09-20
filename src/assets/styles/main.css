@@ -331,6 +331,7 @@ table {
   padding-top: 10px;
   width: 80%;
   left: 50%;
+  border: none;
 } 
 
 td {
@@ -339,15 +340,11 @@ text-align: center;
 padding: 8px;
 }
 
-
- th {
+th {
   padding: 5px 10px 5px 10px;
   border: none;
 }
 
-/* .createEventBtn {
-  margin-top: 20px;
-} */
 
 .tableField {
   display: flex;
