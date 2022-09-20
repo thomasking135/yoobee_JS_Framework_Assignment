@@ -90,9 +90,21 @@ h1 {
 #logo {
   height: 100px;
   margin-left: 15px;
-  display: flex;
+  /* display: flex; */
 }
 
+.mobileLogo {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .mobileLogo {
+    display: flex;
+  }
+  .desktopLogo {
+    display: none;
+  }
+}
 
 .icon-nav li {
   list-style: none;
@@ -199,7 +211,7 @@ h1 {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  margin-top: -100px;
+  margin-top: -105px;
   z-index: 1;
 }
 
