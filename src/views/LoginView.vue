@@ -4,7 +4,7 @@
     :style="{ backgroundImage: 'url(' + backgroundUrl + ')' }"
   >
     <div class="login">
-      <h1>Login</h1>
+      <h1 class="title--login">Login</h1>
 
       <form class="loginForm" @submit.prevent="submitForm" novalidate>
         <div class="loginForm__container">
@@ -26,8 +26,7 @@
           />
 
           <button type="submit" id="submitLogin">Login</button>
-          <br>
-          <router-link to="/"><button type="submit" id="submitLogin">Guest Login</button></router-link>
+          <!-- <router-link to="/"><button type="submit" id="submitLogin">Guest Login</button></router-link> -->
         </div>
 
         <div class="loginForm__container">

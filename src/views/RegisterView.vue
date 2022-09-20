@@ -4,7 +4,7 @@
     :style="{ backgroundImage: 'url(' + backgroundUrl + ')' }"
   >
     <div class="register">
-      <h1>Sign Up</h1>
+      <h1 class="title--login">Sign Up</h1>
       <form class="registerForm" @submit.prevent="onRegister" novalidate>
         <div class="registerForm__container">
           <input
@@ -62,7 +62,7 @@ export default {
   },
    async created(){
     try {
-      const res = await axios.get(baseURL);
+      const res = await axios.get('http://localhost:3000/users');
       this.users = res.data;
     } catch(e){
       console.error(e);

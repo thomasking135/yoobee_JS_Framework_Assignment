@@ -1,30 +1,113 @@
 /*Significant Programme code requirements*/
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: lato, sans-serif;
+  font-weight: 400;
+  font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: var(--grey);
 }
 
-nav {
-  padding-top: 70px;
-  width: 200px;
-  float: right;
+:root {
+  --green: #08bdb6;
+  --blue: #48b1bf;
+  --white: #ffffff;
+  --grey: #303030;
 }
 
-nav a {
-  font-weight: bold;
-  color: #08bdb6;
+.button--primary {
+  background-color: var(--green);
+  border: none;
+  padding: 10px;
 }
 
-nav a.router-link-exact-active {
-  color: #08bdb6;
+.button--primary:hover {
+  background-color: var(--blue);
+  border: none;
+  padding: 10px;
 }
 
-.landingImg {
-  width: 2%;
-  float: left;
+.button--secondary {
+  border: solid 1px var(--green);
+  background-color: transparent;
+  padding: 10px;
+}
+
+.button--secondary:hover {
+  border: solid 1px var(--blue);
+  background-color: transparent;
+  padding: 10px;
+}
+
+.crudIcon {
+  width: 20px;
+  background-color: var(--white);
+  border: none;
+}
+
+.title {
+  font-family: poppins, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--grey);
+  border-top: 1px solid var(--green);
+  padding-top: 20px;
+}
+
+.title--secondary {
+  font-family: poppins, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--grey);
+  margin-top: 50px;
+  font-size: 28px;
+}
+
+.title--login {
+  font-family: poppins, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--white);
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  text-align: center;
+}
+
+.icon-nav {
+  display: flex;
+  width: 100vw;
+  background: var(--white);
+  z-index: 100;
+  position: relative;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+#logo {
+  height: 100px;
+  margin-left: 15px;
+  display: flex;
+}
+
+
+.icon-nav li {
+  list-style: none;
+  margin-top: 30px;
+}
+
+
+.icon-nav li:first-child {
+  margin-right: auto;
+  margin-top: 0px;
+}
+
+.icon-nav li:last-child {
+  margin-right: auto;
+  margin-right: 60px;
 }
 
 /*CSS for the Home Landing Page*/
@@ -37,12 +120,16 @@ nav a.router-link-exact-active {
 
 .centerMessage {
   position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: palegoldenrod;
-  font-size: 300%;
+  color: var(--white);
+  font-size: 48px;
+  font-family: poppins, sans-serif;
+  font-weight: 400;
+  font-style: normal;
   font-weight: bold;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  margin-top: -300px;
 }
 
 .createEvent {
@@ -69,20 +156,30 @@ nav a.router-link-exact-active {
   padding-top: 200px;
 }
 
+.landingImg {
+  object-fit: cover;
+  width: 100%;
+  height: 500px;
+  opacity: 0.4;
+}
+
+.overlayLandingImg {
+  width: 100%;
+  height: 500px;
+  background: black;
+  overflow: hidden;
+  background: var(--green); 
+  background: -webkit-linear-gradient(var(--green), var(--grey)),
+    url("../images/LandingPage.jpg");
+  background: linear-gradient(var(--green), var(--grey)),
+    url("../images/LandingPage.jpg"); /* The least supported option. */
+}
+
 /*CSS for the Login Page*/
 
 * {
   margin: 0;
   padding: 0;
-}
-
-h1 {
-  text-align: center;
-  font-size: 40px;
-  font-family: lato, sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  color: #ffffff;
 }
 
 .login {
@@ -99,8 +196,11 @@ h1 {
 
 .background-image {
   background-size: cover;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
+  overflow: hidden;
+  margin-top: -100px;
+  z-index: 1;
 }
 
 .loginForm {
@@ -214,10 +314,99 @@ span.learnMore a:hover a:visited {
 }
 
 /*CSS for Create Event Page*/
-.createEventHeader {
-  text-align: center;
-  color: black;
-  padding: 10%;
+
+table {
+  padding-top: 10px;
+  width: 80%;
+  left: 50%;
+} 
+
+td {
+border: none;
+text-align: center;
+padding: 8px;
+}
+
+
+ th {
+  padding: 5px 10px 5px 10px;
+  border: none;
+}
+
+.createEventBtn {
+  margin-top: 20px;
+}
+
+.tableField {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.tableField label {
+  width: 150px;
+  justify-items: flex-start;
+  display: flex;
+}
+
+.tableField input {
+  justify-items: flex-end;
+  width: 250px;
+}
+
+.formBorder {
+  border: 2px solid var(--green);
+  display: inline-block;
+  padding: 20px 300px 20px 300px;
+}
+
+#address {
+  width: 353px;
+}
+
+#category,
+#privacy {
+  width: 360px;
+}
+
+#description {
+  border: 2px solid var(--blue);
+  display: inline-block;
+  padding-left: 14%;
+  padding-right: 14.6%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+.postit {
+  width: 100px;
+  height: 30px;
+  float: right;
+  margin-left: 10px;
+}
+
+.postit:hover {
+  transform: scale(1.1);
+  background-color: #06bdb6;
+}
+
+.cancelit {
+  width: 100px;
+  height: 30px;
+  float: right;
+  color: red;
+  border: 2px solid red;
+}
+
+.cancelit:hover {
+  transform: scale(1.1);
+  background-color: red;
+  color: white;
+}
+
+.displayCenter {
+  display: inline-block;
+  margin-left: 25%;
+  margin-right: 25%;
 }
 
 .float {
@@ -228,9 +417,8 @@ span.learnMore a:hover a:visited {
 .create {
   margin-left: auto;
   margin-right: auto;
-  color: black;
+  color: var(--grey);
   text-align: center;
-  padding: 2%;
 }
 
 .imageUpload {
@@ -249,7 +437,6 @@ span.learnMore a:hover a:visited {
   color: black;
   font-size: 200%;
   font-weight: bold;
-  background-image: url("@/assets/images/createGathering.jpg");
   width: 100%;
   height: 13%;
   text-align: center;
@@ -420,9 +607,7 @@ span.learnMore a:hover a:visited {
   padding: 10px;
   width: 50%;
 }
-h1 {
-  text-align: center;
-}
+
 .profile {
   padding-top: 200px;
   text-align: justify;
@@ -487,26 +672,11 @@ h1 {
   padding: 0;
 }
 
-h1 {
-  text-align: center;
-  font-size: 40px;
-  font-family: lato, sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  color: #ffffff;
-}
-
 .register {
   padding-top: 300px;
   text-align: left;
   margin-left: 25%;
   margin-right: 25%;
-}
-
-.background-image {
-  background-size: cover;
-  width: 100%;
-  height: 100vh;
 }
 
 .registerForm {

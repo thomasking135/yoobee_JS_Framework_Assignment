@@ -1,10 +1,9 @@
 <template>
-  <h1 class="black">Profile</h1>
-  
+  <h1 class="title">Profile</h1>
   <label for="image-upload">
-    
     <img class="upload" :src="src" />
-  </label><p>Select an image above</p>
+  </label>
+  <p>Select an image above</p>
   <input v-show="false" type="file" id="image-upload" @change="handleUpload" />
 </template>
 
@@ -26,14 +25,8 @@ export default {
 </script>
 
 <style>
-  .upload{
-    padding-top: 20px;
-    max-width: 25%;
-  }
-
-  .black{
-    padding-top: 200px;
-    color: black;
-  }
-    
+.upload {
+  padding-top: 20px;
+  max-width: 25%;
+}
 </style>

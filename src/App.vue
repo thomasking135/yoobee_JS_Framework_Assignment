@@ -1,59 +1,95 @@
 <template>
-<!--Nav router links-->
-  
-  <router-link to="/"><img id="logo" alt="Vue logo" src="./assets/logo/logo-full.png" style="width: 300px; margin: 40px; float: left;"></router-link>
-  <nav class="icon-nav">  
-    <router-link to="/">
-      <div class="home-icon" id="homes" alt="Home">
-        <img src="./assets/icons/home.png" alt="home hover" style="width: 45px;">
-          <img src="./assets/icons/homeHover.png" class="img-top" alt="home" style="width: 45px;">
-      </div>
-    </router-link>
+  <!--Nav router links-->
+  <link rel="stylesheet" href="https://use.typekit.net/hic2dec.css" />
 
-    <router-link to="/about">
-      <div class="info-icon" id="info" alt="About">
-        <img src="./assets/icons/info.png" alt="home hover" style="width: 45px;">
-          <img src="./assets/icons/infoHover.png" class="img-top" alt="home" style="width: 45px;">
-      </div>
-    </router-link> 
+  <nav class="icon-nav">
+    <li>
+      <router-link to="/"
+        ><img id="logo" alt="logo" src="./assets/logo/logo-full.png"
+      /></router-link>
+    </li>
+    <li>
+      <router-link to="/">
+        <div class="home-icon" id="homes" alt="Home">
+          <img
+            src="./assets/icons/home.png"
+            alt="home hover"
+            style="width: 45px"
+          />
+          <img
+            src="./assets/icons/homeHover.png"
+            class="img-top"
+            alt="home"
+            style="width: 45px"
+          />
+        </div>
+      </router-link>
+    </li>
+    <li>
+      <router-link to="/about">
+        <div class="info-icon" id="info" alt="About">
+          <img
+            src="./assets/icons/info.png"
+            alt="home hover"
+            style="width: 45px"
+          />
+          <img
+            src="./assets/icons/infoHover.png"
+            class="img-top"
+            alt="home"
+            style="width: 45px"
+          />
+        </div>
+      </router-link>
+    </li>
+    <li>
+      <router-link to="/create">
+        <div class="add-icon" id="plus" alt="Create Event">
+          <img
+            src="./assets/icons/add.png"
+            alt="create hover"
+            style="width: 45px"
+          />
+          <img
+            src="./assets/icons/addHover.png"
+            class="img-top"
+            alt="create"
+            style="width: 45px"
+          />
+        </div>
+      </router-link>
+    </li>
 
-    <router-link to="/create">
-      <div class="add-icon" id="plus" alt="Create Event">
-        <img src="./assets/icons/add.png" alt="create hover" style="width: 45px;">
-          <img src="./assets/icons/addHover.png" class="img-top" alt="create" style="width: 45px;">
+    <li>
+      <div class="dropdown">
+        <router-link to="/profile">
+          <div class="user-icon" id="plus" alt="Create Event">
+            <img
+              src="./assets/icons/user.png"
+              alt="create hover"
+              style="width: 45px"
+            />
+            <img
+              src="./assets/icons/userHover.png"
+              class="img-top"
+              alt="create"
+              style="width: 45px"
+            />
+          </div>
+          <div class="dropdown-content">
+            <a><router-link to="/register">Sign Up</router-link></a>
+            <a><router-link to="/login">Log In</router-link></a>
+          </div>
+        </router-link>
       </div>
-    </router-link> 
-
-
-    <div class="dropdown">
-    <router-link to="/profile">
-     <div class="user-icon" id="plus" alt="Create Event">
-      <img src="./assets/icons/user.png" alt="create hover" style="width: 45px;">
-        <img src="./assets/icons/userHover.png" class="img-top" alt="create" style="width: 45px;">
-    </div>
-      <div class="dropdown-content">
-        <a><router-link to="/register">Sign Up</router-link></a>
-        <a><router-link to="/login">Log In</router-link></a>
-      </div>
-    </router-link> 
-    </div>
-    
+    </li>
   </nav>
-  <router-view/>
-
+  <router-view />
 </template>
-
-
 
 <!--Style guide-->
 <style>
-@import './assets/styles/main.css';
-
-.icon-nav {
-  width: 350px;
-  height: 45px;
-  margin-right: 50px;
-}
+@import "./assets/styles/main.css";
 
 .home-icon {
   width: 45px;
@@ -67,7 +103,6 @@
   top: 0;
   left: 0;
   z-index: 99;
-  
 }
 .home-icon:hover .img-top {
   display: inline;
@@ -124,8 +159,6 @@
   display: inline;
 }
 
-
-
 .dropbtn {
   color: white;
   border: none;
@@ -142,7 +175,7 @@
   position: absolute;
   background-color: #f1f1f1;
   min-width: 100px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   margin-top: 0px;
   margin-right: 500px;
@@ -158,14 +191,16 @@
   display: block;
 }
 
-.dropdown-content a:hover {background-color: #303030; color: #08BDB6}
+.dropdown-content a:hover {
+  background-color: #303030;
+  color: #08bdb6;
+}
 
-.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
-.dropdown:hover .dropbtn {background-color: transparent;}
+.dropdown:hover .dropbtn {
+  background-color: transparent;
+}
 </style>
-
-
-
-
-
