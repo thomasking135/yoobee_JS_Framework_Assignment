@@ -79,6 +79,8 @@
   display: flex;
   width: 100vw;
   background: var(--white);
+  z-index: 100;
+  position: relative;
 }
 
 h1 {
@@ -197,6 +199,8 @@ h1 {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+  margin-top: -100px;
+  z-index: 1;
 }
 
 .loginForm {
