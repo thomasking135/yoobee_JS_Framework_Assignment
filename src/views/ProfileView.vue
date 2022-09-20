@@ -93,7 +93,6 @@ export default {
 </script>
 
 <style>
-<<<<<<< HEAD
 table {
   padding-top: 10px;
   font-family: arial, sans-serif;
@@ -112,8 +111,6 @@ th {
 tr:nth-child(even) {
   background-color: #dddddd;
 }
-=======
->>>>>>> 953c34fea11ba7250db208346d553f0d968dbe49
 
 .center {
   margin-left: auto;
