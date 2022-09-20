@@ -53,6 +53,7 @@
   color: var(--grey);
   border-top: 1px solid var(--green);
   padding-top: 20px;
+  font-size: 48px;
 }
 
 .title--secondary {
@@ -75,6 +76,12 @@
   text-align: center;
 }
 
+.center {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .icon-nav {
   display: flex;
   width: 100vw;
@@ -87,10 +94,22 @@ h1 {
   font-size: 40px;
 }
 
+.mobileLogo {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .mobileLogo {
+    display: flex;
+  }
+  .desktopLogo {
+    display: none;
+  }
+}
+
 #logo {
   height: 100px;
   margin-left: 15px;
-  display: flex;
 }
 
 .icon-nav li {
@@ -197,7 +216,7 @@ h1 {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  margin-top: -100px;
+  margin-top: -105px;
   z-index: 1;
 }
 
@@ -440,15 +459,6 @@ th {
 }
 
 /*CSS for About Info Page*/
-.CoverHeader {
-  position: absolute;
-  text-align: left;
-  bottom: 8%;
-  left: 20%;
-  font-size: 40pt;
-  transform: translate(-50%, -50%);
-  color: white;
-}
 
 #contactHead {
   padding-top: 60px;
@@ -471,6 +481,10 @@ th {
   font-weight: bold;
 }
 
+.about p {
+  margin-bottom: 50px;
+}
+
 .createEvent {
   background-color: #08bdb6;
   text-align: center;
@@ -491,12 +505,12 @@ th {
 
 .about {
   padding-top: 100px;
-  padding-bottom: 100px;
   text-align: justify;
-
-  margin-left: 10%;
-  margin-right: 10%;
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
+
 .CoverContainer {
   position: relative;
   display: inline-block;
@@ -504,16 +518,15 @@ th {
 .cover-image {
   width: 100vw;
   margin-top: 0;
-  border-top: 1px solid #06beb6;
   object-fit: cover;
   height: 500px;
 }
 .ContactUs {
   padding-top: 50px;
-  text-align: justify;
   margin-bottom: 50px;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
 }
 .ContactHeader {
   text-align: left;

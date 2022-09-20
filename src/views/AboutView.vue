@@ -5,7 +5,7 @@
       :src="aboutCoverImage"
       alt="people standing around a fire on the beach"
     />
-    <h1 class="CoverHeader">About</h1>
+    <h1 class="title">About</h1>
   </div>
   <div class="about">
     <p>
@@ -15,8 +15,6 @@
       we have proudly created ‘Hap’, an app that will hopefully make your event
       experience more enjoyable.
     </p>
-    <br />
-    <br />
 
     <p>
       Hap allows the attendees of events to communicate with speakers and hosts
@@ -25,9 +23,6 @@
       during the event.
     </p>
 
-    <br />
-    <br />
-
     <p>
       We have given the attendees all the information they need in one place!
       The event page is a one stop shop, with all the information that is needed
@@ -35,9 +30,6 @@
       down into a simple and intuitive app that works carefree. Anyone is able
       to enjoy Hap.
     </p>
-
-    <br />
-    <br />
 
     <p>
       Whether you are looking to go to an event and find your crowd, or create
@@ -53,7 +45,7 @@
     ></a
   >
   <div class="ContactUs">
-    <h2 class="ContactHeader">Contact</h2>
+    <h2 class="title center">Contact</h2>
     <p class="contactPara">
       For any futher information or inquires, get in-touch with our team at
       <a href="mailto:admin@hap.com">admin@hap.com</a>
