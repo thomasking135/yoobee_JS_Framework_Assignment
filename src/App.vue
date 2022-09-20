@@ -5,7 +5,11 @@
   <nav class="icon-nav">
     <li>
       <router-link to="/"
-        ><img id="logo" alt="logo" src="./assets/logo/logo-full.png"
+        ><img id="logo" class="desktopLogo" alt="logo" src="./assets/logo/logo-full.png"
+      /></router-link>
+
+      <router-link to="/"
+        ><img id="logo" class="mobileLogo" alt="logo" src="./assets/logo/icon.png"
       /></router-link>
     </li>
     <li>
@@ -84,6 +88,8 @@
       </div>
     </li>
   </nav>
+
+
   <router-view />
 </template>
 

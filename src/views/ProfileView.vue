@@ -101,17 +101,6 @@ table {
   left: 50%;
 }
 
-td,
-th {
-  border: 1px solid #dddddd;
-  text-align: center;
-  padding: 8px;
-}
-
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
-
 .center {
   margin-left: auto;
   margin-right: auto;
