@@ -311,14 +311,19 @@ padding: 8px;
   margin-top: 20px;
 }
 
+.tableField {
+  display: flex;
+  margin-bottom: 10px;
+}
 
 .tableField label {
-  margin-right: 10px;
   width: 150px;
+  justify-items: flex-start;
+  display: flex;
 }
 
 .tableField input {
-  float: right;
+  justify-items: flex-end;
   width: 250px;
 }
 
