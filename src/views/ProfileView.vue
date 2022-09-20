@@ -93,24 +93,6 @@ export default {
 </script>
 
 <style>
-  table {
-    padding-top: 10px;
-    font-family: arial, sans-serif;
-    border-collapse: collapse black 1px;
-    width: 80%;
-    left: 50%;
-    
-  }
-
-  td, th {
-  border: 1px solid #dddddd;
-  text-align: center;
-  padding: 8px;
-}
-
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
 
 .center {
   margin-left: auto;

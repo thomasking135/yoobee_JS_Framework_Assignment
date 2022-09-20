@@ -78,7 +78,7 @@
           😞Please enter all fields
         </p>
 
-        <button class="button--primary">Create Event</button>
+        <button class="button--primary createEventBtn">Create Event</button>
       </form>
     </div>
   </div>

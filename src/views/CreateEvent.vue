@@ -3,7 +3,6 @@
 <template>
   <div class="create">
     <event-form @add:event="addEvent" />
-    <br /><br /><br /><br /><br /><br />
     <event-table
       class="displayCenter"
       :events="events"

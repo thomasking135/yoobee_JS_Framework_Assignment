@@ -1,6 +1,6 @@
 <template>
   <div id="event-table">
-    <h2>Current Events</h2>
+    <h2 class="title--secondary">Current Events</h2>
     <br /><br />
     <p>Click on the events to express interest or to find an event contact.</p>
     <p v-if="events.length < 1" class="event-table">No events</p>
@@ -156,5 +156,7 @@ td {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
+  border-collapse: separate;
+ border-spacing: 20px 0;
 }
 </style>
