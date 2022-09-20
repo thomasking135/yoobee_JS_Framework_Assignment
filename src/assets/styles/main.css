@@ -46,25 +46,40 @@
   border: none;
 }
 
-nav {
-  padding-top: 70px;
-  width: 200px;
-  float: right;
+.title {
+  font-family: poppins, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--grey);
+  border-top: 1px solid var(--green);
+  padding-top: 20px;
 }
 
-nav a {
-  font-weight: bold;
-  color: #08bdb6;
+.icon-nav {
+  display: -webkit-flex;
+  display: flex;
+  width: 98%;
 }
 
-nav a.router-link-exact-active {
-  color: #08bdb6;
+h1 {
+  font-size: 40px;
 }
 
-.landingImg {
-  width: 2%;
-  float: left;
+#logo {
+ width: 300px;
 }
+
+.icon-nav li {
+  margin: 10px;
+	display: block;
+	padding: 5px;
+	text-decoration: none;
+}
+
+.icon-nav li:first-child{
+  margin-right: auto;
+}
+
 
 /*CSS for the Home Landing Page*/
 .container {
@@ -76,12 +91,16 @@ nav a.router-link-exact-active {
 
 .centerMessage {
   position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: palegoldenrod;
-  font-size: 300%;
+  color: var(--white);
+  font-size: 48px;
+  font-family: poppins, sans-serif;
+  font-weight: 400;
+  font-style: normal;
   font-weight: bold;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  margin-top: -300px;
 }
 
 .createEvent {
@@ -108,20 +127,30 @@ nav a.router-link-exact-active {
   padding-top: 200px;
 }
 
+.landingImg {
+  object-fit: cover;
+  width: 100%;
+  height: 500px;
+  opacity: 0.4;
+}
+
+.overlayLandingImg {
+  width: 100%;
+  height: 500px;
+  background: black;
+  overflow: hidden;
+  background: #c33764; /* fallback colour. Make sure this is just one solid colour. */
+  background: -webkit-linear-gradient(var(--green), var(--grey)),
+    url("../images/LandingPage.jpg");
+  background: linear-gradient(var(--green), var(--grey)),
+    url("../images/LandingPage.jpg"); /* The least supported option. */
+}
+
 /*CSS for the Login Page*/
 
 * {
   margin: 0;
   padding: 0;
-}
-
-h1 {
-  text-align: center;
-  font-size: 40px;
-  font-family: lato, sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  color: #ffffff;
 }
 
 .login {
@@ -259,12 +288,12 @@ span.learnMore a:hover a:visited {
   height: 20px;
 }
 
-.tableField label{
+.tableField label {
   margin-right: 10px;
   float: left;
 }
 
-.tableField input{
+.tableField input {
   float: right;
   width: 250px;
 }
@@ -329,12 +358,6 @@ span.learnMore a:hover a:visited {
   margin-right: 25%;
 }
 
-.createEventHeader {
-  text-align: center;
-  color: var(--grey);
-  padding: 10%;
-}
-
 .float {
   float: right;
   height: 50px;
@@ -345,7 +368,6 @@ span.learnMore a:hover a:visited {
   margin-right: auto;
   color: var(--grey);
   text-align: center;
-  padding: 2%;
 }
 
 .imageUpload {
@@ -534,9 +556,7 @@ span.learnMore a:hover a:visited {
   padding: 10px;
   width: 50%;
 }
-h1 {
-  text-align: center;
-}
+
 .profile {
   padding-top: 200px;
   text-align: justify;
@@ -601,14 +621,6 @@ h1 {
   padding: 0;
 }
 
-h1 {
-  text-align: center;
-  font-size: 40px;
-  font-family: lato, sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  color: #ffffff;
-}
 
 .register {
   padding-top: 300px;
