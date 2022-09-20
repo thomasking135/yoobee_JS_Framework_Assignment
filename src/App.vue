@@ -5,7 +5,7 @@
   <nav class="icon-nav">
     <li>
       <router-link to="/"
-        ><img id="logo" alt="Vue logo" src="./assets/logo/logo-full.png"
+        ><img id="logo" alt="logo" src="./assets/logo/logo-full.png"
       /></router-link>
     </li>
     <li>

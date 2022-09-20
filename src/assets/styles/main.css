@@ -64,10 +64,21 @@
   font-size: 28px;
 }
 
+.title--login {
+  font-family: poppins, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--white);
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  text-align: center;
+}
+
 .icon-nav {
-  display: -webkit-flex;
   display: flex;
-  width: 98%;
+  width: 100vw;
+  background: var(--white);
 }
 
 h1 {
@@ -75,16 +86,26 @@ h1 {
 }
 
 #logo {
-  width: 200px;
+  height: 100px;
   margin-left: 15px;
+  display: flex;
 }
+
 
 .icon-nav li {
   list-style: none;
+  margin-top: 30px;
 }
+
 
 .icon-nav li:first-child {
   margin-right: auto;
+  margin-top: 0px;
+}
+
+.icon-nav li:last-child {
+  margin-right: auto;
+  margin-right: 60px;
 }
 
 /*CSS for the Home Landing Page*/
@@ -145,7 +166,7 @@ h1 {
   height: 500px;
   background: black;
   overflow: hidden;
-  background: #c33764; /* fallback colour. Make sure this is just one solid colour. */
+  background: var(--green); 
   background: -webkit-linear-gradient(var(--green), var(--grey)),
     url("../images/LandingPage.jpg");
   background: linear-gradient(var(--green), var(--grey)),
@@ -173,8 +194,9 @@ h1 {
 
 .background-image {
   background-size: cover;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
+  overflow: hidden;
 }
 
 .loginForm {
@@ -651,12 +673,6 @@ padding: 8px;
   text-align: left;
   margin-left: 25%;
   margin-right: 25%;
-}
-
-.background-image {
-  background-size: cover;
-  width: 100%;
-  height: 100vh;
 }
 
 .registerForm {
