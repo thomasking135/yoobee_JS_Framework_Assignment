@@ -47,7 +47,11 @@
 
     <p>Hap, It’s where it’s at.</p>
   </div>
-  <a><router-link to="/register"><button class="JoinUsButton">Join Us!</button></router-link></a>
+  <a
+    ><router-link to="/register"
+      ><button class="JoinUsButton">Join Us!</button></router-link
+    ></a
+  >
   <div class="ContactUs">
     <h2 class="ContactHeader">Contact</h2>
     <p class="contactPara">
@@ -58,7 +62,7 @@
 </template>
 
 <style>
-@import '../assets/styles/main.css';
+@import "../assets/styles/main.css";
 </style>
 
 <script>
