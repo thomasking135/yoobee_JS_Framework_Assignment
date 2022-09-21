@@ -1,11 +1,11 @@
 <template>
   <div class="CoverContainer">
+    <h1 class="title">About</h1>
     <img
       class="cover-image"
       :src="aboutCoverImage"
       alt="people standing around a fire on the beach"
     />
-    <h1 class="title">About</h1>
   </div>
   <div class="about">
     <p>
@@ -51,10 +51,49 @@
       <a href="mailto:admin@hap.com">admin@hap.com</a>
     </p>
   </div>
+  <div class="ContactUs">
+    <h2 class="title center">Contact The Developers</h2>
+    <table class="center">
+      <tr>
+        <th>Person</th>
+        <th>Email</th>
+      </tr>
+      <tr>
+        <td>Justina Ho</td>
+        <td>
+          <a href="mailto:270191422@yoobeestudent.ac.nz"
+            >270191422@yoobeestudent.ac.nz</a
+          >
+        </td>
+      </tr>
+      <tr>
+        <td>Keegan Dufty</td>
+        <td>
+          <a href="mailto:270184437@yoobeestudent.ac.nz "
+            >270184437@yoobeestudent.ac.nz</a
+          >
+        </td>
+      </tr>
+      <tr>
+        <td>Thomas King</td>
+        <td>
+          <a href="mailto:270033944@yoobeestudent.ac.nz "
+            >270033944@yoobeestudent.ac.nz
+          </a>
+        </td>
+      </tr>
+    </table>
+  </div>
 </template>
 
 <style>
 @import "../assets/styles/main.css";
+
+table {
+  padding-top: 10px;
+  border-collapse: collapse black 1px;
+  width: 80%;
+}
 </style>
 
 <script>

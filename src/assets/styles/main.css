@@ -506,9 +506,9 @@ th {
 .about {
   padding-top: 100px;
   text-align: justify;
-  width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
+
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 .CoverContainer {

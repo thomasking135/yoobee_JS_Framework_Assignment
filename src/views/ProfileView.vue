@@ -37,29 +37,6 @@
   </div>
   <h2>Contacts</h2>
 
-  <table class="center">
-    <tr>
-      <th>Person</th>
-      <th>Phone</th>
-      <th>Email</th>
-    </tr>
-    <tr>
-      <td>Justina Ho</td>
-      <td>021345678</td>
-      <td><a href="mailto:justina@gmail.com">justina@gmail.com</a></td>
-    </tr>
-    <tr>
-      <td>Keegan Dufty</td>
-      <td>0212345678</td>
-      <td><a href="mailto:keegan@hotmail.com">keegan@hotmail.com</a></td>
-    </tr>
-    <tr>
-      <td>Thomas King</td>
-      <td>0274567832</td>
-      <td><a href="mailto:thomasking135@gmail.com">thomas@gmail.com</a></td>
-    </tr>
-  </table>
-
   <FooterSection />
 </template>
 
@@ -128,13 +105,6 @@ export default {
 .ProfileUserDeatilsContainer {
   display: flex;
   flex-direction: column;
-}
-table {
-  padding-top: 10px;
-  font-family: arial, sans-serif;
-  border-collapse: collapse black 1px;
-  width: 80%;
-  left: 50%;
 }
 
 .center {
