@@ -16,8 +16,18 @@
           />
         </div>
 
+          <div class="tableField">
+          <label>Event description</label>
+          <input
+            type="text"
+            :class="{ 'has-error': submitting && invalidDescription }"
+            v-model="event.Description"
+            @focus="clearStatus"
+          />
+        </div>
+
         <div class="tableField">
-          <label>Event email</label>
+          <label>Event email contact</label>
           <input
             ref="first"
             type="email"
@@ -58,16 +68,6 @@
           />
         </div>
 
-        <div class="tableField">
-          <label>Description</label>
-          <input
-            type="text"
-            :class="{ 'has-error': submitting && invalidDescription }"
-            v-model="event.Description"
-            @focus="clearStatus"
-          />
-        </div>
-
         <p v-if="success" class="success-message">👍 Event Created!</p>
         <p v-if="error && submitting" class="error-message">
           😞Please enter all fields
@@ -89,17 +89,21 @@ export default {
       success: false,
       event: {
         name: "",
+        Description: "",
         Email: "",
         StartDate: "",
         EndDate: "",
-        Location: "",
-        Description: "",
+        Location: ""
       },
     };
   },
   computed: {
     invalidName() {
       return this.event.name === "";
+    },
+
+    invalidDescription() {
+      return this.event.Description === "";
     },
 
     invalidEmail() {
@@ -118,9 +122,6 @@ export default {
       return this.event.Location === "";
     },
 
-    invalidDescription() {
-      return this.event.Description === "";
-    },
   },
   methods: {
     handleSubmit() {
@@ -129,11 +130,11 @@ export default {
 
       if (
         this.invalidName ||
+        this.invalidDescription ||
         this.invalidEmail ||
         this.invalidStartDate ||
         this.invalidEndDate ||
-        this.invalidLocation ||
-        this.invalidDescription
+        this.invalidLocation 
       ) {
         this.error = true;
         return;
@@ -143,10 +144,11 @@ export default {
       this.$refs.first.focus();
       this.event = {
         name: "",
+        Description: "",
+        Email:"",
         StartDate: "",
         EndDate: "",
-        Location: "",
-        Description: "",
+        Location: ""
       };
       this.clearStatus();
       this.submitting = false;

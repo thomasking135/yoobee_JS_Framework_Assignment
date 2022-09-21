@@ -15,5 +15,34 @@
       "id": 3,
       "username": "thom"
     }
+  ],
+  "events": [
+    {
+      "name": "10km Fun Run",
+      "Description": "The 10km is the most popular fun run distance and great stepping stone on the way up from 5km to longer distances.",
+      "email": "justina@ho.com",
+      "StartDate": "2022-09-22T08:11",
+      "EndDate": "2022-09-09-07T30:00",
+      "Location": "Wellington",
+      "id": 1
+    },
+    {
+      "name": "Learn how to surf!",
+      "Description": "Learn the basics of surfing quickly and with plenty of fun",
+      "email": "keegan@dufty.com",
+      "StartDate": "2022-09-14-07T00:00",
+      "EndDate": "2022-09-15-07T30:00",
+      "Location": "Auckland",
+      "id": 2
+    },
+    {
+      "name": "Golf Tournament",
+      "Description": "All are welcome to join!",
+      "email": "thom@king.com",
+      "StartDate": "2022-10-02-07T00:00",
+      "EndDate": "2022-10-03-07T30:00",
+      "Location": "Christchurch",
+      "id": 3
+    }
   ]
 }

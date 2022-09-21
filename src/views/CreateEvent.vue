@@ -19,6 +19,7 @@
 <script>
 import EventForm from "@/components/EventForm.vue";
 import EventTable from "@/components/EventTable.vue";
+const baseURL = "http://localhost:3000/events";
 
 export default {
   name: "app",
@@ -40,8 +41,7 @@ export default {
     async getEvents() {
       try {
         const response = await fetch(
-          "https://jsonplaceholder.typicode.com/users"
-          /*This is where our own API data will go*/
+          baseURL
           /*Use of the JSON https API created by Justina*/
         );
         const data = await response.json();
@@ -54,8 +54,7 @@ export default {
     async addEvent(event) {
       try {
         const response = await fetch(
-          "https://jsonplaceholder.typicode.com/users",
-          /*This is where our own API data will go*/
+          baseURL,
           /*Use of the JSON https API created by Justina*/
           {
             method: "POST",
@@ -73,8 +72,8 @@ export default {
     async editEvent(id, updatedEvent) {
       try {
         const response = await fetch(
-          `https://jsonplaceholder.typicode.com/users/${id}`,
-          /*This is where our own API data will go*/
+           'baseURL/${id}',
+          // `https://jsonplaceholder.typicode.com/users/${id}`,
           /*Use of the JSON https API created by Justina*/
           {
             method: "PUT",
@@ -93,8 +92,7 @@ export default {
 
     async deleteEvent(id) {
       try {
-        await fetch(`https://jsonplaceholder.typicode.com/users/${id}`, {
-          /*This is where our own API data will go*/
+        await fetch(`baseURL/${id}`, {
           /*Use of the JSON https API created by Justina*/
           method: "DELETE",
         });

@@ -8,12 +8,12 @@
     <table class="event-table" v-else>
       <thead>
         <tr>
-          <th>Name</th>
-          <th>Email</th>
+          <th>Event name</th>
+          <th>Description</th>
+          <th>Contact</th>
           <th>Start Date</th>
           <th>End Date</th>
           <th>Location</th>
-          <th>Description</th>
           <th>Participate</th>
         </tr>
       </thead>
@@ -24,6 +24,12 @@
             <input type="text" v-model="event.name" />
           </td>
           <td v-else>{{ event.name }}</td>
+
+          <!--Edit Event Description-->
+          <td v-if="editing === event.id">
+            <input type="text" v-model="event.Description" />
+          </td>
+          <td v-else>{{ event.Description }}</td>
 
           <!--Edit Event email-->
           <td v-if="editing === event.id">
@@ -49,12 +55,6 @@
             <input type="text" v-model="event.Location" />
           </td>
           <td v-else>{{ event.Location }}</td>
-
-          <!--Edit Event Description-->
-          <td v-if="editing === event.id">
-            <input type="text" v-model="event.Description" />
-          </td>
-          <td v-else>{{ event.Description }}</td>
 
           <td>
             <!-- Rounded switch -->

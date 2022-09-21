@@ -1,6 +1,6 @@
 <template>
 <div class="accordion">
-    <!--<input type="checkbox" name="collapse" id="handle1" checked="checked" hidden>-->
+    <!-- <input type="checkbox" name="collapse" id="handle1" checked="checked" hidden> -->
     <h2 class="handle">
      
       <label for="handle1">Search <img class="landingImg inline" src="../assets/icons/filter.png" id="filter" ></label>
