@@ -24,6 +24,7 @@
       "StartDate": "2022-09-22T08:11",
       "EndDate": "2022-09-09-07T30:00",
       "Location": "Wellington",
+      "Comment": "Sounds like a great event!",
       "id": 1
     },
     {
@@ -33,6 +34,7 @@
       "StartDate": "2022-09-14-07T00:00",
       "EndDate": "2022-09-15-07T30:00",
       "Location": "Auckland",
+      "Comment": "Sounds like a great event!",
       "id": 2
     },
     {
@@ -42,6 +44,7 @@
       "StartDate": "2022-10-02-07T00:00",
       "EndDate": "2022-10-03-07T30:00",
       "Location": "Christchurch",
+      "Comment": "Sounds like a great event!",
       "id": 3
     }
   ]

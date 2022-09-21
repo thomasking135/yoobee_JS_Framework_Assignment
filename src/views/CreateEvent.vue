@@ -8,8 +8,10 @@
       :events="events"
       @delete:event="deleteEvent"
       @edit:event="editEvent"
+      @comment:event="commentEvent"
     />
   </div>
+
 </template>
 
 <style>
@@ -97,6 +99,23 @@ export default {
           method: "DELETE",
         });
         this.events = this.events.filter((event) => event.id !== id);
+      } catch (error) {
+        console.error(error);
+      }
+    },
+
+    async commentEvent() {
+      try {
+        await fetch(baseURL, {
+          /*Use of the JSON https API created by Justina*/
+          // method: "POST",
+          method: "POST",
+            body: JSON.stringify(event),
+            headers: { "Content-type": "application/json; charset=UTF-8" },
+        });
+
+        
+        // this.events = this.events.filter((event) => event.id !== id);
       } catch (error) {
         console.error(error);
       }

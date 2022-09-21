@@ -15,6 +15,7 @@
           <th>End Date</th>
           <th>Location</th>
           <th>Participate</th>
+          <th>Comments</th>
         </tr>
       </thead>
       <tbody>
@@ -64,12 +65,25 @@
             </label>
           </td>
 
+         <!--Comment-->
+          <td v-if="editing === event.id">
+            <input type="text" v-model="event.Comment" />
+          </td>
+          <td v-else>{{ event.Comment }}</td>
+
           <!--Further Processing Functions-->
           <td v-if="editing === event.id">
             <button @click="editEvent(event)">Save</button>
             <button class="muted-button" @click="editing = null">Cancel</button>
           </td>
           <td v-else>
+            <button @click="$emit('comment:event', event.id)">
+              <img
+                class="crudIcon"
+                src="../assets/icons/comment.png"
+                alt="comment"
+              />
+            </button>
             <button @click="editMode(event.id)">
               <img class="crudIcon" src="../assets/icons/edit.png" alt="edit" />
             </button>
@@ -145,8 +159,8 @@ input {
 }
 
 td {
-  text-align: justify;
- border: 1px solid var(--green);
+  text-align: left;
+  border: 1px solid var(--green);
 }
 
 .bold {
