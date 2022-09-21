@@ -93,6 +93,9 @@ export default {
 </script>
 
 <style>
+.ProfileDetailsContainer {
+  display: flex;
+}
 table {
   padding-top: 10px;
   font-family: arial, sans-serif;

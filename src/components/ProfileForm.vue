@@ -26,7 +26,9 @@ export default {
 
 <style>
 .upload {
-  padding-top: 20px;
-  max-width: 25%;
+  margin-top: 20px;
+  max-width: 20%;
+  border-radius: 50%;
+  border: 1px solid #303030;
 }
 </style>
