@@ -44,7 +44,7 @@
     </router-link>
   </a>
   <div class="ContactUs">
-    <h2 class="title center">Contact</h2>
+    <h2 class="title">Contact</h2>
     <p class="contactPara">
       For any futher information or inquires, get in-touch with our team at
       <a href="mailto:admin@hap.com">admin@hap.com</a>

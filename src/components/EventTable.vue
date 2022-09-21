@@ -146,6 +146,7 @@ input {
 
 td {
   text-align: justify;
+ border: 1px solid var(--green);
 }
 
 .bold {
@@ -153,10 +154,12 @@ td {
 }
 
 .event-table {
+  border-collapse: collapse;
+  border-spacing: 0;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
   border-collapse: separate;
- border-spacing: 20px 0;
 }
+
 </style>
