@@ -1,23 +1,23 @@
 <!--Thomas Code-->
 <!--Template-->
 <template>
+ <div class="centerMessage">
+    <h2>  Kia ora, Hap is where it's at! </h2>
+      <router-link to="/create"
+        ><button class="button--landing">
+          Create a new event
+        </button></router-link
+      >
+  </div>
   <div class="overlayLandingImg">
     <img
       class="landingImg"
       src="../assets/images/LandingPage.jpg"
       alt="Landing page"
     />
-    <div class="centerMessage">
-      Kia ora, Hap is where it's at!<br />
-      <router-link to="/create"
-        ><button class="button--primary">
-          Create a new event
-        </button></router-link
-      >
-    </div>
   </div>
 
-  <div class="accordion">
+  <!-- <div class="accordion">
     <form action="/create">
       <h2 class="handle">
         <label for="handle1">Search</label>
@@ -32,10 +32,9 @@
       />
 
       <button class="search button--secondary">Search</button>
-      <br />
-    </form>
-    <br />
-  </div>
+      <br /> -->
+    <!-- </form> -->
+  <!-- </div> -->
 </template>
 <!--End of template-->
 

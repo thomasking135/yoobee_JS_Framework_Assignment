@@ -35,15 +35,14 @@
       Whether you are looking to go to an event and find your crowd, or create
       an event of your own, we have made the app for you!
     </p>
-    <br />
 
     <p>Hap, It’s where it’s at.</p>
   </div>
-  <a
-    ><router-link to="/register"
-      ><button class="JoinUsButton">Join Us!</button></router-link
-    ></a
-  >
+  <a>
+    <router-link to="/register">
+      <button class="button--primary">Join Us!</button>
+    </router-link>
+  </a>
   <div class="ContactUs">
     <h2 class="title center">Contact</h2>
     <p class="contactPara">
@@ -52,8 +51,8 @@
     </p>
   </div>
   <div class="ContactUs">
-    <h2 class="title center">Contact The Developers</h2>
-    <table class="center">
+    <h2 class="title">Contact The Developers</h2>
+    <table class="contactTable">
       <tr>
         <th>Person</th>
         <th>Email</th>
