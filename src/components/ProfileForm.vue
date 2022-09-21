@@ -1,5 +1,4 @@
 <template>
-  <h1 class="title">Profile</h1>
   <label for="image-upload">
     <img class="upload" :src="src" />
   </label>
@@ -27,7 +26,7 @@ export default {
 <style>
 .upload {
   margin-top: 20px;
-  max-width: 20%;
+  max-width: 50%;
   border-radius: 50%;
   border: 1px solid #303030;
 }

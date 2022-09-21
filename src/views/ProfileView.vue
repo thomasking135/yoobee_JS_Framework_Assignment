@@ -1,29 +1,40 @@
 <template>
-  <ProfileForm
-    @image-upload="uploadFile"
-    :src="src"
-    :isUploading="uploading"
-    @remove-image="removeImage"
-  />
+  <h1 class="title">Profile</h1>
+  <div class="ProfileInfoContainer">
+    <div class="ProfilePicContainer">
+      <ProfileForm
+        @image-upload="uploadFile"
+        :src="src"
+        :isUploading="uploading"
+        @remove-image="removeImage"
+      />
+    </div>
+    <br /><br />
+    <div class="ProfileUserDeatilsContainer">
+      <h3>{{ users.username }}</h3>
+      <p>Username: {{ message }}</p>
+      <input v-model="message" placeholder="Username" />
+      <br /><br />
+      <span>Bio:</span>
+      <p style="white-space: pre-line">{{ message }}</p>
+      <textarea
+        v-model="message"
+        placeholder="I love to create event"
+      ></textarea>
 
-  <br /><br />
+      <br /><br />
 
-  <p>Username: {{ message }}</p>
-  <input v-model="message" placeholder="Username" />
-  <br /><br />
-  <span>Bio:</span>
-  <p style="white-space: pre-line">{{ message }}</p>
-  <textarea v-model="message" placeholder="I love to create event"></textarea>
-
-  <br /><br />
-
-  <router-link to="/create"
-    ><button id="createEvent" class="center">
-      Create a new event
-    </button></router-link
-  >
-  <br /><br />
-
+      <router-link to="/create"
+        ><button id="createEvent" class="button--primary">
+          Create a new event
+        </button></router-link
+      >
+      <router-link to="/login"
+        ><button class="button--secondary">Login</button></router-link
+      >
+      <br /><br />
+    </div>
+  </div>
   <h2>Contacts</h2>
 
   <table class="center">
@@ -71,7 +82,17 @@ export default {
     return {
       src: "",
       uploading: false,
+      users: [],
+      username: "",
     };
+  },
+  async created() {
+    try {
+      const res = await Axios.get(`http://localhost:3000/users`);
+      this.items = res.data;
+    } catch (error) {
+      console.log(error);
+    }
   },
 
   methods: {
@@ -93,8 +114,20 @@ export default {
 </script>
 
 <style>
-.ProfileDetailsContainer {
+.ProfileInfoContainer {
   display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.ProfilePicContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.ProfileUserDeatilsContainer {
+  display: flex;
+  flex-direction: column;
 }
 table {
   padding-top: 10px;
@@ -125,6 +158,5 @@ table {
 
 #createEvent:hover {
   background-color: #48b1bf;
-  border-radius: 26px;
 }
 </style>
