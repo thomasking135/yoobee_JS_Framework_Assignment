@@ -1,11 +1,6 @@
 <template>
   <h1 class="title">Create Event</h1>
 
-  <div class="centerMessaging">
-    <!--<img class="float" src="../assets/icons/uploadImage.png" alt="upload" >-->
-    <!--<br><br><p class="imageUpload">Click to upload image</p>-->
-  </div>
-
   <div class="formBorder">
     <div id="event-form">
       <form @submit.prevent="handleSubmit">
@@ -78,7 +73,7 @@
           😞Please enter all fields
         </p>
 
-        <button class="button--primary createEventBtn">Create Event</button>
+        <button class="button--primary">Create Event</button>
       </form>
     </div>
   </div>
