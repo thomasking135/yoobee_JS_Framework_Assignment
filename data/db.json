@@ -43,15 +43,6 @@
       "EndDate": "2022-10-03-07T30:00",
       "Location": "Christchurch",
       "id": 3
-    },
-    {
-      "name": "Test",
-      "Description": "Test",
-      "email": "Test@gmail.com",
-      "StartDate": "2022-09-23T20:43",
-      "EndDate": "2022-09-25T20:43",
-      "Location": "Auckland",
-      "id": 4
     }
   ],
   "comments": [
@@ -69,10 +60,6 @@
       "name": "Thom",
       "post": "I'm excited!",
       "id": 3
-    },
-    {
-      "name": "Hello!",
-      "id": 4
     }
   ]
 }

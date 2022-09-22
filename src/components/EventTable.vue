@@ -15,7 +15,6 @@
           <th>End Date</th>
           <th>Location</th>
           <th>Participate</th>
-          <th>Comments</th>
         </tr>
       </thead>
       <tbody>
@@ -65,12 +64,6 @@
             </label>
           </td>
 
-          <!--Comment-->
-          <td id="addComment" style="display: none" v-if="editing === event.id">
-            <input type="text" v-model="event.Comment" />
-          </td>
-          <td v-else>{{ event.Comment }}</td>
-
           <!--Further Processing Functions-->
           <td v-if="editing === event.id">
             <button @click="editEvent(event)">Save</button>
@@ -95,7 +88,6 @@
 </template>
 
 <script>
-
 export default {
   name: "event-table",
   props: {

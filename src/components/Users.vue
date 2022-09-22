@@ -2,75 +2,117 @@
   <div>
     <div id="comment-form">
       <form class="commentForm" @submit.prevent="handleSubmit">
-        <input
-          ref="name"
-          type="text"
-          :class="{ 'has-error': submitting && invalidName }"
-          v-model="comment.name"
-          @focus="clearStatus"
-          @keypress="clearStatus"
-        />
-         <input
-          ref="post"
-          type="text"
-          :class="{ 'has-error': submitting && invalidName }"
-          v-model="comment.post"
-          @focus="clearStatus"
-          @keypress="clearStatus"
-        />
+        <div class="commentField">
+          <label>Name</label>
+          <input
+            ref="name"
+            type="text"
+            :class="{ 'has-error': submitting && invalidName }"
+            v-model="comment.name"
+            @focus="clearStatus"
+            @keypress="clearStatus"
+          />
+        </div>
+        <div class="commentField">
+          <label>Comment</label>
+          <input
+            ref="post"
+            type="text"
+            :class="{ 'has-error': submitting && invalidComment }"
+            v-model="comment.post"
+            @focus="clearStatus"
+            @keypress="clearStatus"
+          />
+        </div>
         <p v-if="error && submitting" class="error-message">
-          ❗Please enter a comment
+          ❗Please fill out all fields
         </p>
         <p v-if="success" class="success-message">
           ✅ Comment successfully added
         </p>
-        <button v-on:click="addComment(comment.id)" class="button--primary">Add Comment</button>
       </form>
+      <button v-on:click="addComment(comment.id)" class="button--primary">
+        Add Comment
+      </button>
     </div>
 
     <table class="commentPosts" border="1px">
+        <p v-if="comment.length < 1" >No events</p>
       <tr>
-        <td>name</td>
-        <td>post</td>
-        <td>action</td>
+        <td>Name</td>
+        <td>Comments posted</td>
+        <td></td>
       </tr>
       <tr v-for="comment in comments" v-bind:key="comment.id">
         <td>{{ comment.name }}</td>
         <td>{{ comment.post }}</td>
-        <td><button v-on:click="deleteComment(comment.id)">Delete</button></td>
+        <td>
+          <button v-on:click="deleteComment(comment.id)">
+            <img
+              class="crudIcon"
+              src="../assets/icons/delete.png"
+              alt="delete"
+            />
+          </button>
+          <button v-on:click="editComment(comment.id)">
+            <img
+              class="crudIcon"
+              src="../assets/icons/edit.png"
+              alt="edit"
+            />
+          </button>
+          
+        </td>
       </tr>
     </table>
   </div>
+  <!--Add a counter-->
+    <div id="counter">
+      <p class="bold">Like Hap?</p>
+      <button
+        id="like"
+        @click="incrementValue"
+        class="button-reset bg-green ba b--black ph4 pv3 mb2 white f4 dim">
+          <img class="crudIcon" src="../assets/icons/like.png" alt="edit" />
+        </button>
+      <div class="likeCountStyling">{{ counter }}</div>
+    </div>
 </template>
 
 <script>
 import axios from "axios";
+import CommentTable from "@/components/CommentTable.vue";
 
 export default {
   name: "Users",
   data() {
     return {
+      CommentTable,
+      counter: 65789,
       comments: null,
       error: false,
       submitting: false,
       success: false,
       comment: {
         name: "",
-        post: ""
-      }
+        post: "",
+      },
     };
   },
-computed: {
+  computed: {
     invalidName() {
       return this.comment.name === "";
-    }
+    },
+      invalidComment() {
+      return this.comment.post === "";
+    },
   },
   methods: {
-      handleSubmit() {
+    handleSubmit() {
       this.clearStatus();
       this.submitting = true;
 
-    if (this.invalidName) {
+      if (this.invalidName || this.invalidComment) {
         this.error = true;
         return;
       }
@@ -78,7 +120,8 @@ computed: {
       this.$emit("add:comment", this.comment);
       this.$refs.first.focus();
       this.comment = {
-        name: ""
+        name: "",
+        post: "",
       };
       this.clearStatus();
       this.submitting = false;
@@ -91,7 +134,6 @@ computed: {
     getData() {
       axios.get("http://localhost:3000/comments").then((response) => {
         this.users = response.data;
-        console.log(response);
         this.comments = response.data;
       });
     },
@@ -109,16 +151,32 @@ computed: {
 
     async addComment() {
       try {
+        const response = await fetch("http://localhost:3000/comments", {
+          method: "POST",
+          body: JSON.stringify(this.comment),
+          headers: { "Content-type": "application/json; charset=UTF-8" },
+        });
+        const data = await response.json();
+        this.comments = [...this.comments, data];
+      } catch (error) {
+        console.error(error);
+      }
+    },
+
+    async editComment(id, updatedComment) {
+      try {
         const response = await fetch(
-          'http://localhost:3000/comments',
+          `http://localhost:3000/comments/${id}`,
           {
-            method: "POST",
-            body: JSON.stringify(this.comment),
+            method: "PUT",
+            body: JSON.stringify(updatedComment),
             headers: { "Content-type": "application/json; charset=UTF-8" }
           }
         );
         const data = await response.json();
-        this.comments = [...this.comments, data];
+        this.comments = this.comments.map(comment =>
+          comment.id === id ? data : comment
+        );
       } catch (error) {
         console.error(error);
       }
@@ -131,11 +189,45 @@ computed: {
 </script>
 
 <style scoped>
+
+#counter {
+    margin-bottom: 70px;
+}
+
 .commentPosts {
   width: 50%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 50px;
   margin-bottom: 100px;
+  border: none;
+  border: 1px solid var(--green);
+   border-collapse: separate;
+   border-spacing: 0;
+}
+
+.commentPosts td {
+   border: 1px solid var(--green);
+   border-collapse: separate;
+   border-spacing: 0;
+}
+
+.commentField {
+  margin-bottom: 10px;
+  justify-content:center;
+  display: flex;
+}
+
+.commentField label {
+ width: 100px;
+}
+
+.commentField input {
+  width: 500px;
+}
+
+
+button {
+  margin-right: 10px;
 }
 </style>

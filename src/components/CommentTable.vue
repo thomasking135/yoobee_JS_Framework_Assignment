@@ -24,13 +24,13 @@
             >
           </td>
           <td v-else>{{comment.name}}</td>
-          <!-- <td v-if="editing === comment.id">
+          <td v-if="editing === comment.id">
             <input
               type="text"
-              v-model="comment.email"
+              v-model="comment.post"
             >
-          </td> -->
-          <!-- <td v-else>{{comment.email}}</td> -->
+          </td>
+          <td v-else>{{comment.post}}</td>
           <td v-if="editing === comment.id">
             <button @click="editcomment(comment)">Save</button>
             <button
@@ -42,22 +42,11 @@
             <button @click="editMode(comment.id)"><img class="crudIcon" src="../assets/icons/edit.png"></button>
             <button @click="$emit('delete:comment', comment.id)"><img class="crudIcon" src="../assets/icons/delete.png"></button>
           </td>
-
         </tr>
       </tbody>
     </table>
   </div>
-  <!--Add a counter-->
-    <div id="counter">
-      <p class="bold">Like Hap?</p>
-      <button
-        id="like"
-        @click="incrementValue"
-        class="button-reset bg-green ba b--black ph4 pv3 mb2 white f4 dim">
-          <img class="crudIcon" src="../assets/icons/like.png" alt="edit" />
-        </button>
-      <div class="likeCountStyling">{{ counter }}</div>
-    </div>
+  
 </template>
 
 <script>
@@ -69,7 +58,6 @@ export default {
   data() {
     return {
       editing: null,
-       counter: 65789
     }
   },
   methods: {
@@ -105,10 +93,7 @@ input {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
-
-    border-spacing: 0;
-    margin-left: auto;
-    margin-right: auto;
+    border-spacing: 0; 
     border-collapse: separate;
 }
 
@@ -117,12 +102,17 @@ input {
 }
 
 tr {
-  border-collapse: collapse;
   border-spacing: 0;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
+  
+}
+
+tbody{
   border-collapse: separate;
+   border-spacing: 0; 
+   border: px solid var(--green);
 }
 
 td {
