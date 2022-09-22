@@ -16,7 +16,7 @@
           />
         </div>
 
-          <div class="tableField">
+        <div class="tableField">
           <label>Event description</label>
           <input
             type="text"
@@ -93,7 +93,7 @@ export default {
         email: "",
         StartDate: "",
         EndDate: "",
-        Location: ""
+        Location: "",
       },
     };
   },
@@ -121,7 +121,6 @@ export default {
     invalidLocation() {
       return this.event.Location === "";
     },
-
   },
   methods: {
     handleSubmit() {
@@ -134,7 +133,7 @@ export default {
         this.invalidEmail ||
         this.invalidStartDate ||
         this.invalidEndDate ||
-        this.invalidLocation 
+        this.invalidLocation
       ) {
         this.error = true;
         return;
@@ -145,10 +144,10 @@ export default {
       this.event = {
         name: "",
         Description: "",
-        email:"",
+        email: "",
         StartDate: "",
         EndDate: "",
-        Location: ""
+        Location: "",
       };
       this.clearStatus();
       this.submitting = false;

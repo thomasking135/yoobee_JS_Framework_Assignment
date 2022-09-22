@@ -17,7 +17,7 @@
           :key="comment.id"
           v-for="comment in comments"
         >
-          <td v-if="editing === comment.id">
+          <td class="editCommentInput" v-if="editing === comment.id">
             <input
               type="text"
               v-model="comment.name"

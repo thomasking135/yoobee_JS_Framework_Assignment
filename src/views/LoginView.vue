@@ -52,8 +52,7 @@
 
 <script>
 import backgroundUrl from "../assets/images/LogInSignUpDesktop.jpg";
-// eslint-disable-next-line no-unused-vars
-import axios, { Axios } from "axios";
+import axios from "axios";
 const baseURL = "http://localhost:3000/users";
 export default {
   name: "login",

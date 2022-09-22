@@ -65,7 +65,7 @@
             </label>
           </td>
 
-         <!--Comment-->
+          <!--Comment-->
           <td id="addComment" style="display: none" v-if="editing === event.id">
             <input type="text" v-model="event.Comment" />
           </td>
@@ -91,11 +91,11 @@
         </tr>
       </tbody>
     </table>
-    
   </div>
 </template>
 
 <script>
+
 export default {
   name: "event-table",
   props: {
@@ -110,7 +110,6 @@ export default {
     editMode(id) {
       this.editing = id;
     },
-
     editEvent(event) {
       if (
         event.name === "" ||
@@ -154,5 +153,4 @@ td {
   margin-right: auto;
   border-collapse: separate;
 }
-
 </style>

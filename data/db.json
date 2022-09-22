@@ -22,7 +22,7 @@
       "Description": "The 10km is the most popular fun run distance and great stepping stone on the way up from 5km to longer distances.",
       "email": "justina@ho.com",
       "StartDate": "2022-09-22T08:11",
-      "EndDate": "2022-09-09-07T30:00",
+      "EndDate": "2022-09-09T09:11",
       "Location": "Wellington",
       "id": 1
     },
@@ -56,15 +56,18 @@
   ],
   "comments": [
     {
-      "name": "Some great sounding events!",
+      "name": "Justina",
+      "post": "Some great sounding events!",
       "id": 1
     },
     {
-      "name": "Do any of these events cost?",
+      "name": "Keegan",
+      "post": "Do any of these events cost?",
       "id": 2
     },
     {
-      "name": "I'm excited!",
+      "name": "Thom",
+      "post": "I'm excited!",
       "id": 3
     },
     {

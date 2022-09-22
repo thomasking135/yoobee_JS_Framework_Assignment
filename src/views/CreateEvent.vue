@@ -11,11 +11,11 @@
       @comment:event="commentEvent"
     />
   </div>
-
     <div id="app" class="small-container">
     <h2 class="title--secondary">Comments</h2>
 
     <comment-form @add:comment="addComment"/>
+            <Users/>
     <comment-table
       :comments="comments"
       @delete:comment="deleteComment"
@@ -32,18 +32,20 @@
 <script>
 import EventForm from "@/components/EventForm.vue";
 import EventTable from "@/components/EventTable.vue";
-import CommentTable from "@/components/CommentTable.vue";
-import CommentForm from "@/components/CommentForm.vue";
-const baseURL = "http://localhost:3000/events";
-const commentURL = "http://localhost:3000/comments";
+// import CommentTable from "@/components/CommentTable.vue";
+// import CommentForm from "@/components/CommentForm.vue";
+import Users from "@/components/Users.vue";
+// const baseURL = "http://localhost:3000/events";
+// const commentURL = "http://localhost:3000/comments";
 
 export default {
   name: "app",
   components: {
     EventForm,
     EventTable,
-    CommentForm,
-    CommentTable
+    // CommentForm,
+    // CommentTable,
+    Users
   },
   data() {
     return {
@@ -58,10 +60,11 @@ export default {
   },
 
  methods: {
+
     async getEvents() {
       try {
         const response = await fetch(
-          baseURL
+         "https://api.npoint.io/a284c810658102f76a1f/events"
           /*This is where our own API data will go*/
           /*Use of the JSON https API created by Justina*/
         );
@@ -75,7 +78,7 @@ export default {
     async addEvent(event) {
       try {
         const response = await fetch(
-          baseURL,
+         'https://api.npoint.io/a284c810658102f76a1f/events',
           /*This is where our own API data will go*/
           /*Use of the JSON https API created by Justina*/
           {
@@ -94,7 +97,7 @@ export default {
     async editEvent(id, updatedEvent) {
       try {
         const response = await fetch(
-          `https://jsonplaceholder.typicode.com/users/${id}`,
+          `https://api.npoint.io/a284c810658102f76a1f/events/${id}`,
           /*This is where our own API data will go*/
           /*Use of the JSON https API created by Justina*/
           {
@@ -114,7 +117,7 @@ export default {
 
     async deleteEvent(id) {
       try {
-        await fetch(`https://jsonplaceholder.typicode.com/users/${id}`, {
+        await fetch(`https://api.npoint.io/a284c810658102f76a1f/events/${id}`, {
           /*This is where our own API data will go*/
           /*Use of the JSON https API created by Justina*/
           method: "DELETE"
@@ -129,7 +132,7 @@ export default {
      async getComments() {
       try {
         const response = await fetch(
-          commentURL,
+          'https://api.npoint.io/a284c810658102f76a1f/comments',
         );
         const data = await response.json();
         this.comments = data;
@@ -141,7 +144,7 @@ export default {
     async addComment(comment) {
       try {
         const response = await fetch(
-          commentURL,
+          'https://api.npoint.io/a284c810658102f76a1f/comments',
           {
             method: "POST",
             body: JSON.stringify(comment),
@@ -158,7 +161,7 @@ export default {
     async editComment(id, updatedComment) {
       try {
         const response = await fetch(
-          `https://jsonplaceholder.typicode.com/users/${id}`,
+          `https://api.npoint.io/a284c810658102f76a1f/comments/${id}`,
           {
             method: "PUT",
             body: JSON.stringify(updatedComment),
@@ -176,7 +179,7 @@ export default {
 
     async deleteComment(id) {
       try {
-        await fetch(`https://jsonplaceholder.typicode.com/users/${id}`, {
+        await fetch(`https://api.npoint.io/a284c810658102f76a1f/comments/${id}`, {
           method: "DELETE"
         });
         this.comments = this.comments.filter(comment => comment.id !== id);
@@ -184,6 +187,7 @@ export default {
         console.error(error);
       }
     }
+
   }
 }; 
 </script>
