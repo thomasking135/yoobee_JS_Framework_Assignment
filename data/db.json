@@ -43,15 +43,6 @@
       "EndDate": "2022-10-03-07T30:00",
       "Location": "Christchurch",
       "id": 3
-    },
-    {
-      "name": "test",
-      "Description": "tes",
-      "email": "test@test.com",
-      "StartDate": "2022-09-22T13:23",
-      "EndDate": "2022-09-23T13:23",
-      "Location": "test",
-      "id": 4
     }
   ],
   "comments": [
