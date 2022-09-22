@@ -11,7 +11,6 @@
     </div>
     <br /><br />
     <div class="ProfileUserDeatilsContainer">
-      <h3>{{ username }}</h3>
       <p>Username: {{ message }}</p>
       <input v-model="message" placeholder="Username" />
       <br /><br />
