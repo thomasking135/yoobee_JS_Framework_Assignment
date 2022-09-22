@@ -67,8 +67,22 @@ h2 {
 
 .crudIcon {
   width: 20px;
-  background-color: var(--white);
+  background-color: transparent;
   border: none;
+}
+
+button {
+  background-color: var(--green);
+  border: none;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+button:hover {
+  background-color: var(--blue);
+  border: none;
+  padding: 5px;
+  margin-bottom: 5px;
 }
 
 .title {

@@ -9,8 +9,7 @@
     <table v-else>
       <thead>
         <tr>
-          <th>Comments</th>
-          <th>Actions</th>
+          <th>Posted comments</th>
         </tr>
       </thead>
       <tbody>
