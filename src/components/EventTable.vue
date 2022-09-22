@@ -10,7 +10,7 @@
         <tr>
           <th>Event name</th>
           <th>Description</th>
-          <th>Contact</th>
+          <th>Email</th>
           <th>Start Date</th>
           <th>End Date</th>
           <th>Location</th>
@@ -66,7 +66,7 @@
           </td>
 
          <!--Comment-->
-          <td v-if="editing === event.id">
+          <td id="addComment" style="display: none" v-if="editing === event.id">
             <input type="text" v-model="event.Comment" />
           </td>
           <td v-else>{{ event.Comment }}</td>
@@ -139,7 +139,8 @@ export default {
         event.StartDate === "" ||
         event.EndDate === "" ||
         event.Location === "" ||
-        event.Description === ""
+        event.Description === "" ||
+        event.email === ""
       )
         return;
       this.$emit("edit:event", event.id, event);

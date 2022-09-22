@@ -32,7 +32,7 @@
             ref="first"
             type="email"
             :class="{ 'has-error': submitting && invalidEmail }"
-            v-model="event.Email"
+            v-model="event.email"
             @focus="clearStatus"
             @keypress="clearStatus"
           />
@@ -90,7 +90,7 @@ export default {
       event: {
         name: "",
         Description: "",
-        Email: "",
+        email: "",
         StartDate: "",
         EndDate: "",
         Location: ""
@@ -107,7 +107,7 @@ export default {
     },
 
     invalidEmail() {
-      return this.event.Email === "";
+      return this.event.email === "";
     },
 
     invalidStartDate() {
@@ -145,7 +145,7 @@ export default {
       this.event = {
         name: "",
         Description: "",
-        Email:"",
+        email:"",
         StartDate: "",
         EndDate: "",
         Location: ""
