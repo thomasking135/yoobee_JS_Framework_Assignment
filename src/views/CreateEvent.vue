@@ -10,6 +10,7 @@
     />
   </div>
 
+  <!--Event form and table display-->
   <div class="create">
     <event-form @add:event="addEvent"/>
     <event-table
@@ -20,6 +21,8 @@
       @comment:event="commentEvent"
     />
   </div>
+
+  <!--Comments section-->
     <div id="app" class="small-container">
     <h2 class="title--secondary">Comments</h2>
     <comment-form @add:comment="addComment"/>

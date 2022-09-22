@@ -7,6 +7,7 @@
       ><button class="button--landing">Create a new event</button></router-link
     >
   </div>
+<!--Image overlay-->
   <div class="overlayLandingImg">
     <img
       class="landingImg"
@@ -15,6 +16,7 @@
     />
   </div>
 
+  <!--Events table-->
   <event-table
     class="displayCenter"
     :events="events"
@@ -83,55 +85,7 @@ export default {
 </script>
 <!--Style section-->
 <style>
-/*
- CSS for the main interaction
-*/
-.accordion {
-  position: absolute;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-  margin-top: 100px;
-}
+@import "../assets/styles/main.css";
 
-.accordion .content {
-  overflow-y: hidden;
-  height: 0;
-  transition: height 0.3s ease;
-}
-
-.accordion > input[type="checkbox"]:checked ~ .content {
-  height: auto;
-  overflow: visible;
-}
-
-.inline {
-  display: inline-block;
-}
-
-.clear {
-  border: 2px solid #06bdb6;
-  height: 50px;
-  width: 70px;
-}
-
-.search {
-  height: 50px;
-  width: 70px;
-  margin-left: 10px;
-}
-
-#keyword,
-#category,
-#date,
-#location {
-  height: 45px;
-  width: 300px;
-}
-
-#filter {
-  position: absolute;
-  margin-left: 20px;
-}
 </style>
 <!--End of style section-->
