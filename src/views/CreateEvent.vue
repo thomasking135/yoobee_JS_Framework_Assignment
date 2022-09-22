@@ -139,7 +139,7 @@ export default {
         console.error(error);
       }
     },
-    
+
 //  Comment form
      async getComments() {
       try {
@@ -201,5 +201,5 @@ export default {
     }
 
   }
-}; 
+};
 </script>

@@ -155,8 +155,6 @@ button:hover {
 }
 
 .icon-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   background: var(--white);
   z-index: 100;
@@ -173,8 +171,6 @@ h1 {
 
 @media (max-width: 600px) {
   .mobileLogo {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
   .desktopLogo {
@@ -188,7 +184,6 @@ h1 {
     margin-right: auto;
   }
 }
-
 .editCommentInput input {
   width: 100%;
   padding: 0;
@@ -253,8 +248,7 @@ h1 {
 
 .createEvent:hover {
   background-color: #48b1bf;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
   border-radius: 26%;
 }
 
@@ -276,9 +270,7 @@ h1 {
   height: 500px;
   overflow: hidden;
   background: var(--green);
-  background: -webkit-gradient(linear, left top, left bottom, from(var(--green)), to(var(--grey))), url("../images/LandingPage.jpg");
-  background: linear-gradient(var(--green), var(--grey)), url("../images/LandingPage.jpg");
-  /* The least supported option. */
+  background: linear-gradient(var(--green), var(--grey)), url("../images/LandingPage.jpg"); /* The least supported option. */
 }
 
 /*CSS for the Login Page*/
@@ -318,8 +310,7 @@ h1 {
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 #submitLogin {
@@ -421,10 +412,10 @@ span.learnMore a:hover a:visited {
 
 /*CSS for Create Event Page*/
 /* table {
-    padding-top: 10px;
-    width: 80%;
-    left: 50%;
-  } */
+  padding-top: 10px;
+  width: 80%;
+  left: 50%;
+} */
 td {
   border: none;
   text-align: center;
@@ -447,8 +438,6 @@ th {
 }
 
 .tableField {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-bottom: 10px;
 }
@@ -456,8 +445,6 @@ th {
 .tableField label {
   width: 150px;
   justify-items: flex-start;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -467,25 +454,16 @@ th {
 }
 
 .formBorder {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   width: 90%;
   margin-left: auto;
   margin-right: auto;
 }
 
 #event-form form {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   /* border: 1px solid var(--green); */
   padding: 20px;
 }
@@ -516,8 +494,7 @@ th {
 }
 
 .postit:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
   background-color: #06bdb6;
 }
 
@@ -530,8 +507,7 @@ th {
 }
 
 .cancelit:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
   background-color: red;
   color: white;
 }
@@ -567,8 +543,7 @@ th {
   position: absolute;
   top: 45%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   color: black;
   font-size: 200%;
   font-weight: bold;
@@ -640,10 +615,10 @@ th {
 }
 
 /* .CoverContainer {
-    position: relative;
-    display: inline-block;
-    width: 100vw;
-  } */
+  position: relative;
+  display: inline-block;
+  width: 100vw;
+} */
 .cover-image {
   width: 100%;
   padding: 0;
@@ -673,9 +648,7 @@ th {
   font-weight: 700;
   border: 1px solid #06beb6;
   margin-top: 30px;
-  -webkit-box-align: left;
-      -ms-flex-align: left;
-          align-items: left;
+  align-items: left;
   margin-left: 10%;
   margin-right: 10%;
 }
@@ -694,14 +667,12 @@ th {
 /*CSS for profile page*/
 #logoutProfile:hover {
   background-color: #48b1bf;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 #updateProfile:hover {
   background-color: #48b1bf;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .profileHR {
@@ -733,10 +704,7 @@ th {
 }
 
 .profileDetails {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   float: right;
   margin-top: -15%;
   margin-right: 17%;
@@ -783,10 +751,8 @@ th {
 }
 
 .ProfileTabs {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
 }
 
 .ProfileTabButtons {
@@ -818,9 +784,7 @@ th {
   width: 80%;
   font-weight: 500;
   margin-bottom: 10px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   margin-bottom: 20px;
 }
 
@@ -852,8 +816,7 @@ th {
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 #submitSignUp {
@@ -937,24 +900,15 @@ span.account a:hover a:visited {
 /*CSS for Event Deleted Confirmation Component*/
 .ModalContainer {
   position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   background-color: #303030;
   left: 20%;
   right: 20%;
   top: 35%;
   bottom: 35%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 .ModalCrossButton {
@@ -982,16 +936,10 @@ span.account a:hover a:visited {
 
 /*CSS for Abandon Modal component*/
 .ModalButtonsContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .ModalCancelButton {
@@ -1012,8 +960,8 @@ span.account a:hover a:visited {
 }
 
 /*
-   CSS for the main interaction
-  */
+ CSS for the main interaction
+*/
 .accordion {
   position: absolute;
   margin-left: auto;
@@ -1025,11 +973,10 @@ span.account a:hover a:visited {
 .accordion .content {
   overflow-y: hidden;
   height: 0;
-  -webkit-transition: height 0.3s ease;
   transition: height 0.3s ease;
 }
 
-.accordion > input[type="checkbox"]:checked ~ .content {
+.accordion > input[type=checkbox]:checked ~ .content {
   height: auto;
   overflow: visible;
 }
@@ -1090,8 +1037,7 @@ span.account a:hover a:visited {
 }
 
 .update:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
   background-color: #06bdb6;
 }
 
@@ -1104,44 +1050,27 @@ span.account a:hover a:visited {
 }
 
 .delete:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
   background-color: red;
   color: white;
 }
 
 /*ProfileView Page Keegan's page*/
 .ProfileInfoContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: flex-start;
+  justify-content: center;
   margin-bottom: 50px;
 }
 
 .ProfilePicContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 .ProfileUserDeatilsContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 .profileLoginBtn {
@@ -1164,13 +1093,8 @@ span.account a:hover a:visited {
 
 .profileTabButtons {
   margin-top: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 .viewEventsProfile {
@@ -1198,4 +1122,125 @@ span.account a:hover a:visited {
 #createEvent:hover {
   background-color: #48b1bf;
 }
-/*# sourceMappingURL=style.css.map */
+
+/*APP.VUE CSS PAGE CSS*/
+.home-icon {
+  width: 45px;
+  position: relative;
+  display: inline-block;
+  margin: 10px;
+}
+
+.home-icon .img-top {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+.home-icon:hover .img-top {
+  display: inline;
+}
+
+.info-icon {
+  width: 45px;
+  position: relative;
+  display: inline-block;
+  margin: 10px;
+}
+
+.info-icon .img-top {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+.info-icon:hover .img-top {
+  display: inline;
+}
+
+.add-icon {
+  width: 45px;
+  position: relative;
+  display: inline-block;
+  margin: 10px;
+}
+
+.add-icon .img-top {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+.add-icon:hover .img-top {
+  display: inline;
+}
+
+.user-icon {
+  width: 45px;
+  position: relative;
+  display: inline-block;
+  margin: 10px;
+}
+
+.user-icon .img-top {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+.user-icon:hover .img-top {
+  display: inline;
+}
+
+.dropbtn {
+  color: white;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  width: 45px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  margin-top: 0px;
+  margin-right: 500px;
+  left: 70%;
+  right: auto;
+  transform: translateX(-50%);
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 10px 10px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #303030;
+  color: #08bdb6;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: transparent;
+}/*# sourceMappingURL=style.css.map */
