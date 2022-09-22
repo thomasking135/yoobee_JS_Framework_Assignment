@@ -30,14 +30,30 @@
         </button></router-link
       >
       <router-link to="/login"
-        ><button class="button--secondary">Login</button></router-link
+        ><button class="button--secondary profileLoginBtn">
+          Login
+        </button></router-link
       >
       <br /><br />
     </div>
   </div>
 
-  <h3 class="center suggestedEvents">Suggested Events</h3>
-
+  <h3 class="center suggestedEvents title--secondary">My Events</h3>
+  <p class="profileTabPara">
+    Unfortunately there are no events to dislplay at the moment.
+  </p>
+  <div class="profileTabButtons">
+    <router-link to="/"
+      ><button class="button--secondary viewEventsProfile">
+        View Events
+      </button></router-link
+    >
+    <router-link to="/create"
+      ><button class="button--secondary createEventsBtnProfile">
+        Create Your Own Event
+      </button></router-link
+    >
+  </div>
   <FooterSection />
 </template>
 
@@ -122,9 +138,34 @@ export default {
   flex-direction: column;
 }
 
+.profileLoginBtn {
+  width: 100%;
+}
+
 .center {
   margin-left: auto;
   margin-right: auto;
+}
+
+.suggestedEvents {
+  color: #08bdb6;
+  border-bottom: 1px solid #08bdb6;
+}
+
+.profileTabPara {
+  margin-top: 50px;
+}
+.profileTabButtons {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.viewEventsProfile {
+  width: 30%;
+}
+.createEventsBtnProfile {
+  width: 30%;
 }
 
 #createEvent {
