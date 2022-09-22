@@ -60,7 +60,6 @@
 import Axios from "axios";
 import ProfileForm from "@/components/ProfileForm.vue";
 import FooterSection from "@/components/FooterSection.vue";
-import LoginView from "../views/LoginView.vue";
 
 //const baseURL = "http://localhost:3000/users";
 
@@ -73,9 +72,6 @@ export default {
   components: {
     ProfileForm,
     FooterSection,
-
-    // eslint-disable-next-line vue/no-unused-components
-    LoginView,
   },
   data() {
     return {
