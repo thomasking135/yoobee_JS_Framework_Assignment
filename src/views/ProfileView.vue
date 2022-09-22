@@ -11,7 +11,7 @@
     </div>
     <br /><br />
     <div class="ProfileUserDeatilsContainer">
-      <h3>{{ this.users.username }}</h3>
+      <h3>{{ username }}</h3>
       <p>Username: {{ message }}</p>
       <input v-model="message" placeholder="Username" />
       <br /><br />
@@ -35,7 +35,8 @@
       <br /><br />
     </div>
   </div>
-  <h2>Contacts</h2>
+
+  <h3 class="center suggestedEvents">Suggested Events</h3>
 
   <FooterSection />
 </template>
@@ -45,7 +46,8 @@ import Axios from "axios";
 import ProfileForm from "@/components/ProfileForm.vue";
 import FooterSection from "@/components/FooterSection.vue";
 import LoginView from "../views/LoginView.vue";
-const baseURL = "http://localhost:3000/users";
+
+//const baseURL = "http://localhost:3000/users";
 
 const cloudName = "dqyhsobqa";
 const unsignedUploadPreset = "ewvntos9";
@@ -56,6 +58,7 @@ export default {
   components: {
     ProfileForm,
     FooterSection,
+
     // eslint-disable-next-line vue/no-unused-components
     LoginView,
   },
@@ -65,23 +68,24 @@ export default {
       uploading: false,
       users: [],
       username: "",
+      events: [],
     };
   },
 
-  mounted() {
-    Axios.get(baseURL).then(
-      (response) => (this.users.username = response.data)
-    );
+  /*mounted() {
+    Axios.get(baseURL).then((response) => {
+      this.users.username = response.data;
+    });
   },
-
-  async created() {
+*/
+  /*async created() {
     try {
       const res = await Axios.get(baseURL);
       this.items = res.data;
     } catch (error) {
       console.log(error);
     }
-  },
+  },*/
 
   methods: {
     uploadFile(fileData) {

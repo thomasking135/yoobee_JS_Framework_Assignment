@@ -30,19 +30,19 @@
         </div>
 
         <div class="loginForm__container">
-          <span class="signUp"><a href="/register">Don't have an account?</a></span>
+          <span class="signUp"
+            ><a href="/register">Don't have an account?</a></span
+          >
         </div>
 
         <div class="loginForm__container">
           <span class="learnMore"><a href="/about">Learn more!</a></span>
         </div>
-
       </form>
     </div>
 
     <div v-if="!formIsValid">Please enter a valid email and username</div>
     <div v-if="!userDetailsIsValid">Email and/or username is incorrect</div>
-
   </div>
 </template>
 
@@ -52,7 +52,8 @@
 
 <script>
 import backgroundUrl from "../assets/images/LogInSignUpDesktop.jpg";
-import axios from "axios";
+// eslint-disable-next-line no-unused-vars
+import axios, { Axios } from "axios";
 const baseURL = "http://localhost:3000/users";
 export default {
   name: "login",
@@ -92,9 +93,9 @@ export default {
           window.location.href = "/";
         }
         if (this.username !== this.users.username) {
-           this.userDetailsIsValid = false;
+          this.userDetailsIsValid = false;
         }
-      } 
+      }
 
       //GET
       axios
