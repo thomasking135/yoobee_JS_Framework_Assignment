@@ -1,5 +1,5 @@
-<!--Thomas to update functionality-->
-<!--Functionality to be tested by Justina Ho-->
+<!--THOMAS KING Code-->
+<!--Functionality tested by Justina Ho-->
 <template>
   <h1 class="title center">Create Event</h1>
    <div class="overlayLandingImg">

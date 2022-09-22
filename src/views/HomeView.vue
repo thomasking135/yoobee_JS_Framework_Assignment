@@ -1,4 +1,5 @@
-<!--Thomas Code-->
+<!--THOMAS KING Code-->
+<!--Functionality tested by Justina Ho-->
 <!--Template-->
 <template>
   <div class="centerMessage">

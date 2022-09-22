@@ -1,3 +1,5 @@
+<!--JUSTINA HO code-->
+<!--Functionality tested by Keegan Dufty-->
 <template>
   <div
     class="background-image"

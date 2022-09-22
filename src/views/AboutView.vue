@@ -1,3 +1,5 @@
+<!--KEEGAN DUFTY CODE-->
+<!--Functionality tested by Thomas King-->
 <template>
   <div class="CoverContainer">
     <h1 class="title center">About</h1>

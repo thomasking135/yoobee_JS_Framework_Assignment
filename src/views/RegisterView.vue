@@ -1,4 +1,5 @@
-<!--JUSTINA HO page-->
+<!--JUSTINA HO code-->
+<!--Functionality tested by Keegan Difty-->
 <template>
   <div
     class="background-image"

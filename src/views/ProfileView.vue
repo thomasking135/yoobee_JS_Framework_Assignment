@@ -1,4 +1,5 @@
-<!--KEEGAN DUFTY page-->
+<!--KEEGAN DUFTY code-->
+<!--Functionality tested by Thomas King-->
 <template>
   <h1 class="title--profile">Profile</h1>
   <div class="ProfileInfoContainer">
