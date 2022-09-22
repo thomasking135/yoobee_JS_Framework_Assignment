@@ -1,3 +1,4 @@
+<!--KEEGAN DUFTY page-->
 <template>
   <h1 class="title--profile">Profile</h1>
   <div class="ProfileInfoContainer">
@@ -10,6 +11,7 @@
       />
     </div>
     <br /><br />
+    <!--User Profile Content area-->
     <div class="ProfileUserDeatilsContainer">
       <p>Username: {{ message }}</p>
       <input v-model="message" placeholder="Username" />
@@ -23,6 +25,7 @@
 
       <br /><br />
 
+      <!--Router Links to Create Event Page and Login-->
       <router-link to="/create"
         ><button id="createEvent" class="button--primary">
           Create a new event
@@ -41,6 +44,7 @@
   <p class="profileTabPara">
     Unfortunately there are no events to dislplay at the moment.
   </p>
+  <!--Router Links to View Events and Create Own Events-->
   <div class="profileTabButtons">
     <router-link to="/"
       ><button class="button--secondary viewEventsProfile">
@@ -53,6 +57,7 @@
       </button></router-link
     >
   </div>
+  <!--Footer-->
   <FooterSection />
 </template>
 

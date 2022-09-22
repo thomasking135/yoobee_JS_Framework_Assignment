@@ -1,3 +1,4 @@
+<!--JUSTINA HO page-->
 <template>
   <div
     class="background-image"
@@ -5,6 +6,7 @@
   >
     <div class="register">
       <h1 class="title--login">Sign Up</h1>
+      <!--Start of registration form-->
       <form class="registerForm" @submit.prevent="onRegister" novalidate>
         <div class="registerForm__container">
           <input
@@ -33,6 +35,7 @@
           >
         </div>
       </form>
+      <!--End of registration form-->
     </div>
     <div v-if="!formIsValid">Please enter a valid email and username</div>
      <div v-if="nameTaken">This username and/or email has been taken, please try another one.</div>

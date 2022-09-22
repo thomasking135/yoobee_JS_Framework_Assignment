@@ -5,7 +5,7 @@
   >
     <div class="login">
       <h1 class="title--login">Login</h1>
-
+      <!--Start of Login form-->
       <form class="loginForm" @submit.prevent="submitForm" novalidate>
         <div class="loginForm__container">
           <input
@@ -39,8 +39,9 @@
           <span class="learnMore"><a href="/about">Learn more!</a></span>
         </div>
       </form>
+      <!--End of login form-->
     </div>
-
+    <!--Conditional Login responses with v-if control-->
     <div v-if="!formIsValid">Please enter a valid email and username</div>
     <div v-if="!userDetailsIsValid">Email and/or username is incorrect</div>
   </div>

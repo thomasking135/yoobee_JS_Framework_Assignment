@@ -140,7 +140,7 @@ export default {
       }
     },
 
-//  Comment form
+    //  Comment form
      async getComments() {
       try {
         const response = await fetch(
@@ -152,7 +152,7 @@ export default {
         console.error(error);
       }
     },
-
+    //  Add Comment
     async addComment(comment) {
       try {
         const response = await fetch(
@@ -170,6 +170,7 @@ export default {
       }
     },
 
+    //  Edit/Update Comment
     async editComment(id, updatedComment) {
       try {
         const response = await fetch(
@@ -189,6 +190,7 @@ export default {
       }
     },
 
+    //  Delete Comment
     async deleteComment(id) {
       try {
         await fetch(`http://localhost:3000/comments/${id}`, {
