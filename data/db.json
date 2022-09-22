@@ -24,7 +24,6 @@
       "StartDate": "2022-09-22T08:11",
       "EndDate": "2022-09-09-07T30:00",
       "Location": "Wellington",
-      "Comment": "Sounds like a great event!",
       "id": 1
     },
     {
@@ -34,7 +33,6 @@
       "StartDate": "2022-09-14-07T00:00",
       "EndDate": "2022-09-15-07T30:00",
       "Location": "Auckland",
-      "Comment": "Sounds like a great event!",
       "id": 2
     },
     {
@@ -44,7 +42,29 @@
       "StartDate": "2022-10-02-07T00:00",
       "EndDate": "2022-10-03-07T30:00",
       "Location": "Christchurch",
-      "Comment": "Sounds like a great event!",
+      "id": 3
+    },
+    {
+      "name": "test",
+      "Description": "tes",
+      "email": "test@test.com",
+      "StartDate": "2022-09-22T13:23",
+      "EndDate": "2022-09-23T13:23",
+      "Location": "test",
+      "id": 4
+    }
+  ],
+  "comments": [
+    {
+      "name": "Some great sounding events!",
+      "id": 1
+    },
+    {
+      "name": "Do any of these events cost?",
+      "id": 2
+    },
+    {
+      "name": "I'm excited!",
       "id": 3
     }
   ]

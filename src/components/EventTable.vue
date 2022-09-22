@@ -77,13 +77,6 @@
             <button class="muted-button" @click="editing = null">Cancel</button>
           </td>
           <td v-else>
-            <button @click="$emit('comment:event', event.id)">
-              <img
-                class="crudIcon"
-                src="../assets/icons/comment.png"
-                alt="comment"
-              />
-            </button>
             <button @click="editMode(event.id)">
               <img class="crudIcon" src="../assets/icons/edit.png" alt="edit" />
             </button>
@@ -98,18 +91,7 @@
         </tr>
       </tbody>
     </table>
-    <br /><br />
-    <!--Add a counter-->
-    <div id="counter">
-      <p class="bold">Like Hap?</p>
-      <button
-        id="like"
-        @click="incrementValue"
-        class="button-reset bg-green ba b--black ph4 pv3 mb2 white f4 dim">
-          <img class="crudIcon" src="../assets/icons/like.png" alt="edit" />
-        </button>
-      <div class="likeCountStyling">{{ counter }}</div>
-    </div>
+    
   </div>
 </template>
 
@@ -122,15 +104,11 @@ export default {
   data() {
     return {
       editing: null,
-      counter: 65789,
     };
   },
   methods: {
     editMode(id) {
       this.editing = id;
-    },
-    incrementValue() {
-      this.counter++;
     },
 
     editEvent(event) {

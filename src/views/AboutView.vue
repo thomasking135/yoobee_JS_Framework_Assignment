@@ -88,11 +88,6 @@
 <style>
 @import "../assets/styles/main.css";
 
-table {
-  padding-top: 10px;
-  border-collapse: collapse black 1px;
-  width: 80%;
-}
 </style>
 
 <script>

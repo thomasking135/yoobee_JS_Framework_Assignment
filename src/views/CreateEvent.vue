@@ -12,6 +12,17 @@
     />
   </div>
 
+    <div id="app" class="small-container">
+    <h2 class="title--secondary">Comments</h2>
+
+    <comment-form @add:comment="addComment"/>
+    <comment-table
+      :comments="comments"
+      @delete:comment="deleteComment"
+      @edit:comment="editComment"
+    />
+  </div>
+
 </template>
 
 <style>
@@ -21,22 +32,29 @@
 <script>
 import EventForm from "@/components/EventForm.vue";
 import EventTable from "@/components/EventTable.vue";
+import CommentTable from "@/components/CommentTable.vue";
+import CommentForm from "@/components/CommentForm.vue";
 const baseURL = "http://localhost:3000/events";
+const commentURL = "http://localhost:3000/comments";
 
 export default {
   name: "app",
   components: {
     EventForm,
     EventTable,
+    CommentForm,
+    CommentTable
   },
   data() {
     return {
       events: [],
+      comments: []
     };
   },
 
   mounted() {
     this.getEvents();
+    this.getComments();
   },
 
  methods: {
@@ -102,6 +120,66 @@ export default {
           method: "DELETE"
         });
         this.events = this.events.filter(event => event.id !== id);
+      } catch (error) {
+        console.error(error);
+      }
+    },
+    
+//  Comment form
+     async getComments() {
+      try {
+        const response = await fetch(
+          commentURL,
+        );
+        const data = await response.json();
+        this.comments = data;
+      } catch (error) {
+        console.error(error);
+      }
+    },
+
+    async addComment(comment) {
+      try {
+        const response = await fetch(
+          commentURL,
+          {
+            method: "POST",
+            body: JSON.stringify(comment),
+            headers: { "Content-type": "application/json; charset=UTF-8" }
+          }
+        );
+        const data = await response.json();
+        this.comments = [...this.comments, data];
+      } catch (error) {
+        console.error(error);
+      }
+    },
+
+    async editComment(id, updatedComment) {
+      try {
+        const response = await fetch(
+          `https://jsonplaceholder.typicode.com/users/${id}`,
+          {
+            method: "PUT",
+            body: JSON.stringify(updatedComment),
+            headers: { "Content-type": "application/json; charset=UTF-8" }
+          }
+        );
+        const data = await response.json();
+        this.comments = this.comments.map(comment =>
+          comment.id === id ? data : comment
+        );
+      } catch (error) {
+        console.error(error);
+      }
+    },
+
+    async deleteComment(id) {
+      try {
+        await fetch(`https://jsonplaceholder.typicode.com/users/${id}`, {
+          method: "DELETE"
+        });
+        this.comments = this.comments.filter(comment => comment.id !== id);
       } catch (error) {
         console.error(error);
       }
