@@ -1,0 +1,1129 @@
+/*Significant Programme code requirements*/
+#app {
+    font-family: lato, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: var(--grey);
+  }
+  
+  :root {
+    --green: #08bdb6;
+    --blue: #48b1bf;
+    --white: #ffffff;
+    --grey: #303030;
+  }
+  
+  h2 {
+    font-family: poppins, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--white);
+    font-size: 72px;
+  }
+  
+  .button--landing {
+    background-color: var(--green);
+    border: none;
+    padding: 20px;
+    width: 300px;
+    font-size: 18px;
+  }
+  
+  .button--landing:hover {
+    background-color: var(--blue);
+    border: none;
+    padding: 20px;
+    width: 300px;
+    font-size: 18px;
+  }
+  
+  .button--primary {
+    background-color: var(--green);
+    border: 1px solid var(--green);
+    padding: 10px;
+  }
+  
+  .button--primary:hover {
+    background-color: var(--blue);
+    border: 1px solid var(--blue);
+    padding: 10px;
+  }
+  
+  .button--secondary {
+    border: solid 1px var(--green);
+    background-color: transparent;
+    padding: 10px;
+  }
+  
+  .button--secondary:hover {
+    border: solid 1px var(--blue);
+    background-color: transparent;
+    padding: 10px;
+  }
+  
+  .crudIcon {
+    width: 20px;
+    background-color: transparent;
+    border: none;
+  }
+  
+  button {
+    background-color: var(--green);
+    border: none;
+    padding: 5px;
+    margin-bottom: 5px;
+  }
+  
+  button:hover {
+    background-color: var(--blue);
+    border: none;
+    padding: 5px;
+    margin-bottom: 5px;
+  }
+  
+  .title {
+    font-family: poppins, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--white);
+    border-top: 1px solid var(--green);
+    padding-top: 20px;
+    font-size: 48px;
+    position: absolute;
+    z-index: 102;
+    margin-top: 380px;
+  }
+  
+  .title--profile {
+    font-family: poppins, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--grey);
+    border-top: 1px solid var(--green);
+    padding-top: 20px;
+    font-size: 48px;
+  }
+  
+  
+  .title--secondary {
+    font-family: poppins, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--grey);
+    margin-top: 50px;
+    font-size: 28px;
+  }
+  
+  .title--login {
+    font-family: poppins, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--white);
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .center {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .contactTable {
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .contactTable td {
+    background-color: var(--blue);
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .contactPara {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .icon-nav {
+    display: flex;
+    background: var(--white);
+    z-index: 100;
+    position: relative;
+  }
+  
+  h1 {
+    font-size: 40px;
+  }
+  
+  .mobileLogo {
+    display: none;
+  }
+  
+  @media (max-width: 600px) {
+    .mobileLogo {
+      display: flex;
+    }
+    .desktopLogo {
+      display: none;
+    }
+  
+    h2 {
+      font-size: 40px;
+    }
+  
+    .centerMessage {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  
+  .editCommentInput input{
+    width: 100%;
+    padding: 0;
+  }
+  
+  #logo {
+    height: 100px;
+    margin-left: 15px;
+  }
+  
+  .icon-nav li {
+    list-style: none;
+    margin-top: 30px;
+  }
+  
+  .icon-nav li:first-child {
+    margin-right: auto;
+    margin-top: 0px;
+  }
+  
+  .icon-nav li:last-child {
+    margin-right: auto;
+    margin-right: 60px;
+  }
+  
+  /*CSS for the Home Landing Page*/
+  .container {
+    padding-top: -100px;
+    position: absolute;
+    text-align: center;
+    color: white;
+  }
+  
+  .centerMessage {
+    position: absolute;
+    color: var(--white);
+    font-size: 48px;
+    font-family: poppins, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    z-index: 100;
+    margin-top: 5%;
+  }
+  
+  .createEvent {
+    background-color: #08bdb6;
+    text-align: center;
+    font-size: 14px;
+    font-family: lato, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #303030;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  
+  .createEvent:hover {
+    background-color: #48b1bf;
+    transform: scale(1.1);
+    border-radius: 26%;
+  }
+  
+  .home {
+    padding-top: 200px;
+  }
+  
+  .landingImg {
+    position: relative;
+    object-fit: cover;
+    width: 100%;
+    height: 500px;
+    opacity: 0.4;
+  }
+  
+  .overlayLandingImg {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    background: var(--green);
+    background: -webkit-linear-gradient(var(--green), var(--grey)),
+      url("../images/LandingPage.jpg");
+    background: linear-gradient(var(--green), var(--grey)),
+      url("../images/LandingPage.jpg"); /* The least supported option. */
+  }
+  
+  /*CSS for the Login Page*/
+  
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .login {
+    padding-top: 300px;
+    text-align: left;
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+  
+  .loginForm__container {
+    padding: 16px;
+    border: none;
+  }
+  
+  .background-image {
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    margin-top: -105px;
+    z-index: 1;
+  }
+  
+  .loginForm {
+    border: none;
+  }
+  
+  .loginFormInput {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  #submitLogin {
+    background-color: #08bdb6;
+    text-align: center;
+    font-size: 14px;
+    font-family: lato, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #303030;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  #submitLogin:hover {
+    background-color: #48b1bf;
+  }
+  
+  .SignUpBtn {
+    color: #303030;
+    text-align: center;
+    font-size: 14px;
+    font-family: lato, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    text-decoration: underline;
+    width: auto;
+    padding: 10px 18px;
+    background-color: transparent;
+  }
+  
+  .SignUpBtn:hover {
+    color: #303030;
+    width: auto;
+    padding: 10px 18px;
+    background-color: transparent;
+  }
+  
+  span.psw {
+    float: right;
+    padding-top: 16px;
+    text-align: center;
+    font-size: 14px;
+    font-family: lato, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #303030;
+  }
+  
+  span.psw a {
+    color: #303030;
+  }
+  
+  span.psw a:hover a:visited {
+    color: #303030;
+  }
+  
+  span.signUp {
+    float: left;
+    padding-top: 16px;
+    text-align: center;
+    font-size: 14px;
+    font-family: lato, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #303030;
+  }
+  
+  span.signUp a {
+    color: #303030;
+  }
+  
+  span.signUp a:hover a:visited {
+    color: #303030;
+  }
+  
+  span.learnMore {
+    float: right;
+    margin-top: -15px;
+    padding-top: 0px;
+    text-align: center;
+    font-size: 14px;
+    font-family: lato, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #303030;
+  }
+  
+  span.learnMore a {
+    color: #303030;
+  }
+  
+  span.learnMore a:hover a:visited {
+    color: #303030;
+  }
+  
+  /*CSS for Create Event Page*/
+  
+  /* table {
+    padding-top: 10px;
+    width: 80%;
+    left: 50%;
+  } */
+  
+  td {
+    border: none;
+    text-align: center;
+    padding: 8px;
+  }
+  
+  th {
+    padding: 5px 10px 5px 10px;
+    border: none;
+  }
+  
+  .commentForm input{
+    width: 500px;
+    margin-right: 10px;
+    padding: 10px;
+  }
+  
+  .createEventBtn {
+    margin-top: 20px;
+  }
+  
+  .tableField {
+    display: flex;
+    margin-bottom: 10px;
+  }
+  
+  .tableField label {
+    width: 150px;
+    justify-items: flex-start;
+    display: flex;
+  }
+  
+  .tableField input {
+    justify-items: flex-end;
+    width: 250px;
+  }
+  
+  .formBorder {
+    align-items: center;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  #event-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 1px solid var(--green); */
+    padding: 20px;
+  }
+  
+  #address {
+    width: 353px;
+  }
+  
+  #category,
+  #privacy {
+    width: 360px;
+  }
+  
+  #description {
+    border: 2px solid var(--blue);
+    display: inline-block;
+    padding-left: 14%;
+    padding-right: 14.6%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+  }
+  
+  .postit {
+    width: 100px;
+    height: 30px;
+    float: right;
+    margin-left: 10px;
+  }
+  
+  .postit:hover {
+    transform: scale(1.1);
+    background-color: #06bdb6;
+  }
+  
+  .cancelit {
+    width: 100px;
+    height: 30px;
+    float: right;
+    color: red;
+    border: 2px solid red;
+  }
+  
+  .cancelit:hover {
+    transform: scale(1.1);
+    background-color: red;
+    color: white;
+  }
+  
+  .displayCenter {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+  }
+  
+  .float {
+    float: right;
+    height: 50px;
+  }
+  
+  .create {
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--grey);
+    text-align: center;
+  }
+  
+  .imageUpload {
+    margin-left: auto;
+    margin-right: auto;
+    position: justify;
+    /*color: white; (this would have been the colour of the text present for the upload image link for a Bit64 upload*/
+    text-align: auto;
+  }
+  
+  .centerMessaging {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-size: 200%;
+    font-weight: bold;
+    width: 100%;
+    height: 13%;
+    text-align: center;
+  }
+  
+  /*CSS for About Info Page*/
+  
+  #contactHead {
+    padding-top: 60px;
+    color: black;
+  }
+  
+  .container {
+    padding-top: 100px;
+    position: absolute;
+    text-align: center;
+    color: white;
+  }
+  
+  .centerAboutMessage {
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    color: palegoldenrod;
+    font-size: 300%;
+    font-weight: bold;
+  }
+  
+  .about p {
+    margin-bottom: 50px;
+  }
+  
+  .createEvent {
+    background-color: #08bdb6;
+    text-align: center;
+    font-size: 14px;
+    font-family: lato, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #303030;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  
+  .createEventImg{
+    width: 100%;
+    padding: 0;
+    margin-top: 0;
+    object-fit: cover;
+    height: 500px;
+    position: relative;
+  }
+  .createEvent:hover {
+    background-color: #48b1bf;
+  }
+  
+  .about {
+    padding-top: 100px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+  }
+  
+  /* .CoverContainer {
+    position: relative;
+    display: inline-block;
+    width: 100vw;
+  } */
+  
+  .cover-image {
+    width: 100%;
+    padding: 0;
+    margin-top: 0;
+    object-fit: cover;
+    height: 500px;
+  }
+  .ContactUs {
+    padding-top: 50px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+  .ContactHeader {
+    text-align: left;
+    font-size: 40pt;
+  }
+  
+  .JoinUsButton {
+    background-color: #06beb6;
+    color: #303030;
+    padding: 10px;
+    font-weight: 700;
+    border: 1px solid #06beb6;
+    margin-top: 30px;
+    align-items: left;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  .JoinUsButton:hover {
+    background-color: #48b1bf;
+    border: 1px solid #48b1bf;
+    padding: 10px;
+    color: #303030;
+  }
+  
+  #aboutImage {
+    padding-bottom: 50px;
+  }
+  
+  /*CSS for profile page*/
+  #logoutProfile:hover {
+    background-color: #48b1bf;
+    transform: scale(1.1);
+  }
+  
+  #updateProfile:hover {
+    background-color: #48b1bf;
+    transform: scale(1.1);
+  }
+  
+  .profileHR {
+    margin-top: 23em;
+    border-top: 2px solid #48b1bf;
+  }
+  
+  .ProfileImageContainer {
+    margin-top: 100px;
+  }
+  
+  .ProfileImage {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 1px solid black;
+    margin-left: 5%;
+    margin-top: -10%;
+  }
+  
+  .updateProfileImage {
+    width: 150px;
+    background-color: white;
+    border: 1px solid #06beb6;
+    padding: 10px;
+    margin-top: 10px;
+    margin-left: 0%;
+    float: left;
+  }
+  
+  .profileDetails {
+    flex-direction: column;
+    float: right;
+    margin-top: -15%;
+    margin-right: 17%;
+  }
+  
+  .ProfileEvents {
+    padding-top: 360px;
+  }
+  
+  .submitBio {
+    background-color: white;
+    border: 1px solid #06beb6;
+    padding: 10px;
+    width: 50%;
+    padding: 10px;
+  }
+  .LogOutBtn {
+    background-color: #06beb6;
+    border: 10px solid #06beb6;
+    color: #303030;
+    padding: 10px;
+    width: 50%;
+  }
+  
+  .profile {
+    padding-top: 200px;
+    text-align: justify;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+  
+  .profileBio {
+    height: 100px;
+    margin-bottom: 10px;
+    border: 1px solid #303030;
+    padding: 10px;
+  }
+  
+  .profileUserName {
+    margin-bottom: 10px;
+    border: 1px solid #303030;
+    padding: 10px;
+  }
+  
+  .ProfileTabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .ProfileTabButtons {
+    background-color: white;
+    border: none;
+    font-size: 22pt;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #303030;
+    cursor: pointer;
+  }
+  
+  .ProfileTabButtons:active {
+    color: #06beb6;
+    border-bottom: 1px solid #06beb6;
+  }
+  
+  .ProfileNotParticipating {
+    font-size: 13pt;
+    text-align: center;
+    font-weight: 400;
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
+  
+  .ProfileExploreButtons {
+    background-color: white;
+    border: 1px solid #06beb6;
+    padding: 10px;
+    width: 80%;
+    font-weight: 500;
+    margin-bottom: 10px;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  /*CSS for Registration Page*/
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .register {
+    padding-top: 300px;
+    text-align: left;
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+  
+  .registerForm {
+    border: none;
+  }
+  
+  .registerForm__container {
+    padding: 16px;
+    border: none;
+  }
+  
+  .registerFormInput {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  #submitSignUp {
+    background-color: #08bdb6;
+    text-align: center;
+    font-size: 14px;
+    font-family: lato, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #303030;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  #submit:hover {
+    background-color: #48b1bf;
+  }
+  
+  .SignUpBtn {
+    color: #303030;
+    text-align: center;
+    font-size: 14px;
+    font-family: lato, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    text-decoration: underline;
+    width: auto;
+    padding: 10px 18px;
+    background-color: transparent;
+  }
+  
+  .SignUpBtn:hover {
+    color: #303030;
+    width: auto;
+    padding: 10px 18px;
+    background-color: transparent;
+  }
+  
+  span.psw {
+    float: right;
+    padding-top: 16px;
+    text-align: center;
+    font-size: 14px;
+    font-family: lato, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #303030;
+  }
+  
+  span.psw a {
+    color: #303030;
+  }
+  
+  span.psw a:hover a:visited {
+    color: #303030;
+  }
+  
+  span.account {
+    float: left;
+    padding-top: 16px;
+    text-align: center;
+    font-size: 14px;
+    font-family: lato, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #303030;
+  }
+  
+  span.account a {
+    color: #303030;
+  }
+  
+  span.account a:hover a:visited {
+    color: #303030;
+  }
+  
+  /*CSS For Modal Pop Ups*/
+  /*CSS for Event Deleted Confirmation Component*/
+  
+  .ModalContainer {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: #303030;
+    left: 20%;
+    right: 20%;
+    top: 35%;
+    bottom: 35%;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  
+  .ModalCrossButton {
+    background-color: #06beb6;
+    border: 1px solid #06beb6;
+    border-radius: 50%;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .ModalExitButton {
+    width: 35%;
+    background-color: #06beb6;
+    border: 1px solid #06beb6;
+    color: #303030;
+    cursor: pointer;
+  }
+  
+  .ModalText {
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+  }
+  
+  /*CSS for Abandon Modal component*/
+  
+  .ModalButtonsContainer {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .ModalCancelButton {
+    width: 35%;
+    background-color: #303030;
+    border: 1px solid #06beb6;
+    color: #06beb6;
+    margin-right: 2%;
+  }
+  
+  .ModalYesButton {
+    width: 35%;
+    background-color: #06beb6;
+    border: 1px solid #06beb6;
+    color: #303030;
+    cursor: pointer;
+    margin-left: 2%;
+  }
+  
+  /*
+   CSS for the main interaction
+  */
+  .accordion {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    margin-top: 100px;
+  }
+  
+  .accordion .content {
+    overflow-y: hidden;
+    height: 0;
+    transition: height 0.3s ease;
+  }
+  
+  .accordion > input[type="checkbox"]:checked ~ .content {
+    height: auto;
+    overflow: visible;
+  }
+  
+  .inline {
+    display: inline-block;
+  }
+  
+  .clear {
+    border: 2px solid #06bdb6;
+    height: 50px;
+    width: 70px;
+  }
+  
+  .search {
+    height: 50px;
+    width: 70px;
+    margin-left: 10px;
+  }
+  
+  #keyword,
+  #category,
+  #date,
+  #location {
+    height: 45px;
+    width: 300px;
+  }
+  
+  #filter {
+    position: absolute;
+    margin-left: 20px;
+  }
+
+/*UpdateDelete.vue file*/
+
+#address {
+    width: 353px;
+  }
+  
+  #category,
+  #privacy {
+    width: 360px;
+  }
+  
+  #description {
+    border: 2px solid blue;
+    display: inline-block;
+    padding-left: 14%;
+    padding-right: 14.6%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+  }
+  
+  .update {
+    width: 100px;
+    height: 30px;
+    float: right;
+    margin-left: 10px;
+  }
+  
+  .update:hover {
+    transform: scale(1.1);
+    background-color: #06bdb6;
+  }
+  
+  .delete {
+    width: 100px;
+    height: 30px;
+    float: right;
+    color: red;
+    border: 2px solid red;
+  }
+  
+  .delete:hover {
+    transform: scale(1.1);
+    background-color: red;
+    color: white;
+  }
+
+  /*ProfileView Page Keegan's page*/
+
+  .ProfileInfoContainer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+  .ProfilePicContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .ProfileUserDeatilsContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .profileLoginBtn {
+    width: 100%;
+  }
+  
+  .center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .suggestedEvents {
+    color: #08bdb6;
+    border-bottom: 1px solid #08bdb6;
+  }
+  
+  .profileTabPara {
+    margin-top: 50px;
+  }
+  .profileTabButtons {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .viewEventsProfile {
+    width: 30%;
+  }
+  .createEventsBtnProfile {
+    width: 30%;
+  }
+  
+  #createEvent {
+    background-color: #08bdb6;
+    text-align: center;
+    font-size: 14px;
+    font-family: lato, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #303030;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  
+  #createEvent:hover {
+    background-color: #48b1bf;
+  }
+
+
+  

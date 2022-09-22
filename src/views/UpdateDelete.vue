@@ -50,49 +50,8 @@
 </template>
 
 <style>
-@import "../assets/styles/main.css";
+  /*All style files are entered into the 'style.scss' file and converted into css into the 'style.css' file*/
+@import "../assets/styles/style.css";
 
-#address {
-  width: 353px;
-}
 
-#category,
-#privacy {
-  width: 360px;
-}
-
-#description {
-  border: 2px solid blue;
-  display: inline-block;
-  padding-left: 14%;
-  padding-right: 14.6%;
-  padding-top: 1%;
-  padding-bottom: 1%;
-}
-
-.update {
-  width: 100px;
-  height: 30px;
-  float: right;
-  margin-left: 10px;
-}
-
-.update:hover {
-  transform: scale(1.1);
-  background-color: #06bdb6;
-}
-
-.delete {
-  width: 100px;
-  height: 30px;
-  float: right;
-  color: red;
-  border: 2px solid red;
-}
-
-.delete:hover {
-  transform: scale(1.1);
-  background-color: red;
-  color: white;
-}
 </style>

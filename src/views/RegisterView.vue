@@ -40,7 +40,8 @@
 </template>
 
 <style>
-@import "../assets/styles/main.css";
+/*All style files are entered into the 'style.scss' file and converted into css into the 'style.css' file*/
+@import "../assets/styles/style.css";
 </style>
 
 <script>

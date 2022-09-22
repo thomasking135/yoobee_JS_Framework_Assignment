@@ -95,7 +95,7 @@
 
 <!--Style guide-->
 <style>
-@import "./assets/styles/main.css";
+@import "./assets/styles/style.css";
 
 .home-icon {
   width: 45px;

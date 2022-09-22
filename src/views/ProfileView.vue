@@ -117,67 +117,6 @@ export default {
 </script>
 
 <style>
-.ProfileInfoContainer {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  margin-bottom: 50px;
-}
-.ProfilePicContainer {
-  display: flex;
-  flex-direction: column;
-}
-
-.ProfileUserDeatilsContainer {
-  display: flex;
-  flex-direction: column;
-}
-
-.profileLoginBtn {
-  width: 100%;
-}
-
-.center {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.suggestedEvents {
-  color: #08bdb6;
-  border-bottom: 1px solid #08bdb6;
-}
-
-.profileTabPara {
-  margin-top: 50px;
-}
-.profileTabButtons {
-  margin-top: 30px;
-  display: flex;
-  flex-direction: column;
-}
-
-.viewEventsProfile {
-  width: 30%;
-}
-.createEventsBtnProfile {
-  width: 30%;
-}
-
-#createEvent {
-  background-color: #08bdb6;
-  text-align: center;
-  font-size: 14px;
-  font-family: lato, sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  color: #303030;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 50px;
-  padding-right: 50px;
-}
-
-#createEvent:hover {
-  background-color: #48b1bf;
-}
+/*All style files are entered into the 'style.scss' file and converted into css into the 'style.css' file*/
+@import "../assets/styles/style.css";
 </style>
