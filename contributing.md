@@ -45,10 +45,15 @@ List the ready features here:
 
 ## Setup
 What are the project requirements/dependencies? Where are they listed? A requirements.txt or a Pipfile.lock file perhaps? Where is it located?
+This project is created using Vue JS 3
+This requires the Vue CLI and Vue router to be installed to use.
 
 Proceed to describe how to install / setup one's local environment / get started with the project.
 
-The project requires AXIOS to serve as an API. The NPM is needed along with Axios to access data. 
+The project requires AXIOS to serve as an API. The NPM is needed along with Axios to access data.
+To access the *DB* the user will also need to install the following packages:
+- npm install json-server
+- npx json-server --watch data/db.json 
 
 
 ## Usage
@@ -59,34 +64,45 @@ One goes to the login page (/login). After entering their details (user: user, p
 
 
 ## Project Status
-Project is: _in progress_ / _complete_ / _no longer being worked on_. If you are no longer working on it, provide reasons why.
+Project is: 
+The project is on track for completion. We aim to have the MVP ready for submission by 6pm on Sunday the 25th of September. 
 
 
 ## Room for Improvement
-Include areas you believe need improvement / could be improved. Also add TODOs for future development.
+There are many areas where this app could be improved.
 
 Room for improvement:
-- Registration page
-- Ability to adjust settings (i.e. background, darkmode)
+- The ability for users to have more effective filtering options in the search area
+- The ability to login using a social network login
+- Users could have the ability to have avatars that appear across the website and people can engage more directly between members
+- The ability to have a profile area where users could customse their settings (i.e. dark mode, changing font size and colour, background colour etc)
 
+Here is a list of TODO features we would like to integrate in the future. 
 To do:
-- Feature to be added 1
-- Feature to be added 2
+- The ability for the users to upload images and videos
+- The ability to chat interactively with other Hap app users
+- The integration of a follow button to allow users to send friend requests and to connect with other users
+- Improved search bar functionality
+- Integrations to more effectively improve and enable private communication and the pushing of notifications
+- Creating an open functioning forum
+- Improving the the performance and delivery of real time notifications
+- Improving the customizable privacy settings and security of the ap app
 
 
 ## Acknowledgements
 Give credit here.
-- This project was inspired by sharing apps like Meetups.
-- This project was based on Yoobee [LMS lessons](https://www.example.com).
-- Many thanks to Miguel Cruz and our moms of course for being alive to do this project. 
+- This project could not have been built without the tireless work of Justina Ho, Keegan Dufty, and Thomas King
+- We would like to that Stackoverflow, MDN docs, and the team at Vue for all the resources we used to build this project
+- Many thanks to Miguel Cruz too for his mentorship and knowledge
+- A special thanks to our moms too and the people that supported us during the development of this app. 
 
 
 ## Contact
-Created by [@theteam](https://www.<givemeaname>.co.nz/) - feel free to contact us!
+Created by Justina Ho, Keegan Dufty, and Thomas King [@theteam](https://www.<givemeaname>.co.nz/) - feel free to contact us!
 
 
 <!-- Optional -->
-<!-- ## License -->
-<!-- This project is open source and available under the [... License](). -->
+## License -->
+This project is open source and available to all keen users wanting to mix and to mingle.
 
-<!-- You don't have to include all sections - just the one's relevant to your project -->
+
