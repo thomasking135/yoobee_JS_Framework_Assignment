@@ -1,11 +1,13 @@
 <template>
   <div class="CoverContainer">
-    <h1 class="title">About</h1>
+    <h1 class="title center">About</h1>
+   <div class="overlayLandingImg">
     <img
-      class="cover-image"
-      :src="aboutCoverImage"
-      alt="people standing around a fire on the beach"
+      class="landingImg"
+      src="../assets/images/AboutPage.jpg"
+      alt="Landing page"
     />
+  </div>
   </div>
   <div class="about">
     <p>
@@ -44,14 +46,14 @@
     </router-link>
   </a>
   <div class="ContactUs">
-    <h2 class="title">Contact</h2>
+    <h2 class="title--profile">Contact</h2>
     <p class="contactPara">
       For any futher information or inquires, get in-touch with our team at
       <a href="mailto:admin@hap.com">admin@hap.com</a>
     </p>
   </div>
   <div class="ContactUs">
-    <h2 class="title">Contact The Developers</h2>
+    <h2 class="title--profile">Contact the developers</h2>
     <table class="contactTable">
       <tr>
         <th>Person</th>

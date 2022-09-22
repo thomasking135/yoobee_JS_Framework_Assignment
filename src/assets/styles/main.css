@@ -88,11 +88,25 @@ button:hover {
   font-family: poppins, sans-serif;
   font-weight: 400;
   font-style: normal;
+  color: var(--white);
+  border-top: 1px solid var(--green);
+  padding-top: 20px;
+  font-size: 48px;
+  position: absolute;
+  z-index: 102;
+  margin-top: 380px;
+}
+
+.title--profile {
+  font-family: poppins, sans-serif;
+  font-weight: 400;
+  font-style: normal;
   color: var(--grey);
   border-top: 1px solid var(--green);
   padding-top: 20px;
   font-size: 48px;
 }
+
 
 .title--secondary {
   font-family: poppins, sans-serif;
@@ -586,6 +600,14 @@ th {
   padding-right: 50px;
 }
 
+.createEventImg{
+  width: 100%;
+  padding: 0;
+  margin-top: 0;
+  object-fit: cover;
+  height: 500px;
+  position: relative;
+}
 .createEvent:hover {
   background-color: #48b1bf;
 }

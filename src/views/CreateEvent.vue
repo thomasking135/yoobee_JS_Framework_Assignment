@@ -1,6 +1,15 @@
 <!--Thomas to update functionality-->
 <!--Functionality to be tested by Justina Ho-->
 <template>
+  <h1 class="title center">Create Event</h1>
+   <div class="overlayLandingImg">
+    <img
+      class="landingImg"
+      src="../assets/images/createEvent.jpg"
+      alt="Landing page"
+    />
+  </div>
+
   <div class="create">
     <event-form @add:event="addEvent"/>
     <event-table
@@ -13,7 +22,6 @@
   </div>
     <div id="app" class="small-container">
     <h2 class="title--secondary">Comments</h2>
-
     <comment-form @add:comment="addComment"/>
             <Users/>
     <comment-table

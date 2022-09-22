@@ -1,5 +1,5 @@
 <template>
-  <h1 class="title">Profile</h1>
+  <h1 class="title--profile">Profile</h1>
   <div class="ProfileInfoContainer">
     <div class="ProfilePicContainer">
       <ProfileForm

@@ -1,6 +1,4 @@
 <template>
-  <h1 class="title">Create Event</h1>
-
   <div class="formBorder">
     <div id="event-form">
       <form @submit.prevent="handleSubmit">
