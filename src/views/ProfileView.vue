@@ -89,6 +89,7 @@ export default {
     };
   },
 
+  //Below is Keegans attempt to draw the username from the json file
   /*mounted() {
     Axios.get(baseURL).then((response) => {
       this.users.username = response.data;
