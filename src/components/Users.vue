@@ -56,13 +56,15 @@
               alt="delete"
             />
           </button>
-          <button v-on:click="editComment(comment.id)">
+
+          <!-- Couldn't figure out how to make the edit function work -->
+          <!-- <button v-on:click="editComment(comment.id)">
             <img
               class="crudIcon"
               src="../assets/icons/edit.png"
               alt="edit"
             />
-          </button>
+          </button> -->
 
         </td>
       </tr>
@@ -164,25 +166,25 @@ export default {
         console.error(error);
       }
     },
-
-    async editComment(id, updatedComment) {
-      try {
-        const response = await fetch(
-          `http://localhost:3000/comments/${id}`,
-          {
-            method: "PUT",
-            body: JSON.stringify(updatedComment),
-            headers: { "Content-type": "application/json; charset=UTF-8" }
-          }
-        );
-        const data = await response.json();
-        this.comments = this.comments.map(comment =>
-          comment.id === id ? data : comment
-        );
-      } catch (error) {
-        console.error(error);
-      }
-    },
+// Couldn't figure out how to make the edit function work
+    // async editComment(id, updatedComment) {
+    //   try {
+    //     const response = await fetch(
+    //       `http://localhost:3000/comments/${id}`,
+    //       {
+    //         method: "PUT",
+    //         body: JSON.stringify(updatedComment),
+    //         headers: { "Content-type": "application/json; charset=UTF-8" }
+    //       }
+    //     );
+    //     const data = await response.json();
+    //     this.comments = this.comments.map(comment =>
+    //       comment.id === id ? data : comment
+    //     );
+    //   } catch (error) {
+    //     console.error(error);
+    //   }
+    // },
   },
   mounted() {
     this.getData();
