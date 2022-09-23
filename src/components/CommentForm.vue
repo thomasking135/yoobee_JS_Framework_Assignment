@@ -1,3 +1,4 @@
+// Coded by Justina Ho
 <template>
   <div id="comment-form">
     <form class="commentForm" @submit.prevent="handleSubmit">

@@ -1,3 +1,5 @@
+// Coded by Justina Ho, tested by Keegan Dufty
+// comments input bar and comments table
 <template>
   <div>
     <div id="comment-form">
@@ -188,46 +190,6 @@ export default {
 };
 </script>
 
-<style scoped>
-
-#counter {
-    margin-bottom: 70px;
-}
-
-.commentPosts {
-  width: 50%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 50px;
-  margin-bottom: 100px;
-  border: none;
-  border: 1px solid var(--green);
-   border-collapse: separate;
-   border-spacing: 0;
-}
-
-.commentPosts td {
-   border: 1px solid var(--green);
-   border-collapse: separate;
-   border-spacing: 0;
-}
-
-.commentField {
-  margin-bottom: 10px;
-  justify-content:center;
-  display: flex;
-}
-
-.commentField label {
- width: 100px;
-}
-
-.commentField input {
-  width: 500px;
-}
-
-
-button {
-  margin-right: 10px;
-}
+<style>
+@import "../assets/styles/style.css";
 </style>

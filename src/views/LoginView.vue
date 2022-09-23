@@ -87,7 +87,8 @@ export default {
         this.formIsValid = false;
         return;
       }
-
+    // runs through each user in json file to see if they match, if so then it 
+    //allows the user to go through to the landing page
       for (let i = 0; i <= this.users.length; i++) {
         if (this.username == this.users[i].username) {
           window.location.href = "/";
@@ -96,6 +97,10 @@ export default {
           window.location.href = "/";
         }
         if (this.username !== this.users.username) {
+          this.userDetailsIsValid = false;
+        }
+
+        if (this.email !== this.users.email) {
           this.userDetailsIsValid = false;
         }
       }

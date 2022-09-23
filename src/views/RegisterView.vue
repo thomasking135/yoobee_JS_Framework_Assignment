@@ -87,8 +87,9 @@ export default {
 
     },
 
+    // adds new user into the json file, if user has the same email and/or user name as the ones that already 
+    //exists then it shows an error to pick another username/email
       async addUser() {
-
       for (let i=0; i<this.users.length; i++){
         if (this.username === 'justina' || this.email === 'justina@ho.com'){
           this.nameTaken = true;
